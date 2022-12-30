@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ReSinau</string>
+    <string name="score">Score</string>
+    <string name="profile">Profile</string>
+    <string name="lesson">Lesson</string>
+    <string name="contact">Contact</string>
+    <string name="contest">Contest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rumus_matematika">Rumus Matematika</string>
+    <string name="rumus_ipa">Rumus IPA</string>
+    <string name="tajwid">Tajwid</string>
+    <string name="semua_pelajaran">Semua Pelajaran</string>
+    <string name="sd">SD</string>
+    <string name="smp">SMP</string>
+    <string name="sma">SMA</string>
+    <string name="kelas1">Kelas 1</string>
+    <string name="kelas2">Kelas 2</string>
+    <string name="kelas3">Kelas 3</string>
+    <string name="kelas4">Kelas 4</string>
+    <string name="kelas5">Kelas 5</string>
+    <string name="kelas6">Kelas 6</string>
+    <string name="kelas7">Kelas 7</string>
+    <string name="kelas8">Kelas 8</string>
+    <string name="kelas9">Kelas 9</string>
+    <string name="kelas10">Kelas 10</string>
+    <string name="kelas11">Kelas 11</string>
+    <string name="kelas12">Kelas 12</string>
+    <string name="score_mat">Math:</string>
+    <string name="matematika">MATEMATIKA</string>
+    <string name="indonesia">Bahasa Indonesia</string>
+    <string name="inggris">Bahasa Inggris</string>
+    <string name="ips">IPS (Ilmu Pengetahuan Sosial)</string>
+    <string name="ipa">IPA (Ilmu Pengetahuan Alam)</string>
+    <string name="pai">PAI (Pendidikan Agama Islam)</string>
+    <string name="pancasila">Pendidikan Pancasila</string>
+    <string name="seni">Seni dan Budaya</string>
+    <string name="olahraga">PJOK (PenJasKes)</string>
+    <string name="try_again">coba lagi</string>
+    <string name="toast_salah">cek lagi jawaban anda!</string>
+    <string name="selamat_datang">matematika sd</string>
+    <string name="next">selanjutnya</string>
+    <string name="sukses">anda hebat</string>
+    <string name="cek">cek jawaban</string>
+    <string name="lanjut">selanjutnya</string>
+    <string name="kurang_tepat">jawaban belum benar, ayo coba lagi !!</string>
+
+
+</resources>

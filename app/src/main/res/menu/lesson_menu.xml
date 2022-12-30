@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/matSd"
+        android:title="@string/rumus_matematika"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/matSMP"
+        android:title="@string/rumus_ipa"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/matSma"
+        android:title="@string/tajwid"
+        app:showAsAction="never" />
+
+
+</menu>
