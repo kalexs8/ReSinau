@@ -14,7 +14,7 @@ out_kunci = ""
 
 with open(argv[1]) as f:
     x = f.read().split("\n")
-    if len(x) < 4 or len(x) > 4:
+    if len(x) != 4:
         raise Exception("Length file {} harus 4".format(argv[1]))
     base_source = x[0].split("=")[1]
     out_soal = x[1].split("=")[1]
@@ -29,11 +29,19 @@ with open(base_source, "r") as f:
     s = f.read()
     pecahan = s.split("\n")
     st = ""
+    kunci_jawaban = []
     for idx in range(0, len(pecahan)):
         i = pecahan[idx]
-        if i.lower() == "--kunci":
-            break
         if len(i) < 1:
+            continue
+
+        if i.lower().startswith("jawaban: a"):
+            continue
+        elif i.lower().startswith("jawaban: b"):
+            continue
+        elif i.lower().startswith("jawaban: c"):
+            continue
+        elif i.lower().startswith("jawaban: d"):
             continue
 
         is_soal = soalPattern.search(i) is not None
@@ -49,25 +57,18 @@ with open(base_source, "r") as f:
             if len(st) > 0:
                 soal.append(st)
                 st = ""
-    encountered_kunci = False
-    kunci_jawaban = []
     for i in pecahan:
-        if i.lower() == "--kunci":
-            encountered_kunci = True
-        
-        if encountered_kunci and i.lower() != "--kunci":
-            should = 0
-            if i.lower() == "b":
-                should = 1
-            elif i.lower() == "c":
-                should = 2
-            elif i.lower() == "d":
-                should = 3
-            kunci_jawaban.append(should)
-            if len(kunci_jawaban) == 3:
-                kunci_jawab.append(kunci_jawaban)
-                kunci_jawaban = []
-
+        if i.lower().startswith("jawaban: a"):
+            kunci_jawaban.append(0)
+        elif i.lower().startswith("jawaban: b"):
+            kunci_jawaban.append(1)
+        elif i.lower().startswith("jawaban: c"):
+            kunci_jawaban.append(2)
+        elif i.lower().startswith("jawaban: d"):
+            kunci_jawaban.append(3)
+        if len(kunci_jawaban) == 3:
+            kunci_jawab.append(kunci_jawaban)
+            kunci_jawaban = []
 
 soal_len = len(soal)
 remain = soal_len % 3
@@ -117,11 +118,11 @@ with open(out_soal, "w") as f:
     for i in soal:
         if counter % 3 == 0:
             if counter == len(soal):
-                f.write('"{}")'.format(i))
+                f.write('Soal("{}", null))'.format(i))
             else:
-                f.write('"{}"),\n\nlistOf('.format(i))
+                f.write('Soal("{}", null)),\n\nlistOf('.format(i))
         else:
-            f.write('"{}",\n'.format(i))
+            f.write('Soal("{}", null),\n'.format(i))
 
         counter += 1
 
