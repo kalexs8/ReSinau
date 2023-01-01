@@ -95,7 +95,7 @@ with open(base_source, "r") as f:
             kunci_jawab.append(kunci_jawaban)
             kunci_jawaban = []
 
-log.info("Done, got {} Segment Soal, {} Segment Jawaban, {} Segment Kunci"            
+log.info("Done, got {} Segment Soal, {} Segment Jawaban, {} Segment Kunci".format(len(soal), len(jawab), len(kunci_jawaban))           
 log.info("Preparing data...")
 soal_len = len(soal)
 remain = soal_len % 3
