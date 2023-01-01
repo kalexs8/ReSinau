@@ -1,8 +1,24 @@
 import re
 from sys import argv
 
+class Logger:
+    def __init__(self):
+        print("Flushing initial logger")
+        with open("runtime.log", "w") as f:
+            f.write("")
+    def error(self, message):
+        print("Error, see log")
+        with open("runtime.log", "a") as f:
+            f.write("[Error]: " + message + "\n")
+        exit(1)
+    def info(self, message):
+        with open("runtime.log", "a") as f:
+            f.write("[Info]: " + message + "\n")
+
+log = Logger()
+log.info("Initial reading argv[1]")
 if len(argv) < 2:
-    raise Exception("Length argumen minimal harus 2")
+    log.error("Parameter minimal harus 2")
 
 soalPattern = re.compile(r"^\d+\..*(\.{3}|=|\?|\.{3} |= |\? )$", re.IGNORECASE | re.MULTILINE)
 jawabPattern = re.compile(r"^[a-d|A-D]*\.", re.IGNORECASE)
@@ -15,7 +31,7 @@ out_kunci = ""
 with open(argv[1]) as f:
     x = f.read().split("\n")
     if len(x) != 4:
-        raise Exception("Length file {} harus 4".format(argv[1]))
+        log.error("Length file {} harus 4".format(argv[1]))
     base_source = x[0].split("=")[1]
     out_soal = x[1].split("=")[1]
     out_jawab = x[2].split("=")[1]
@@ -24,7 +40,8 @@ with open(argv[1]) as f:
 soal = []
 jawab = []
 kunci_jawab = []
-
+log.info("Fetched output keywords (Reader: {}, Soal: {}, Jawaban: {}, Kunci: {})".format(base_source, out_soal, out_jawab, out_kunci))
+log.info("Starting extraction")
 with open(base_source, "r") as f:
     s = f.read()
     pecahan = s.split("\n")
@@ -36,25 +53,33 @@ with open(base_source, "r") as f:
             continue
 
         if i.lower().startswith("jawaban: a"):
+            log.info("Fetched kunci jawaban A")
             continue
         elif i.lower().startswith("jawaban: b"):
+            log.info("Fetched kunci jawaban B")
             continue
         elif i.lower().startswith("jawaban: c"):
+            log.info("Fetched kunci jawaban C")
             continue
         elif i.lower().startswith("jawaban: d"):
+            log.info("Fetched kunci jawaban D")
             continue
 
         is_soal = soalPattern.search(i) is not None
         is_jawaban = jawabPattern.search(i) is not None
         if not is_soal and not is_jawaban:
             st += i + "\n"
+            log.info("Detected invalid soal, reading next input")
         
         if is_soal:
+            log.info("Fetched soal")
             soal.append(i)
         
         if is_jawaban:
+            log.info("Fetched Jawaban")
             jawab.append(i)
             if len(st) > 0:
+                log.info("Found missing parts of soal")
                 soal.append(st)
                 st = ""
     for i in pecahan:
@@ -73,7 +98,7 @@ with open(base_source, "r") as f:
 soal_len = len(soal)
 remain = soal_len % 3
 if soal_len < 3 or remain != 0:
-    raise Exception("Jumlah soal harus berbasis 3, Hanya terdapat {} soal, kurang {} soal lagi".format(soal_len, 3 - remain))
+    log.error("Jumlah soal harus berbasis 3, Hanya terdapat {} soal, kurang {} soal lagi".format(soal_len, 3 - remain))
 
 del soal_len
 del remain
@@ -82,6 +107,7 @@ temp = jawab
 jawab = []
 jtmp = []
 
+log.info("Preparing data...")
 for i in range(0, 2):
     if i == 1:
         temp = jawab
@@ -101,17 +127,18 @@ len_jawaban = len(jawab)
 
 if len_kunci != len_jawaban:
     if len_kunci > len_jawaban:
-        raise Exception("Kunci jawaban melebihi jawaban segmen, harusnya terdapat {} kunci segmen, tetapi lebih {}."
+        log.error("Kunci jawaban melebihi jawaban segmen, harusnya terdapat {} kunci segmen, tetapi lebih {}."
         .format(len_jawaban, len_kunci - len_jawaban)
         + " (Segmen Kunci Jawaban: {}, Segmen Jawaban: {})".format(len_kunci, len_jawaban))
     else:
-        raise Exception("Kunci jawaban kurang dari jawaban segmen, harusnya terdapat {} kunci segmen, tetapi kurang {}."
+        log.error("Kunci jawaban kurang dari jawaban segmen, harusnya terdapat {} kunci segmen, tetapi kurang {}."
         .format(len_jawaban, len_jawaban - len_kunci)
         + " (Segmen Kunci Jawaban: {}, Segmen Jawaban: {})".format(len_kunci, len_jawaban))
 
 del len_kunci
 del len_jawaban
 
+log.info("Writing to file...")
 with open(out_soal, "w") as f:
     counter = 1
     f.write("listOf(\n")
@@ -159,3 +186,5 @@ with open(out_kunci, "w") as f:
             f.write(")\n")
         else:
             f.write("),\nlistOf(")
+
+log.info("Finished, exiting...")
