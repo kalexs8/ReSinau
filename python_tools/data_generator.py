@@ -95,6 +95,8 @@ with open(base_source, "r") as f:
             kunci_jawab.append(kunci_jawaban)
             kunci_jawaban = []
 
+log.info("Done, got {} Segment Soal, {} Segment Jawaban, {} Segment Kunci"            
+log.info("Preparing data...")
 soal_len = len(soal)
 remain = soal_len % 3
 if soal_len < 3 or remain != 0:
@@ -107,7 +109,6 @@ temp = jawab
 jawab = []
 jtmp = []
 
-log.info("Preparing data...")
 for i in range(0, 2):
     if i == 1:
         temp = jawab
