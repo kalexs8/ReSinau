@@ -69,6 +69,25 @@ with open(base_source, "r") as f:
             continue
         elif i.lower().startswith("jawaban: d"):
             log.info("Fetched kunci jawaban D")
+
+            continue
+	# Ketika user menambahkan keyword kunci, otomatis break
+	if i.lower() == "--kunci":
+            log.info("Found Switch, switching fetch")
+            detected_dash = True
+            break
+
+        if i.lower().startswith("jawaban: a"):
+            log.info("Fetched kunci jawaban A")
+            continue
+        elif i.lower().startswith("jawaban: b"):
+            log.info("Fetched kunci jawaban B")
+            continue
+        elif i.lower().startswith("jawaban: c"):
+            log.info("Fetched kunci jawaban C")
+            continue
+        elif i.lower().startswith("jawaban: d"):
+            log.info("Fetched kunci jawaban D")
             continue
 
         is_soal = soalPattern.search(i) is not None
@@ -87,7 +106,8 @@ with open(base_source, "r") as f:
             if len(st) > 0:
                 log.info("Found missing parts of soal")
                 soal.append(st)
-                st = ""
+                st = "
+
     # Fetch kunci jawaban (kalau ada)
     if not detected_dash:
         for i in pecahan:
@@ -124,6 +144,37 @@ with open(base_source, "r") as f:
                     kunci_jawaban = []
             if i.lower() == "--kunci":
                 yet_found = True
+
+
+         for i in pecahan:
+             if i.lower().startswith("jawaban: a"):
+                kunci_jawaban.append(0)
+             elif i.lower().startswith("jawaban: b"):
+                kunci_jawaban.append(1)
+             elif i.lower().startswith("jawaban: c"):
+                kunci_jawaban.append(2)
+             elif i.lower().startswith("jawaban: d"):
+                kunci_jawaban.append(3)
+             if len(kunci_jawaban) == 3:
+                 kunci_jawab.append(kunci_jawaban)
+                 kunci_jawaban = []
+    else:
+         for i in pecahan:
+             if i.lower().startswith("a"):
+                kunci_jawaban.append(0)
+		log.info("Fetched kunci jawaban A from switch")
+             elif i.lower().startswith("b"):
+                kunci_jawaban.append(1)
+		log.info("Fetched kunci jawaban B from switch")
+             elif i.lower().startswith("c"):
+                kunci_jawaban.append(2)
+		log.info("Fetched kunci jawaban C from switch")
+             elif i.lower().startswith("d"):
+                kunci_jawaban.append(3)
+		log.info("Fetched kunci jawaban D from switch")
+             if len(kunci_jawaban) == 3:
+                 kunci_jawab.append(kunci_jawaban)
+                 kunci_jawaban = []
 
 log.info("Done got {} Soal, {} Jawaban, {} Kunci Jawab".format(len(soal), len(jawab), len(kunci_jawab)))
 log.info("Preparing data...")
