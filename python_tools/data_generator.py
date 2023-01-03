@@ -27,20 +27,30 @@ base_source = ""
 out_soal = ""
 out_jawab = ""
 out_kunci = ""
+segments = 3
+segment_jawaban = 3
 
 with open(argv[1]) as f:
     x = f.read().split("\n")
-    if len(x) != 4:
+    if len(x) < 4:
         log.error("Length file {} harus 4".format(argv[1]))
     base_source = x[0].split("=")[1]
     out_soal = x[1].split("=")[1]
     out_jawab = x[2].split("=")[1]
     out_kunci = x[3].split("=")[1]
+    if len(x) >= 5:
+        gt = int(x[4].split("=")[1])
+        segments = gt if gt >= 3 else 3
+    if len(x) == 6:
+        gt = int(x[5].split("=")[1])
+        segment_jawaban = gt if gt >= 3 else 3
+    
 
 soal = []
 jawab = []
 kunci_jawab = []
 log.info("Fetched output keywords (Reader: {}, Soal: {}, Jawaban: {}, Kunci: {})".format(base_source, out_soal, out_jawab, out_kunci))
+log.info("Starting tool using soal segments of {} and jawaban segments of {}".format(segments, segment_jawaban))
 log.info("Starting extraction")
 with open(base_source, "r") as f:
     s = f.read()
@@ -87,7 +97,7 @@ with open(base_source, "r") as f:
             if len(st) > 0:
                 log.info("Found missing parts of soal")
                 soal.append(st)
-                st = "
+                st = ""
 
     # Fetch kunci jawaban (kalau ada)
     if not detected_dash:
@@ -120,7 +130,7 @@ with open(base_source, "r") as f:
                 elif i.lower().startswith("d"):
                     log.info("Got D")
                     kunci_jawaban.append(3)
-                if len(kunci_jawaban) == 3:
+                if len(kunci_jawaban) == segments:
                     kunci_jawab.append(kunci_jawaban)
                     kunci_jawaban = []
             if i.lower() == "--kunci":
@@ -129,9 +139,10 @@ with open(base_source, "r") as f:
 log.info("Done got {} Soal, {} Jawaban, {} Kunci Jawab".format(len(soal), len(jawab), len(kunci_jawab)))
 log.info("Preparing data...")
 soal_len = len(soal)
-remain = soal_len % 3
-if soal_len < 3 or remain != 0:
-    log.error("Jumlah soal harus berbasis 3, Hanya terdapat {} soal, kurang {} soal lagi".format(soal_len, 3 - remain))
+remain = soal_len % segments
+
+if soal_len < segments or remain != 0:
+    log.error("Jumlah soal harus berbasis {}, Hanya terdapat {} soal, kurang {} soal lagi".format(segments, soal_len, segments - remain))
 
 del soal_len
 del remain
@@ -147,35 +158,34 @@ for i in range(0, 2):
         jtmp = []
     for i in temp:
         jtmp.append(i)
-        if len(jtmp) == 3:
+        if len(jtmp) == segment_jawaban:
             jawab.append(jtmp)
             jtmp = []
 del temp
 del jtmp
 
-
 len_kunci = len(kunci_jawab)
-len_jawaban = len(jawab)
+len_soal = len(soal) / segments
 
-if len_kunci != len_jawaban:
-    if len_kunci > len_jawaban:
-        log.error("Kunci jawaban melebihi jawaban segmen, harusnya terdapat {} kunci segmen, tetapi lebih {}."
-        .format(len_jawaban, len_kunci - len_jawaban)
-        + " (Segmen Kunci Jawaban: {}, Segmen Jawaban: {})".format(len_kunci, len_jawaban))
+if len_kunci != len_soal:
+    if len_kunci > len_soal:
+        log.error("Kunci jawaban melebihi soal segmen, harusnya terdapat {} kunci segmen, tetapi lebih {}."
+        .format(len_soal, len_kunci - len_soal)
+        + " (Segmen Kunci Jawaban: {}, Segmen Soal: {})".format(len_kunci, len_soal))
     else:
-        log.error("Kunci jawaban kurang dari jawaban segmen, harusnya terdapat {} kunci segmen, tetapi kurang {}."
-        .format(len_jawaban, len_jawaban - len_kunci)
-        + " (Segmen Kunci Jawaban: {}, Segmen Jawaban: {})".format(len_kunci, len_jawaban))
+        log.error("Kunci jawaban kurang dari soal segmen, harusnya terdapat {} kunci segmen, tetapi kurang {}."
+        .format(len_soal, len_soal - len_kunci)
+        + " (Segmen Kunci Jawaban: {}, Segmen Soal: {})".format(len_kunci, len_soal))
 
 del len_kunci
-del len_jawaban
+del len_soal
 
 log.info("Writing to file...")
 with open(out_soal, "w") as f:
     counter = 1
     f.write("listOf(\n")
     for i in soal:
-        if counter % 3 == 0:
+        if counter % segments == 0:
             if counter == len(soal):
                 f.write('Pair("{}", 0))'.format(i))
             else:
