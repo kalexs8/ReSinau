@@ -29,21 +29,29 @@ out_jawab = ""
 out_kunci = ""
 segments = 3
 segment_jawaban = 3
+jawaban_counter = 3
 
-with open(argv[1]) as f:
-    x = f.read().split("\n")
-    if len(x) < 4:
-        log.error("Length file {} harus 4".format(argv[1]))
-    base_source = x[0].split("=")[1]
-    out_soal = x[1].split("=")[1]
-    out_jawab = x[2].split("=")[1]
-    out_kunci = x[3].split("=")[1]
-    if len(x) >= 5:
-        gt = int(x[4].split("=")[1])
-        segments = gt if gt >= 3 else 3
-    if len(x) == 6:
-        gt = int(x[5].split("=")[1])
-        segment_jawaban = gt if gt >= 3 else 3
+try:
+    with open(argv[1]) as f:
+        x = f.read().split("\n")
+        if len(x) < 4:
+            log.error("Length file {} harus 4".format(argv[1]))
+        base_source = x[0].split("=")[1]
+        out_soal = x[1].split("=")[1]
+        out_jawab = x[2].split("=")[1]
+        out_kunci = x[3].split("=")[1]
+        if len(x) >= 5:
+            gt = int(x[4].split("=")[1])
+            segments = gt if gt >= 3 else 3
+        if len(x) >= 6:
+            dt_arg = x[5].split("=")[1].split(".")
+            gt = int(dt_arg[0])
+            gt1 = int(dt_arg[1])
+            segment_jawaban = gt if gt >= 3 else 3
+            jawaban_counter = gt1 if gt1 >= 3 else 3
+            
+except Exception as e:
+    log.error(e)
     
 
 soal = []
@@ -110,7 +118,7 @@ with open(base_source, "r") as f:
                 kunci_jawaban.append(2)
             elif i.lower().startswith("jawaban: d"):
                 kunci_jawaban.append(3)
-            if len(kunci_jawaban) == 3:
+            if len(kunci_jawaban) == segments:
                 kunci_jawab.append(kunci_jawaban)
                 kunci_jawaban = []
     else:
@@ -156,13 +164,20 @@ for i in range(0, 2):
         temp = jawab
         jawab = []
         jtmp = []
-    for i in temp:
-        jtmp.append(i)
-        if len(jtmp) == segment_jawaban:
-            jawab.append(jtmp)
-            jtmp = []
+        for i in temp:
+            jtmp.append(i)
+            if len(jtmp) == segment_jawaban:
+                jawab.append(jtmp)
+                jtmp = []
+    else:
+        for i in temp:
+            jtmp.append(i)
+            if len(jtmp) == jawaban_counter:
+                jawab.append(jtmp)
+                jtmp = []
 del temp
 del jtmp
+print(jawab)
 
 len_kunci = len(kunci_jawab)
 len_soal = len(soal) / segments
