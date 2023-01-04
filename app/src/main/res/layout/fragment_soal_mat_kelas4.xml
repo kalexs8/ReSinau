@@ -14,16 +14,16 @@
         android:layout_height="wrap_content">
 
         <RadioGroup
-            android:id="@+id/radioGrupmatSDpertama"
+            android:id="@+id/radioGrupmatSD3a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSDkedua">
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3b">
 
             <TextView
-                android:id="@+id/textSoalMatsdPertama"
+                android:id="@+id/textSoalMatsd2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="10. Pita Doni 5 meter, pita Dona 7 meter, pita Indah 4 meter.  Maka yang paling pendek adalah pita. . . "
@@ -31,26 +31,26 @@
                 android:textStyle="bold" />
 
             <RadioButton
-                android:id="@+id/radioButtonPertama"
+                android:id="@+id/radioButton3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="a. Doni  " />
 
             <RadioButton
-                android:id="@+id/radioButtonKedua"
+                android:id="@+id/radioButton3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="b. Dona " />
 
             <RadioButton
-                android:id="@+id/radioButtonKetiga"
+                android:id="@+id/radioButton3c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="c. Indah  " />
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/radioGrupmatSDkedua"
+            android:id="@+id/radioGrupmatSD3b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -59,7 +59,7 @@
             app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_8">
 
             <TextView
-                android:id="@+id/textSoalMatsdKedua"
+                android:id="@+id/textSoalMatsd2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="9. Arif memiliki 10 buah kelereng. Andi memberikan 6 kelereng kepada Arif. Jumlah kelereng Arif sekarang adalah . . . "
@@ -67,19 +67,19 @@
                 android:textStyle="bold" />
 
             <RadioButton
-                android:id="@+id/radioButtonKeempat"
+                android:id="@+id/radioButton3e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="a. 14 " />
 
             <RadioButton
-                android:id="@+id/radioButtonKelima"
+                android:id="@+id/radioButton3f"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="b. 16 " />
 
             <RadioButton
-                android:id="@+id/radioButtonKeenam"
+                android:id="@+id/radioButton3g"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="c. 8 " />
@@ -398,8 +398,8 @@
             android:backgroundTint="#8bc34a"
             android:text="@string/lanjut"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/radioGrupmatSDpertama"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSDpertama"
+            app:layout_constraintEnd_toEndOf="@+id/radioGrupmatSD3a"
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3a"
             tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

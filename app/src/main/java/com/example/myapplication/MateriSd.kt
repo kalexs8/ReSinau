@@ -3,6 +3,8 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -83,7 +85,17 @@ class MateriSd : AppCompatActivity() {
         val pjok6 = findViewById<TextView>(R.id.pjokKelas6)
         val scoreManager = ScoreManager(this)
         val scoreMatSd = findViewById<TextView>(R.id.scoreMatSd)
-        scoreMatSd.text = getString(R.string.score_mat)+scoreManager.totalScore.toString()
+
+        Thread {
+            while (true){
+                //  Barisan kode penting (gak usah diapa-apain)
+                Thread.sleep(1000) // Sebelum menampilkan skor baru, cooldown selama 1 detik agar Thread tidak exhausted
+                Handler(Looper.getMainLooper()).post{
+                    // Untuk listing score bisa ditambahkan dibawah komen ini (tidak usah sesuai urutan)
+                    scoreMatSd.text = getString(R.string.score_mat)+scoreManager.totalScore.toString()
+                }
+            }
+        }.start()
 
 
 
@@ -239,13 +251,32 @@ class MateriSd : AppCompatActivity() {
                 View.VISIBLE else View.GONE
 
         }
-
         mat1.setOnClickListener {
             if(SoalManager.dijawab(scoreManager.scoreMatKelas1, SoalManager.MATEMATIKA_KELAS1)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this, LatihanMateriSd::class.java)
                 intent.putExtra("POINTER_SOAL", "SoalMatKelas1")
+                startActivity(intent)
+            }
+        }
+
+        mat2.setOnClickListener {
+            if(SoalManager.dijawab(scoreManager.scoreMatKelas2, SoalManager.MATEMATIKA_KELAS2)){
+                Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, LatihanMateriSd::class.java)
+                intent.putExtra("POINTER_SOAL", "SoalMatKelas2")
+                startActivity(intent)
+            }
+        }
+
+        mat3.setOnClickListener {
+            if(SoalManager.dijawab(scoreManager.scoreMatKelas3, SoalManager.MATEMATIKA_KELAS3)){
+                Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, LatihanMateriSd::class.java)
+                intent.putExtra("POINTER_SOAL", "SoalMatKelas3")
                 startActivity(intent)
             }
         }

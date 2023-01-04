@@ -22,18 +22,8 @@ class LatihanMateriSd : AppCompatActivity() {
         supportActionBar?.hide()
         val tipeSoal = intent.getStringExtra("POINTER_SOAL")
         val viewPagerBilangan: ViewPager2 = findViewById(R.id.view_pager_bilangan)
-        val fragments: ArrayList<Fragment> = arrayListOf(
-            SoalMatKelas1(),
-            SoalMatKelas2(),
-            SoalMatKelas3(),
-            SoalMatKelas4(),
-            SoalMatKelas5(),
-            SoalMatKelas6()
-        )
-        val adapterSD = ViewPagerAdapterSd(fragments,this)
         scoreManager = ScoreManager(applicationContext)
         progressBar = findViewById(R.id.progress_bar)
-        viewPagerBilangan.adapter = adapterSD
 
 
         val closesd = findViewById<ImageView>(R.id.closeSd)
@@ -43,11 +33,46 @@ class LatihanMateriSd : AppCompatActivity() {
         progressBar.max = 10
         when (tipeSoal){
             "SoalMatKelas1" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalMatKelas1(),
+                )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
                 Thread {
                     while (true){
                         Thread.sleep(1000)
                         Handler(Looper.getMainLooper()).post{
                             progressBar.progress = if(scoreManager.scoreMatKelas1 < 1) 0 else scoreManager.scoreMatKelas1 / 5
+                        }
+                    }
+                }.start()
+            }
+        "SoalMatKelas2" ->{
+            val fragments: ArrayList<Fragment> = arrayListOf(
+                SoalMatKelas2(),
+            )
+            val adapterSD = ViewPagerAdapterSd(fragments,this)
+            viewPagerBilangan.adapter = adapterSD
+            Thread {
+                while (true){
+                    Thread.sleep(1000)
+                    Handler(Looper.getMainLooper()).post{
+                        progressBar.progress = if(scoreManager.scoreMatKelas2 < 1) 0 else scoreManager.scoreMatKelas2 / 5
+                    }
+                }
+            }.start()
+        }
+            "SoalMatKelas3" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalMatKelas3(),
+                )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManager.scoreMatKelas3 < 1) 0 else scoreManager.scoreMatKelas3 / 5
                         }
                     }
                 }.start()

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/buttonNextSoal1"
+            android:id="@+id/buttonNextSoal2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -23,11 +23,11 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSDketiga"
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3c"
             tools:ignore="TextContrastCheck" />
 
         <RadioGroup
-            android:id="@+id/radioGrupmatSDpertama"
+            android:id="@+id/radioGrupmatSD3a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -36,90 +36,108 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textSoalMatsdPertama"
+                android:id="@+id/textSoalMatsd2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <RadioButton
-                android:id="@+id/radioButtonPertama"
+                android:id="@+id/radioButton3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <RadioButton
-                android:id="@+id/radioButtonKedua"
+                android:id="@+id/radioButton3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
-                android:id="@+id/radioButtonKetiga"
+                android:id="@+id/radioButton3c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/radioGrupmatSDkedua"
+            android:id="@+id/radioGrupmatSD3b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSDpertama">
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3a">
 
             <TextView
-                android:id="@+id/textSoalMatsdKedua"
+                android:id="@+id/textSoalMatsd2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <RadioButton
-                android:id="@+id/radioButtonKeempat"
+                android:id="@+id/radioButton3e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
-                android:id="@+id/radioButtonKelima"
+                android:id="@+id/radioButton3f"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
-                android:id="@+id/radioButtonKeenam"
+                android:id="@+id/radioButton3g"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/radioGrupmatSDketiga"
+            android:id="@+id/radioGrupmatSD3c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSDkedua">
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3b">
 
             <TextView
-                android:id="@+id/textSoalMatsdKetiga"
+                android:id="@+id/textSoalMatsd2c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
             <RadioButton
-                android:id="@+id/radioButtonKetujuh"
+                android:id="@+id/radioButton3i"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
-                android:id="@+id/radioButtonKedelapan"
+                android:id="@+id/radioButton3j"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
-                android:id="@+id/radioButtonKesembilan"
+                android:id="@+id/radioButton3k"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </RadioGroup>

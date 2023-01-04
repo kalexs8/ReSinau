@@ -9,249 +9,71 @@
     android:id="@+id/fragment_lesson">
 
 
-    <TextView
-        android:id="@+id/matematika"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/jenjangSMA"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_box"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_blue_bright"
         android:gravity="center"
-        android:text="@string/matematika"
-        android:textColor="#2E7D32"
+        android:text="@string/sma"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ipsSD"
+        app:layout_constraintStart_toEndOf="@+id/jenjangSMP"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/ips"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/jenjangSMP"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/ips"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ipaSD"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/ipa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/ipa"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AgamaSD"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/agama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/pai"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/AgamaSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sd"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/agama"
-        app:layout_constraintTop_toBottomOf="@+id/agama"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/AgamaSMP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/text_box"
         android:gravity="center"
         android:text="@string/smp"
-        android:textColor="#2E7D32"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/AgamaSD"
-        app:layout_constraintTop_toBottomOf="@+id/agama"
+        app:layout_constraintStart_toEndOf="@+id/jenjangSD"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         tools:ignore="TextContrastCheck" />
 
 
-    <TextView
-        android:id="@+id/AgamaSMA"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/jenjangSD"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sma"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/AgamaSMP"
-        app:layout_constraintTop_toBottomOf="@+id/agama"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/ipsSMA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sma"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ipsSMP"
-        app:layout_constraintTop_toBottomOf="@+id/ips"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/ipsSMP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/smp"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ipsSD"
-        app:layout_constraintTop_toBottomOf="@+id/ips"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/ipsSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/text_box"
         android:gravity="center"
         android:text="@string/sd"
-        android:textColor="#2E7D32"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/ips"
-        app:layout_constraintTop_toBottomOf="@+id/ips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/ipaSMA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sma"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ipaSMP"
-        app:layout_constraintTop_toBottomOf="@+id/ipa"
-        tools:ignore="TextContrastCheck" />
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/ipaSMP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/smp"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ipaSD"
-        app:layout_constraintTop_toBottomOf="@+id/ipa"
-        tools:ignore="TextContrastCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/ipaSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sd"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/ipa"
-        app:layout_constraintTop_toBottomOf="@+id/ipa"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/MatSMA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sma"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/MatSMP"
-        app:layout_constraintTop_toBottomOf="@+id/matematika"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/MatSMP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/smp"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/MatSD"
-        app:layout_constraintTop_toBottomOf="@+id/matematika"
-        tools:ignore="TextContrastCheck" />
-
-
-    <TextView
-        android:id="@+id/MatSD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_box"
-        android:gravity="center"
-        android:text="@string/sd"
-        android:textColor="#2E7D32"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/matematika"
-        app:layout_constraintTop_toBottomOf="@+id/matematika"
-        tools:ignore="TextContrastCheck" />
-
-
+            <TextView
+                android:id="@+id/changeLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
