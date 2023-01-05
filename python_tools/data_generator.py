@@ -219,39 +219,45 @@ del len_kunci
 del len_soal
 
 log.info("Writing to file...")
-with open(out_soal, "w") as f:
+with open(out_soal, "w", encoding="utf-8") as f:
     counter = 1
     f.write("listOf(\n")
-    for i in soal:
-        if counter % segments == 0:
-            if counter == len(soal):
-                f.write('Pair("{}", 0))'.format(i))
+    try:
+        for i in soal:
+            if counter % segments == 0:
+                if counter == len(soal):
+                    f.write('Pair("{}", 0))'.format(i))
+                else:
+                    f.write('Pair("{}", 0)),\n\nlistOf('.format(i))
             else:
-                f.write('Pair("{}", 0)),\n\nlistOf('.format(i))
-        else:
-            f.write('Pair("{}", 0),\n'.format(i))
+                f.write('Pair("{}", 0),\n'.format(i))
 
-        counter += 1
+            counter += 1
+    except Exception as e:
+        log.error("Python error: " + e)
 
-with open(out_jawab, "w") as f:
+with open(out_jawab, "w", encoding="utf-8") as f:
     len_jwb = len(jawab)
     f.write("listOf(\n")
-    for i in range(0, len_jwb):
-        f.write("listOf(")
-        for x in range(0, len(jawab[i])):
-            for j in range(0, len(jawab[i][x])):
-                if j == len(jawab[i][x])-1:
-                    f.write('"{}"'.format(jawab[i][x][j]))
+    try:
+        for i in range(0, len_jwb):
+            f.write("listOf(")
+            for x in range(0, len(jawab[i])):
+                for j in range(0, len(jawab[i][x])):
+                    if j == len(jawab[i][x])-1:
+                        f.write('"{}"'.format(jawab[i][x][j]))
+                    else:
+                        f.write('"{}",'.format(jawab[i][x][j]))
+                if x == len(jawab[i])-1:
+                    f.write(")\n")
                 else:
-                    f.write('"{}",'.format(jawab[i][x][j]))
-            if x == len(jawab[i])-1:
-                f.write(")\n")
+                    f.write("),\nlistOf(")    
+            if i == len_jwb-1:
+                f.write(")")
             else:
-                f.write("),\nlistOf(")    
-        if i == len_jwb-1:
-            f.write(")")
-        else:
-            f.write("),\nlistOf(\n")
+                f.write("),\nlistOf(\n")
+    except Exception as e:
+        log.error("Python error: " + e)
 
 with open(out_kunci, "w") as f:
     f.write("listOf(")
