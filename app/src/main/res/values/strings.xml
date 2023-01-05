@@ -49,15 +49,21 @@
         Changelog\n
         \n
 
+        Version 1.8a\n
+                • minor update:\n
+                    \t\t • melengkapi soal matematika kelas 5\n
+                    \t\t • melengkapi soal matematika kelas 6\n
+        \n
+
         Version 1.8\n
                 • memperbaiki bug autochecked di soal selanjutnya\n
                 • menghilangkan checked ketika menjawab soal dengan jawaban salah\n
                 • score live update ketika segment soal telah selesai\n
-                • minor update\n
-                    •\t\t melengkapi soal matematika kelas 3\n
-                    •\t\t melengkapi soal matematika kelas 4\n
-                    •\t\t menambah opsi pilihan ganda, format a, b , c ,d\n
-                    •\t\t menambahkan toast ketika segment sukses terseleasikan\n
+                • minor update:\n
+                    \t\t • melengkapi soal matematika kelas 3\n
+                    \t\t • melengkapi soal matematika kelas 4\n
+                    \t\t • format opsi pilihan ganda, a, b , c ,d\n
+                    \t\t • toast ketika segment sukses \n
         \n
 
         Version 1.7\n

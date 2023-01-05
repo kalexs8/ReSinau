@@ -76,8 +76,57 @@ class LatihanMateriSd : AppCompatActivity() {
                         }
                     }
                 }.start()
+
+            }
+            "SoalMatKelas4" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalMatKelas4(),
+                )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManager.scoreMatKelas4 < 1) 0 else scoreManager.scoreMatKelas4 / 5
+                        }
+                    }
+                }.start()
+            }
+
+            "SoalMatKelas5" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalMatKelas5(),
+                )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManager.scoreMatKelas5 < 1) 0 else scoreManager.scoreMatKelas5 / 5
+                        }
+                    }
+                }.start()
+            }
+
+            "SoalMatKelas6" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalMatKelas6(),
+                )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManager.scoreMatKelas6 < 1) 0 else scoreManager.scoreMatKelas6 / 5
+                        }
+                    }
+                }.start()
             }
         }
+
     }
 
 

@@ -5,6 +5,9 @@ public final class SoalManager {
     public static final int MATEMATIKA_KELAS1 = 10;
     public static final int MATEMATIKA_KELAS2 = 10;
     public static final int MATEMATIKA_KELAS3 = 10;
+    public static final int MATEMATIKA_KELAS4 = 10;
+    public static final int MATEMATIKA_KELAS5 = 12;
+    public static final int MATEMATIKA_KELAS6 = 20;
 
     // Fungsi operasi soal
     public static boolean dijawab(int score, int target, int division){

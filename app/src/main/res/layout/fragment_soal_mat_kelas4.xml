@@ -1,17 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="bold"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/selamat_datang"
-    tools:ignore="HardcodedText">
-
+    tools:ignore="HardcodedText"
+    tools:context="com.example.matematika.SoalMatKelas4" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonNextSoal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#2e95d3"
+            android:text="selanjutnya"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3c"
+            tools:ignore="TextContrastCheck" />
 
         <RadioGroup
             android:id="@+id/radioGrupmatSD3a"
@@ -20,33 +33,42 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3b">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textSoalMatsd2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="10. Pita Doni 5 meter, pita Dona 7 meter, pita Indah 4 meter.  Maka yang paling pendek adalah pita. . . "
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:contentDescription="null" />
 
             <RadioButton
                 android:id="@+id/radioButton3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="a. Doni  " />
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <RadioButton
                 android:id="@+id/radioButton3b"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. Dona " />
+                android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/radioButton3c"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. Indah  " />
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/radioButton3d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </RadioGroup>
 
         <RadioGroup
@@ -56,352 +78,86 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_8">
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3a">
 
             <TextView
                 android:id="@+id/textSoalMatsd2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="9. Arif memiliki 10 buah kelereng. Andi memberikan 6 kelereng kepada Arif. Jumlah kelereng Arif sekarang adalah . . . "
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:contentDescription="null" />
 
             <RadioButton
                 android:id="@+id/radioButton3e"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 14 " />
+                android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/radioButton3f"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 16 " />
+                android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/radioButton3g"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 8 " />
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/radioButton3h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
         </RadioGroup>
 
         <RadioGroup
-            android:id="@+id/soal_sd_kelas1_8"
+            android:id="@+id/radioGrupmatSD3c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_7">
+            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3b">
 
             <TextView
-                android:id="@+id/soalmat8"
+                android:id="@+id/textSoalMatsd2c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="8. 8 + 7 - 5 = . . . "
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/ans8a"
+            <ImageView
+                android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="a. 19 " />
+                android:visibility="gone"
+                android:contentDescription="null" />
 
             <RadioButton
-                android:id="@+id/ans8b"
+                android:id="@+id/radioButton3i"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 15 " />
+                android:layout_height="wrap_content" />
 
             <RadioButton
-                android:id="@+id/ans8c"
+                android:id="@+id/radioButton3j"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 10 " />
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/radioButton3k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/radioButton3l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_6">
-
-            <TextView
-                android:id="@+id/soalmat7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="7. Lambang bilangan dari Tujuh Belas adalah . . . "
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/ans7a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 27 " />
-
-            <RadioButton
-                android:id="@+id/ans7b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 17 " />
-
-            <RadioButton
-                android:id="@+id/ans7c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 71 " />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_5">
-
-            <TextView
-                android:id="@+id/soalmat6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5. 14 - a = 6, Nilai untuk a adalah. . . "
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="6. 18 - 5 - 2 = " />
-
-            <RadioButton
-                android:id="@+id/ans6a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 14 " />
-
-            <RadioButton
-                android:id="@+id/ans6b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 11 " />
-
-            <RadioButton
-                android:id="@+id/ans6c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 10 " />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_4">
-
-            <TextView
-                android:id="@+id/soalmat5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5. 14 - a = 6, Nilai untuk a adalah. . . "
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/ans5a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 9 " />
-
-            <RadioButton
-                android:id="@+id/ans5b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 8 " />
-
-            <RadioButton
-                android:id="@+id/ans5c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 7" />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_3">
-
-            <TextView
-                android:id="@+id/soalmat4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="4. 18 16 12 20 14 Dari bilangan di atas,  jika diurutkan mulai dari yang terkecil adalah . . . "
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/ans4a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 20, 18, 14, 16, 12 " />
-
-            <RadioButton
-                android:id="@+id/ans4b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 12 , 14, 16, 18, 20 " />
-
-            <RadioButton
-                android:id="@+id/ans4c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 20, 18, 16, 14, 12  " />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_2">
-
-            <TextView
-                android:id="@+id/soalmat3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="3. Di dalam kandang ada 17 ekor ayam.Paman menjual 8 ekor ayam.  Jumlah ayam paman sekarang adalah . . . ekor. "
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/ans3a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 10 " />
-
-            <RadioButton
-                android:id="@+id/ans3b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 9" />
-
-            <RadioButton
-                android:id="@+id/ans3c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 8" />
-        </RadioGroup>
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBarMatematikaSD">
-
-            <TextView
-                android:id="@+id/soalmat1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1. 3 + 5 = "
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/ans1a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. 7"
-                android:textSize="14sp" />
-
-            <RadioButton
-                android:id="@+id/ans1b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. 6 "
-                android:textSize="14sp" />
-
-            <RadioButton
-                android:id="@+id/ans1c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. 8  " />
-        </RadioGroup>
-
-        <ProgressBar
-            android:id="@+id/progressBarMatematikaSD"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:max="20"
-            android:progress="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RadioGroup
-            android:id="@+id/soal_sd_kelas1_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/soal_sd_kelas1_1">
-
-            <TextView
-                android:id="@+id/soalmat2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="2. Delapan ditambah enam sama dengan . . ."
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/ans2a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a. Empat belas  " />
-
-            <RadioButton
-                android:id="@+id/ans2b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="b. Dua belas  " />
-
-            <RadioButton
-                android:id="@+id/ans2c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="c. Tiga belas  " />
-        </RadioGroup>
-
-        <Button
-            android:id="@+id/halaman_selanjutnya"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#8bc34a"
-            android:text="@string/lanjut"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/radioGrupmatSD3a"
-            app:layout_constraintTop_toBottomOf="@+id/radioGrupmatSD3a"
-            tools:ignore="TextContrastCheck" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-

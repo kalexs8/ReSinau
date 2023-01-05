@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ import com.example.alat.ScoreManager
 import com.example.alat.SoalManager
 
 class MateriSd : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_materi_sd)
@@ -277,6 +279,36 @@ class MateriSd : AppCompatActivity() {
             }else{
                 val intent = Intent(this, LatihanMateriSd::class.java)
                 intent.putExtra("POINTER_SOAL", "SoalMatKelas3")
+                startActivity(intent)
+            }
+        }
+
+        mat4.setOnClickListener {
+            if(SoalManager.dijawab(scoreManager.scoreMatKelas4, SoalManager.MATEMATIKA_KELAS4)){
+                Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, LatihanMateriSd::class.java)
+                intent.putExtra("POINTER_SOAL", "SoalMatKelas4")
+                startActivity(intent)
+            }
+        }
+
+        mat5.setOnClickListener {
+            if(SoalManager.dijawab(scoreManager.scoreMatKelas5, SoalManager.MATEMATIKA_KELAS5)){
+                Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, LatihanMateriSd::class.java)
+                intent.putExtra("POINTER_SOAL", "SoalMatKelas5")
+                startActivity(intent)
+            }
+        }
+
+        mat6.setOnClickListener {
+            if(SoalManager.dijawab(scoreManager.scoreMatKelas6, SoalManager.MATEMATIKA_KELAS6)){
+                Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, LatihanMateriSd::class.java)
+                intent.putExtra("POINTER_SOAL", "SoalMatKelas6")
                 startActivity(intent)
             }
         }
