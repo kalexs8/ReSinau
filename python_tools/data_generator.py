@@ -1,5 +1,6 @@
 import re
 from sys import argv
+from string import punctuation
 
 class Logger:
     def __init__(self):
@@ -15,12 +16,22 @@ class Logger:
         with open("runtime.log", "a") as f:
             f.write("[Info]: " + message + "\n")
 
+def tokenize_comment(cmt, st) -> str:
+    if cmt in st:
+        return st.split(cmt)[0]
+    return st
+def valid_comment(cmt) -> bool:
+    for i in cmt:
+        if i not in punctuation:
+            return False
+    return True
+
 log = Logger()
 log.info("Initial reading argv[1]")
 if len(argv) < 2:
     log.error("Parameter minimal harus 2")
 
-soalPattern = re.compile(r"^\d+\..*(\.{3}|=|\?|\.{3} |= |\? )$", re.IGNORECASE | re.MULTILINE)
+soalPattern = re.compile(r"^\d+\..*(\.{3}( +)?|=( +)?|\?( +)?|\!( +)?)$", re.IGNORECASE | re.MULTILINE)
 jawabPattern = re.compile(r"^[a-d|A-D]*\.", re.IGNORECASE)
 
 base_source = ""
@@ -30,6 +41,7 @@ out_kunci = ""
 segments = 3
 segment_jawaban = 3
 jawaban_counter = 3
+comment_keyword = "//"
 
 try:
     with open(argv[1]) as f:
@@ -49,9 +61,15 @@ try:
             gt1 = int(dt_arg[1])
             segment_jawaban = gt if gt >= 3 else 3
             jawaban_counter = gt1 if gt1 >= 3 else 3
-            
+        if len(x) >= 7:
+            get_kw = x[6].split("=")[1]
+            if not valid_comment(get_kw):
+                log.error("Keyword untuk comment harus semuanya simbol (punctuation) keyword masukkan: {}".format(get_kw))
+            comment_keyword = get_kw
+
+
 except Exception as e:
-    log.error(e)
+    log.error("Python error: " + e)
     
 
 soal = []
@@ -60,14 +78,18 @@ kunci_jawab = []
 log.info("Fetched output keywords (Reader: {}, Soal: {}, Jawaban: {}, Kunci: {})".format(base_source, out_soal, out_jawab, out_kunci))
 log.info("Starting tool using soal segments of {} and jawaban segments of {}".format(segments, segment_jawaban))
 log.info("Starting extraction")
-with open(base_source, "r") as f:
-    s = f.read()
+with open(base_source, "r", encoding="utf-8") as f:
+    s = ""
+    try:
+        s = f.read()
+    except Exception as e:
+        log.error("Python error: " + e)
     pecahan = s.split("\n")
     st = ""
     kunci_jawaban = []
     detected_dash = False
     for idx in range(0, len(pecahan)):
-        i = pecahan[idx]
+        i = tokenize_comment(comment_keyword, pecahan[idx])
         if len(i) < 1:
             continue
 
@@ -110,6 +132,7 @@ with open(base_source, "r") as f:
     # Fetch kunci jawaban (kalau ada)
     if not detected_dash:
         for i in pecahan:
+            i = tokenize_comment(comment_keyword, i)
             if i.lower().startswith("jawaban: a"):
                 kunci_jawaban.append(0)
             elif i.lower().startswith("jawaban: b"):
@@ -126,6 +149,7 @@ with open(base_source, "r") as f:
         log.info("Starting kunci switch extractor...")
         for i in pecahan:
             if yet_found:
+                i = tokenize_comment(comment_keyword, i)
                 if i.lower().startswith("a"):
                     log.info("Got A")
                     kunci_jawaban.append(0)
@@ -177,7 +201,6 @@ for i in range(0, 2):
                 jtmp = []
 del temp
 del jtmp
-print(jawab)
 
 len_kunci = len(kunci_jawab)
 len_soal = len(soal) / segments
