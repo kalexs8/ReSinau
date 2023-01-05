@@ -1,0 +1,29 @@
+1. A?
+a. A
+b. B
+c. C
+jawaban: a. A
+
+2. B!
+a. A
+b. B
+c. C
+jawaban: b. B
+
+3. C...
+a. A
+b. B
+c. C
+jawaban: c. C
+
+4. BC = 
+A. AC
+B. BC
+C. CA
+jawaban: b. BC
+
+// --kunci
+// a
+// b
+// c
+// b
