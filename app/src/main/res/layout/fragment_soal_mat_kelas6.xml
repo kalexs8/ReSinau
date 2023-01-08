@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:contentDescription="@string/selamat_datang"
+    android:contentDescription="@string/mat_sd"
     tools:ignore="HardcodedText"
     tools:context="com.example.matematika.SoalMatKelas6" >
 

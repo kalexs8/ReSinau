@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
+    tools:context=".MateriSmp">
+
+    <ScrollView
+        android:id="@+id/scrollViewSmp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/smp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/seniKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/seniKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnSeniSmp" />
+
+            <TextView
+                android:id="@+id/seniKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/seniKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnSeniSmp" />
+
+            <TextView
+                android:id="@+id/pknKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/pknKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnPancasilaSmp" />
+
+            <TextView
+                android:id="@+id/pknKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/pknKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnPancasilaSmp" />
+
+            <TextView
+                android:id="@+id/englisKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/englisKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSmp" />
+
+            <TextView
+                android:id="@+id/englisKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/englisKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSmp" />
+
+            <TextView
+                android:id="@+id/indoKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/indoKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnIndonesiaSmp" />
+
+            <TextView
+                android:id="@+id/indoKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/indoKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnIndonesiaSmp" />
+
+            <TextView
+                android:id="@+id/ipsKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/ipsKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnIpsSmp" />
+
+            <TextView
+                android:id="@+id/ipsKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/ipsKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnIpsSmp" />
+
+            <TextView
+                android:id="@+id/paiKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/paiKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnPaiSmp" />
+
+            <TextView
+                android:id="@+id/paiKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/paiKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnPaiSmp" />
+
+            <TextView
+                android:id="@+id/ipaKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/ipaKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnIpaSmp" />
+
+            <TextView
+                android:id="@+id/ipaKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/ipaKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnIpaSmp" />
+
+            <TextView
+                android:id="@+id/matKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/matKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnMatSmp" />
+
+            <TextView
+                android:id="@+id/englisKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSmp" />
+
+            <TextView
+                android:id="@+id/pjokKelas9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas9"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/pjokKelas8"
+                app:layout_constraintTop_toBottomOf="@+id/btnPjokSmp" />
+
+            <TextView
+                android:id="@+id/pjokKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/pjokkelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnPjokSmp" />
+
+            <TextView
+                android:id="@+id/pjokkelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPjokSmp" />
+
+            <TextView
+                android:id="@+id/seniKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSeniSmp" />
+
+            <TextView
+                android:id="@+id/pknKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPancasilaSmp" />
+
+            <TextView
+                android:id="@+id/indoKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIndonesiaSmp" />
+
+            <TextView
+                android:id="@+id/ipsKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIpsSmp" />
+
+            <TextView
+                android:id="@+id/ipaKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIpaSmp" />
+
+            <TextView
+                android:id="@+id/matKelas8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas8"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/matKelas7"
+                app:layout_constraintTop_toBottomOf="@+id/btnMatSmp" />
+
+            <TextView
+                android:id="@+id/matKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMatSmp" />
+
+            <Button
+                android:id="@+id/btnEnglishSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/inggris"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/indoKelas7" />
+
+            <Button
+                android:id="@+id/btnSeniSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/seni"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pknKelas7" />
+
+            <Button
+                android:id="@+id/btnPjokSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/olahraga"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seniKelas7" />
+
+            <Button
+                android:id="@+id/btnPancasilaSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pancasila"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/englisKelas7" />
+
+            <Button
+                android:id="@+id/btnIndonesiaSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/indonesia"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ipsKelas7" />
+
+            <Button
+                android:id="@+id/btnIpsSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/ips"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ipaKelas7" />
+
+            <TextView
+                android:id="@+id/paiKelas7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_box"
+                android:text="@string/kelas7"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPaiSmp" />
+
+            <Button
+                android:id="@+id/btnIpaSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/ipa"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/matKelas8" />
+
+            <Button
+                android:id="@+id/btnMatSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/matematika"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paiKelas7" />
+
+            <Button
+                android:id="@+id/btnPaiSmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pai"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ConstrainLayoutScoreSmp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstrainLayoutScoreSmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/scorePjokSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="PJOK: 0"
+                    app:layout_constraintStart_toEndOf="@+id/scoreSeniSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreIpsSmp" />
+
+                <TextView
+                    android:id="@+id/scoreSeniSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Seni: 0"
+                    app:layout_constraintStart_toEndOf="@+id/scorePancasilaSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreIpaSmp" />
+
+                <TextView
+                    android:id="@+id/scorePancasilaSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Pancasila: 0"
+                    app:layout_constraintStart_toEndOf="@+id/scoreInggrisSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreMatSmp" />
+
+                <TextView
+                    android:id="@+id/scoreInggrisSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="B.Inggris: 0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scorePaiSmp" />
+
+                <TextView
+                    android:id="@+id/scoreIndoSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="B.Indo: 0"
+                    app:layout_constraintStart_toEndOf="@+id/scoreIpsSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
+
+                <TextView
+                    android:id="@+id/scoreIpsSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="IPS: 0"
+                    app:layout_constraintStart_toEndOf="@+id/scoreIpaSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
+
+                <TextView
+                    android:id="@+id/scoreIpaSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="IPA: 0"
+                    app:layout_constraintStart_toEndOf="@+id/scoreMatSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
+
+                <TextView
+                    android:id="@+id/scoreTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Score: 0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/scoreMatSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/scorePaiSmp"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
+
+                <TextView
+                    android:id="@+id/scorePaiSmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="PAI: 0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

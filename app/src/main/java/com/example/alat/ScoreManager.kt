@@ -40,12 +40,27 @@ class ScoreManager(context: Context) {
         get() = sharedPrefs.getInt("score_mat_kelas_6", 0)
         set(v) = sharedPrefs.edit().putInt("score_mat_kelas_6", v).apply()
 
+    var scoreMatKelas7: Int
+        get() = sharedPrefs.getInt("score_mat_kelas_7", 0)
+        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_7", v).apply()
+
+    var scoreMatKelas8: Int
+        get() = sharedPrefs.getInt("score_mat_kelas_8", 0)
+        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_8", v).apply()
+
+    var scoreMatKelas9: Int
+        get() = sharedPrefs.getInt("score_mat_kelas_9", 0)
+        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_9", v).apply()
+
+
+
+
 
 
 
 
     var totalScore: Int
         get() = scoreMatKelas1 + scoreMatKelas2 + scoreMatKelas3 +scoreMatKelas4 +scoreMatKelas5+
-                scoreMatKelas6
+                scoreMatKelas6 + scoreMatKelas7 + scoreMatKelas8 + scoreMatKelas9
         set(v) = sharedPrefs.edit().putInt("total_score", v).apply()
 }

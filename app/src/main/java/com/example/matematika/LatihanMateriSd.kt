@@ -21,9 +21,9 @@ class LatihanMateriSd : AppCompatActivity() {
         setContentView(R.layout.activity_latihan_materi_sd)
         supportActionBar?.hide()
         val tipeSoal = intent.getStringExtra("POINTER_SOAL")
-        val viewPagerBilangan: ViewPager2 = findViewById(R.id.view_pager_bilangan)
+        val viewPagerBilangan: ViewPager2 = findViewById(R.id.view_pager_bilangan_sd)
         scoreManager = ScoreManager(applicationContext)
-        progressBar = findViewById(R.id.progress_bar)
+        progressBar = findViewById(R.id.progress_bar_sd)
 
 
         val closesd = findViewById<ImageView>(R.id.closeSd)

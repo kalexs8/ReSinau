@@ -9,7 +9,7 @@
     tools:ignore="HardcodedText">
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollViewSd"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/pjokkelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnPJOKsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPjokSd" />
 
             <TextView
                 android:id="@+id/pjokkelas2"
@@ -43,7 +43,7 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/pjokkelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnPJOKsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPjokSd" />
 
             <TextView
                 android:id="@+id/pjokkelas1"
@@ -55,7 +55,7 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnPJOKsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPjokSd" />
 
             <TextView
                 android:id="@+id/seniKelas6"
@@ -91,7 +91,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/seniKelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnSENIssd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnSeniSd" />
 
             <TextView
                 android:id="@+id/seniKelas2"
@@ -103,7 +103,7 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/seniKelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnSENIssd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnSeniSd" />
 
             <TextView
                 android:id="@+id/pknKelas6"
@@ -187,7 +187,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/englisKelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSD" />
+                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSd" />
 
             <TextView
                 android:id="@+id/englisKelas2"
@@ -199,7 +199,7 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/englisKelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSD" />
+                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSd" />
 
             <TextView
                 android:id="@+id/englisKelas1"
@@ -211,7 +211,7 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSD" />
+                app:layout_constraintTop_toBottomOf="@+id/btnEnglishSd" />
 
             <TextView
                 android:id="@+id/indoKelas6"
@@ -319,7 +319,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/paiKelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnPAIsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPaiSd" />
 
             <TextView
                 android:id="@+id/paiKelas2"
@@ -331,7 +331,7 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/paiKelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnPAIsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPaiSd" />
 
             <TextView
                 android:id="@+id/ipaKelas6"
@@ -355,7 +355,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/ipaKelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnIpasd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnIpaSd" />
 
             <TextView
                 android:id="@+id/ipaKelas5"
@@ -368,18 +368,6 @@
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/ipaKelas4"
                 app:layout_constraintTop_toBottomOf="@+id/ipaKelas2" />
-
-            <TextView
-                android:id="@+id/ipaKelas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/text_box"
-                android:text="@string/kelas3"
-                android:visibility="gone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ipaKelas1" />
 
             <TextView
                 android:id="@+id/matKelas6"
@@ -415,7 +403,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/matKelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnMatSD" />
+                app:layout_constraintTop_toBottomOf="@+id/btnMatSd" />
 
             <TextView
                 android:id="@+id/pjokKelas6"
@@ -475,7 +463,7 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnSENIssd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnSeniSd" />
 
             <TextView
                 android:id="@+id/pknKelas4"
@@ -547,7 +535,7 @@
                 android:text="@string/kelas3"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/ipsKelas2"
-                app:layout_constraintTop_toBottomOf="@+id/btnIPSsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnIpsSd" />
 
             <TextView
                 android:id="@+id/ipaKelas4"
@@ -595,7 +583,7 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnIPSsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnIpsSd" />
 
             <TextView
                 android:id="@+id/ipsKelas2"
@@ -607,10 +595,10 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/ipsKelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnIPSsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnIpsSd" />
 
             <Button
-                android:id="@+id/btnEnglishSD"
+                android:id="@+id/btnEnglishSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -621,7 +609,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/indoKelas4" />
 
             <Button
-                android:id="@+id/btnSENIssd"
+                android:id="@+id/btnSeniSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -632,7 +620,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/pknKelas4" />
 
             <Button
-                android:id="@+id/btnPJOKsd"
+                android:id="@+id/btnPjokSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -665,7 +653,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ipsKelas4" />
 
             <Button
-                android:id="@+id/btnIPSsd"
+                android:id="@+id/btnIpsSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -688,7 +676,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/paiKelas1" />
 
             <Button
-                android:id="@+id/btnIpasd"
+                android:id="@+id/btnIpaSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -708,10 +696,10 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/matKelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnMatSD" />
+                app:layout_constraintTop_toBottomOf="@+id/btnMatSd" />
 
             <Button
-                android:id="@+id/btnMatSD"
+                android:id="@+id/btnMatSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -730,10 +718,10 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnMatSD" />
+                app:layout_constraintTop_toBottomOf="@+id/btnMatSd" />
 
             <Button
-                android:id="@+id/btnPAIsd"
+                android:id="@+id/btnPaiSd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -741,7 +729,7 @@
                 android:text="@string/pai"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ConstrainLayoutScoreSD" />
+                app:layout_constraintTop_toBottomOf="@id/ConstrainLayoutScoreSd" />
 
             <TextView
                 android:id="@+id/paiKelas1"
@@ -753,7 +741,7 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnPAIsd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnPaiSd" />
 
             <TextView
                 android:id="@+id/ipaKelas1"
@@ -765,7 +753,7 @@
                 android:text="@string/kelas1"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnIpasd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnIpaSd" />
 
             <TextView
                 android:id="@+id/ipaKelas2"
@@ -777,10 +765,10 @@
                 android:text="@string/kelas2"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/ipaKelas1"
-                app:layout_constraintTop_toBottomOf="@+id/btnIpasd" />
+                app:layout_constraintTop_toBottomOf="@+id/btnIpaSd" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ConstrainLayoutScoreSD"
+                android:id="@+id/ConstrainLayoutScoreSd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -788,7 +776,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/scorePJOKsd"
+                    android:id="@+id/scorePjokSd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -825,7 +813,7 @@
                     android:layout_marginTop="16dp"
                     android:text="B.Inggris: 0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/scorePAISd" />
+                    app:layout_constraintTop_toBottomOf="@+id/scorePaiSd" />
 
                 <TextView
                     android:id="@+id/scoreIndoSd"
@@ -835,7 +823,7 @@
                     android:layout_marginTop="16dp"
                     android:text="B.Indo: 0"
                     app:layout_constraintStart_toEndOf="@+id/scoreIpsSd"
-                    app:layout_constraintTop_toBottomOf="@+id/scoreTotalSD" />
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 
                 <TextView
                     android:id="@+id/scoreIpsSd"
@@ -845,7 +833,7 @@
                     android:layout_marginTop="16dp"
                     android:text="IPS: 0"
                     app:layout_constraintStart_toEndOf="@+id/scoreIpaSd"
-                    app:layout_constraintTop_toBottomOf="@+id/scoreTotalSD" />
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 
                 <TextView
                     android:id="@+id/scoreIpaSd"
@@ -855,10 +843,10 @@
                     android:layout_marginTop="16dp"
                     android:text="IPA: 0"
                     app:layout_constraintStart_toEndOf="@+id/scoreMatSd"
-                    app:layout_constraintTop_toBottomOf="@+id/scoreTotalSD" />
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 
                 <TextView
-                    android:id="@+id/scoreTotalSD"
+                    android:id="@+id/scoreTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total Score: 0"
@@ -872,18 +860,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toEndOf="@+id/scorePAISd"
-                    app:layout_constraintTop_toBottomOf="@+id/scoreTotalSD" />
+                    app:layout_constraintStart_toEndOf="@+id/scorePaiSd"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 
                 <TextView
-                    android:id="@+id/scorePAISd"
+                    android:id="@+id/scorePaiSd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:text="PAI: 0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/scoreTotalSD" />
+                    app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -38,7 +38,9 @@
     <string name="olahraga">PJOK (PenJasKes)</string>
     <string name="try_again">coba lagi</string>
     <string name="toast_salah">cek lagi jawaban anda!</string>
-    <string name="selamat_datang">matematika sd</string>
+    <string name="mat_sd">matematika sd</string>
+    <string name="mat_smp">matematika smp</string>
+    <string name="mat_sma">matematika sma</string>
     <string name="segments_sukses">Mantab anda keren!!!, menuju materi selanjutnya</string>
     <string name="next">selanjutnya</string>
     <string name="sukses">anda hebat</string>
@@ -47,6 +49,16 @@
     <string name="kurang_tepat">jawaban belum benar, ayo coba lagi !!</string>
     <string name="changelog">
         Changelog\n
+        \n
+        
+        Version 1.9\n
+                • add activity materi smp\n
+                • add latihan soal materi smp\n
+                • add materi smp matematika complete\n
+        \n
+        
+        Version 1.8b\n
+                • complete materi sd matematika \n
         \n
 
         Version 1.8a\n

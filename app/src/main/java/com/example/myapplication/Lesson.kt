@@ -17,14 +17,14 @@ class Lesson : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_lesson, container, false)
 
 
         val materisd: Button = view.findViewById(R.id.jenjangSD)
         val materismp: Button = view.findViewById(R.id.jenjangSMP)
-        val materisma: Button = view.findViewById(R.id.jenjangSMA)
+        //val materisma: Button = view.findViewById(R.id.jenjangSMA)
         val changeLog: TextView = view.findViewById(R.id.changeLog)
         changeLog.text = getString(R.string.changelog)
 
@@ -34,6 +34,11 @@ class Lesson : Fragment() {
 
         materisd.setOnClickListener {
             val intent = Intent(context, MateriSd::class.java)
+            startActivity(intent)
+        }
+
+        materismp.setOnClickListener {
+            val intent = Intent(context, MateriSmp::class.java)
             startActivity(intent)
         }
 
