@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.alat.ScoreManager
+import com.example.alat.ScoreManagerMatematika
 import com.example.myapplication.R
 
 
@@ -24,23 +24,23 @@ Tinggi gedung tersebut adalah…
 3 sisi – sudut – sisi
 4 sisi – sisi – sudut
 Jawaban yang benar adalah…
-""", 0),
+""", R.mipmap.mat_kelas9_soal2),
             Pair("""3. Perhatikan gambar berikut.   
 Nilai x sama dengan .... 
-""", 0)),
+""", R.mipmap.mat_kelas9_soal3)),
 
         listOf(Pair("""4. Seorang pemuda menghitung lebar sungai dengan menancapkan tongkat di Q, R, S, dan T ( seperti gambar) 
 sehingga S, R, P segaris ( P = benda di seberang sungai). Lebar sungai (PQ) adalah . . .   
-""", 0),
+""", R.mipmap.mat_kelas9_soal4),
             Pair("""5. Perhatikan gambar di bawah ini 
 Jika ∆ ABC dan ∆ PQR kongruen, maka pasangan sisi yang sama panjang adalah…
-""", 0),
+""", R.mipmap.mat_kelas9_soal5),
             Pair("""6. Pernyataan berikut yang tidak benar adalah…
 """, 0)),
 
         listOf(Pair("""7. Sebuah tabung memiliki jari-jari 10,5 cm dan tinggi 8 cm. Jika  , maka Luas selimut tabung adalah…
 """, 0),
-            Pair("""8. Perhatikan gambar di bawah ini. Jika segiempat ABCD sebangun dengan segiempat DEFG, maka panjang BC adalah ....""", 0),
+            Pair("""8. Perhatikan gambar di bawah ini. Jika segiempat ABCD sebangun dengan segiempat DEFG, maka panjang BC adalah ....""", R.mipmap.mat_kelas9_soal8),
             Pair("""9. Sebuah tempat air berbentuk tabung dengan panjang jari-jari alas 140 cm dan tinggi 1 meter. Jika ditentukan , maka volume tempat air itu adalah…
 """, 0)),
 
@@ -48,14 +48,14 @@ Jika ∆ ABC dan ∆ PQR kongruen, maka pasangan sisi yang sama panjang adalah�
 maka luas seng yang diperlukan adalah …
 """, 0),
             Pair("""11. Perhatikan gambar di atas. Jika panjang BC = CD = 8 cm dan DE = 9 cm, maka panjang AD adalah..
-""", 0),
+""", R.mipmap.mat_kelas9_soal11),
             Pair("""12.  Luas permukaan sebuah kerucut diketahui 200 cm2. Jika panjang jari-jari alasnya 8 cm, maka volume kerucut tersebut adalah…
 """, 0)),
 
         listOf(Pair("""13. Suatu kerucut dibentuk dengan jari-jari 8 cm, tinggi 15 cm, dan  = 3,14. Luas seluruh permukaan kerucut tersebut adalah…
 """, 0),
             Pair("""14. Jika a =14 cm dan b = 12 cm, maka volume bangun tersebut adalah…  
-""", 0),
+""", R.mipmap.mat_kelas9_soal14),
             Pair("""15. Sebuah drum berbentuk tabung dengan panjang diameter 140 cm dan tingginya 60 cm berisi penuh dengan minyak tanah, maka volume drum adalah…liter
 """, 0)),
 
@@ -77,22 +77,22 @@ Nilai Dinda dalam tes matematika tersebut adalah...
 
         listOf(Pair("""22. Tabel berikut adalah data hasil ulangan matematika siswa kelas 9B MTsN Lawang
 Banyak siswa yang memperoleh nilai lebih dari rata-rata adalah…
-""", 0),
+""", R.mipmap.mat_kelas9_soal22),
             Pair("""23. Modus nilai ulangan matematika siswa kelas 9B pada tabel di atas adalah…
 """, 0),
             Pair("""24. Perhatikan tabel di bawah ini:
 Jika nilai rata-rata ulangan Matematika dari data di atas adalah 60,5 maka nilai p adalah …
-""", 0)),
+""", R.mipmap.mat_kelas9_soal24)),
 
         listOf(Pair("""25. Median dari 7, 5, 8, 6, 6, 8, 5, 9, 8, 10, 9, 7 adalah…
 """, 0),
             Pair("""26. Diagram brkt menggambarkan tentang 4 pelajaran UN yang disukai sekelompok siswa. 
 Perbandingan jumlah siswa yang menyukai matematika dan IPA 3 : 2. Jika banyak siswa dalam kelompok tersebut 420 siswa, 
 maka banyak siswa yang menyukai pelajaran IPA…
-""", 0),
+""", R.mipmap.mat_kelas9_soal26),
             Pair("""27. Perhatikan tabel distribusi frekuensi berikut
 Median dari data tersebut adalah ....
-""", 0)),
+""", R.mipmap.mat_kelas9_soal27)),
 
         listOf(Pair("""28. Dari suatu catatan penjual toko keramik pada suatu tahun, setiap bulannya berturut-turut terjual sebanyak 1.750 buah, 
  2.250 buah, 2.500 buah, 2.200 buah, 2.000 buah, 2.000 buah, dan 2.750 buah. Modus data itu adalah ...
@@ -102,7 +102,7 @@ Dari data tersebut,modusnya adalah...
 """, 0),
             Pair("""30. Dalam sebuah kelas, diketahui nilai rata-rata kelompok putri adalah 7,5 sedangkan kelompok putra adalah 6,7. 
 Jika nilai rata-rata kelas 6,9 maka perbandingan banyak siswa putra dan putri dalam kelas itu adalah…
-""", 0)),
+""", R.mipmap.mat_kelas9_soal30)),
 
         listOf(Pair("""31. Nilai dari 5/2⁰ adalah ...""", 0),
             Pair("""32. Bentuk sederhana dari (q³)³ x (q⁴)⁵ adalah ...""", 0),
@@ -146,7 +146,7 @@ Jika nilai rata-rata kelas 6,9 maka perbandingan banyak siswa putra dan putri da
             Pair("""60. Hasil kali berat Adi dan Beni adalah 1400 kg. Berat Beni 5 kg lebihnya dari berat badan Adi. Jumlah berat badan mereka adalah ...""", 0)),
 
         listOf(Pair("""61. Hasil dari –25 x (8 + (–9)) : (2 – 7) adalah ...""", 0),
-            Pair("""62. Hasil dari adalah ...""", 0),
+            Pair("""62. Hasil dari adalah ...""", R.mipmap.mat_kelas9_soal62),
             Pair("""63. Suhu didalam kulkas sebelum dihidupkan 250C. Setelah dihidupkan selama 4 jam suhunya menjadi –90C. 
 perbedaan suhu kulkas sebelum dan setelah dihidupkan adalah ....
 """, 0)),
@@ -154,13 +154,13 @@ perbedaan suhu kulkas sebelum dan setelah dihidupkan adalah ....
         listOf(Pair("""64. Panitia kegiatan sosial menerima sumbangan gula pasir beratnya 21 kg dan 23 kg untukd ibagikan kepada sekelompok warga. 
 setiap warga menerima 2 kg. Berapa banyak warga yangmenerima gula pasir tersebut ?
 """, 0),
-            Pair("""65. Hasil dari adalah ...""", 0),
-            Pair("""66.Bentuk sederhana adalah...""", 0)),
+            Pair("""65. Hasil dari adalah ...""", R.mipmap.mat_kelas9_soal65),
+            Pair("""66.Bentuk sederhana adalah...""", R.mipmap.mat_kelas9_soal66)),
 
         listOf(Pair("""67. Tiga suku berikutnya dari 1, 5, 11, 19,.... adalah?""", 0),
             Pair("""68. Perhatikan gambar berpola berikut :
 jika pola diatas dilanjutkan, banyak bulatan pada pola ke-61 adalah ......
-""", 0),
+""", R.mipmap.mat_kelas9_soal68),
             Pair("""69. Jumlah semua bilangan kelipatan 3 dan 4 antara 200 dan 450 adalah ...""", 0)),
 
         listOf(Pair("""70 . Toko elektronik “CINTA PRODUK INDONESIA” menjual televisi dan memperoleh keuntungan 25%.
@@ -205,54 +205,54 @@ Banyak pembaca yang menyukai majalah politik adalah ...
 """, 0),
             Pair("""81 . Perhatikan diagram panah !
 rumus fungsi dari P ke Q adalah ...
-""", 0)),
+""", R.mipmap.mat_kelas9_soal81)),
 
         listOf(Pair("""82 . Diketahui rumus fungsi f(x)= 2x - 3, Jika f(m) = 5 dan f(–2)= n, nilai dari m + n adalah ...
 """, 0),
             Pair("""83 . Gradien garis yang tegak lurus terhadap garis a adalah ...
-""", 0),
+""", R.mipmap.mat_kelas9_soal83),
             Pair("""84 . Perhatikan garis g pada koordinat Cartesius.
 garis k tegak lurus dengan garis g dan saling berpotongan di titik (0,–20). Koordinat titik potong garis k pada sumbu x adalah...
-""", 0)),
+""", R.mipmap.mat_kelas9_soal84)),
 
         listOf(Pair("""85 . Keliling lapangan berbentuk persegipanjang 58 meter. Jika selisih antara panjang dan lebarlapangan 9 meter. 
 Luas lapangan tersebut adalah ...
 """, 0),
             Pair("""86 . Perhatikan gambar berikut :
 pasangan sudut luar sepihak adalah ...
-""", 0),
+""", R.mipmap.mat_kelas9_soal86),
             Pair("""87 . Perhatikan gambar !
 luas karton yang digunakan untuk membuat bangun huruf E
 adalah ...
-""", 0)),
+""", R.mipmap.mat_kelas9_soal87)),
 
         listOf(Pair("""88 . Perhatikan gambar bangun yang terdiri dari jajargenjang dan segitiga siku siku !
 keliling bangun tersebut adalah ...
-""", 0),
+""", R.mipmap.mat_kelas9_soal88),
             Pair("""89 . Seorang pengamat berada di atas sebuah mercusuar yang memiliki ketinggian 12 meter.
 ia melihat kapal A dan kapal B yang berlayar dilaut.
 jarak pengamat ke kapal A dan ke kapal B berturut turut 20 meter dan 13 meter.
 posisi kapal A, kapal B dan kaki mercusuar terletak segaris.
 jarak antara kapal A dan kapal B adalah ...
-""", 0),
+""", R.mipmap.mat_kelas9_soal89),
             Pair("""90 . Perhatikan gambar !
 titik O adalah titik pusat lingkaran. Garis AC adalah diameter.
 besar sudut ADB adalah ...
-""", 0)),
+""", R.mipmap.mat_kelas9_soal90)),
 
         listOf(Pair("""91 . Sebuah prisma mempunyai 36 rusuk dan 14 sisi. Bentuk alas prisma tersebut ...
 """, 0),
             Pair("""92 . Pak Budi memiliki kawat panjangnya 10 meter yang akan digunakan sebagai empat kerangka bangun ruang seperti dibawah ini:
 sisa kawat yang dimiliki Pak Budi adalah ...
-""", 0),
+""", R.mipmap.mat_kelas9_soal92),
             Pair("""93 . Dua segitiga dibawah ini adalah kongruen !
 pasangan sisi yang sama panjang adalah ...
-""", 0)),
+""", R.mipmap.mat_kelas9_soal93)),
 
         listOf(Pair("""94 . Perhatikan gambar !
 diketahui AB = BC = CD = 18 cm.
 panjang BF adalah ...
-""", 0),
+""", R.mipmap.mat_kelas9_soal94),
             Pair("""95 . Sebuah tabung berdiameter 14 cm dengan tinggi 34 cm.
 luas seluruh permukaan tabung adalah ...
 """, 0),
@@ -272,7 +272,7 @@ judul dan Katalog = 2 halaman, Penjelasan Buku = 1 halaman, KataSambutan = 1 hal
 daftar isi = 1 halaman, Kunci Jawaban = 1 halaman,Daftar Simbol = 1 halaman, Glosarium = 1 halaman,
 indeks = 2 halaman, Daftar Pustaka = 1 halaman, Tes Kemampuan = 4 halaman, yang masing masing Bab, jumlah halamanya disajikan dalam diagram disamping
 Banyak halaman pada bab IV adalah ...
-""", 0)),
+""", R.mipmap.mat_kelas9_soal99)),
 
         listOf(Pair("""100. Dalam kantong terdapat tiga bola berwarna merah diberi nomor 1 sampai 3, lima bola berwarna kuning diberi nomor 4 sampai 8,
 dan empat bola berwarna hijau diberi nomor 9 sampai 12.Tiga bola diambil satu persatu secara acak dari dalam kantong.
@@ -292,7 +292,7 @@ peluang terambil bernomor ganjil pada pengambilan ketiga adalah ...
 
         listOf(Pair("""106. Hasil dari √12 x √6 adalah...""", 0),
             Pair("""107. Hasil dari  adalah … .
-""", 0),
+""", R.mipmap.mat_kelas9_soal107),
             Pair("""108. Jika salah satu akar dari persamaan kuadrat x²-4x + c =0 adalah 2,maka nilai c yang memenuhi persamaan itu adalah...""", 0)),
 
         listOf(Pair("""109. jika akar-akar persamaan kuadrat x² -3x -10 = 0 adalah X1 dan X2, maka hasil dari X1 + X2 sama dengan....""", 0),
@@ -375,7 +375,7 @@ panjang DE adalah ….
             Pair("""138. Ibu membeli kain 3,75m² . ²∕₅ dibuat baju dan ⅔ dari sisanya dibuat rok. Kain ibu yg tersisa.... M² ?""", 0)),
 
         listOf(Pair("""139. Bentuk Sederhana dari 6/4 - 3√2 adalah...""", 0),
-            Pair("""140. Hasil dari gambar di bawah adalah...""", 0),
+            Pair("""140. Hasil dari gambar di bawah adalah...""", R.mipmap.mat_kelas9_soal140),
             Pair("""141. Sebuah asrama memiliki penghuni sebanyak 30 orang. persediaan makanan yang ada di perkirakan akan habis selama 8 hari. 
 karena ada tambahan 10 orang penghuni, berapa hari persediaan makanan akan habis?
 """, 0)),
@@ -716,7 +716,7 @@ jika 10 siswa tidak pernah berkunjung ke Ancol maupun ke Taman Mini, banyaknya a
 
 
     )
-    private lateinit var scoreManager9: ScoreManager
+    private lateinit var scoreManagerMatematika9: ScoreManagerMatematika
 
 
     override fun onCreateView(
@@ -725,8 +725,8 @@ jika 10 siswa tidak pernah berkunjung ke Ancol maupun ke Taman Mini, banyaknya a
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_soal_mat_kelas9, container, false)
-        scoreManager9 = ScoreManager(requireActivity().applicationContext)
-        jawabanBenar9 = if(scoreManager9.scoreMatKelas9 < 1) 0 else scoreManager9.scoreMatKelas9 / 5
+        scoreManagerMatematika9 = ScoreManagerMatematika(requireActivity().applicationContext)
+        jawabanBenar9 = if(scoreManagerMatematika9.scoreMatKelas9 < 1) 0 else scoreManagerMatematika9.scoreMatKelas9 / 5
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -775,18 +775,18 @@ jika 10 siswa tidak pernah berkunjung ke Ancol maupun ke Taman Mini, banyaknya a
                     val ch2 = pilihanGanda9[jawabanBenar9][1][kunciJawaban9[jawabanBenar9][1]]
                     val ch3 = pilihanGanda9[jawabanBenar9][2][kunciJawaban9[jawabanBenar9][2]]
 
-                    var scoreMatSd = scoreManager9.scoreMatKelas9
+                    var scoreMatSd = scoreManagerMatematika9.scoreMatKelas9
                     if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
                         jawabanBenar9++
 
                         if(jawabanBenar9 == soalMatsd9.size){
                             scoreMatSd +=5
-                            scoreManager9.scoreMatKelas9 = scoreMatSd
+                            scoreManagerMatematika9.scoreMatKelas9 = scoreMatSd
                             Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
                             done = true
                         }else {
                             scoreMatSd +=5
-                            scoreManager9.scoreMatKelas9 = scoreMatSd
+                            scoreManagerMatematika9.scoreMatKelas9 = scoreMatSd
                             Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
                             // refresh ui
                             for(i in 0 until (listRadiogrup.size)){

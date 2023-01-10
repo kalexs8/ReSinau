@@ -11,6 +11,7 @@ public final class SoalManager {
     public static final int MATEMATIKA_KELAS7 = 30;
     public static final int MATEMATIKA_KELAS8 = 40;
     public static final int MATEMATIKA_KELAS9 = 50;
+    public static final int PAI_KELAS1 = 10;
 
     // Fungsi operasi soal
     public static boolean dijawab(int score, int target, int division){

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.alat.ScoreManager
+import com.example.alat.ScoreManagerMatematika
 import com.example.myapplication.R
 
 
@@ -33,7 +33,7 @@ Pernyataan-pernyataan yang benar adalah ....
 
         listOf(Pair("""4. Perhatikan garis bilangan berikut :
 Hasil akhir yang sesuai dengan garis bilangan di atas adalah ....
-""", 0),
+""", R.mipmap.mat_kelas7_soal4),
             Pair("""5. Diberikan a = -2, b = - 3, maka nilai 2a - b adalah ....""", 0),
             Pair("""6. Saya adalah suatu bilangan bila saya dikalikan 13 kemudian ditambah 21 hasilnya tidak kurang dari 99 maka saya yang paling kecil adalah...""", 0)),
 
@@ -69,7 +69,7 @@ Himpunan di atas yang mempunyai 4 anggota adalah...
         listOf(Pair("""16. { y | 3 ≤ 2y + 1 ≤ 15, y ∈ himpunan bilangan ganjil } jika dinyatakan dengan mendaftar anggotanya adalah ...""", 0),
             Pair("""17. Diketahui bahwa nilai dari S = 50, A = (15 - x), serta B = (27 + x),
 maka jumlah dari irisan A dan B dari gambar yang ada di bawah ini yaitu ...
-""", 0),
+""", R.mipmap.mat_kelas7_soal17),
             Pair("""18. Diketahui P = {bilangan prima kurang dari 10}. Banyak himpunan bagian dari P adalah ....""", 0)),
 
         listOf(Pair("""19. S = { bilangan asli } dan B = { x | x ≤ 10, x bilangan asli } Komplemen dari B adalah...""", 0),
@@ -143,25 +143,25 @@ yang merupakan jenis sudut tumpul adalah ….
 """, 0),
             Pair("""45. Perhatikan gambar berikut
 sudut-sudut tersebut memiliki AC sebagai salah satu kaki sudutnya, kecuali ….
-""", 0)),
+""", R.mipmap.mat_kelas7_soal45)),
 
         listOf(Pair("""46. Penyiku sudut 35° adalah ....""", 0),
             Pair("""47. Perhatikan gambar berikut.
 jika besar x = 125°, maka besar y adalah ….
-""", 0),
+""", R.mipmap.mat_kelas7_soal47),
             Pair("""48. Perhatikan gambar berikut.
 nilai x pada gambar tersebut adalah ….
-""", 0)),
+""", R.mipmap.mat_kelas7_soal48)),
 
         listOf(Pair("""49. Perhatikan gambar berikut.
 besar RQS adalah ….
-""", 0),
+""", R.mipmap.mat_kelas7_soal49),
             Pair("""50. Perhatikan gambar berikut.
 jika ∠AOD + ∠BOC =110°, maka besar ∠DOC = …
-""", 0),
+""", R.mipmap.mat_kelas7_soal50),
             Pair("""51. Perhatikan gambar berikut.
 berdasarkan gambar tersebut, nilai x + y adalah ….
-""", 0)),
+""", R.mipmap.mat_kelas7_soal51)),
 
         listOf(Pair("""52. Rasio waktu yang diluangkan Karina untuk mengerjakan tugas Matematika terhadap tugas IPA adalah 5 banding 4. Jika dia meluangkan 40 menit untuk menyelesaikan tugas Matematika, maka waktu yang dia luangkan untuk menyelesaikan tugas IPA adalah ...""", 0),
             Pair("""53. Pada  peta  dengan  skala  1   :  450,  sebuah  lapangan  berbentuk  persegipanjang tergambar dalam ukuran 8 cm x 6 cm
@@ -174,14 +174,14 @@ banyak botol yang dapat ditutup oleh mesin dalam waktu 2 menit adalah ...
         listOf(Pair("""55. Di antara perbandingan di bawah ini yang senilai dengan 3 : 8 adalah ....""", 0),
             Pair("""56. Diketahui 6 : ( a + 2 ) = 9 : ( 2a – 1 ), nilai a adalah…
 """, 0),
-            Pair("""57. Tabel disamping menunjukkan waktu yang dibutuhkan seorang perajin untuk membuat sepatu. Berapa hari yang dibutuhkan untuk membuat 75 pasang sepatu?""", 0)),
+            Pair("""57. Tabel disamping menunjukkan waktu yang dibutuhkan seorang perajin untuk membuat sepatu. Berapa hari yang dibutuhkan untuk membuat 75 pasang sepatu?""", R.mipmap.mat_kelas7_soal57)),
 
         listOf(Pair("""58. Jarak  antara  dua  kota  pada  peta  adalah  2  cm.  Jarak  sebenarnya  kedua  kota sebenarnya adalah 80 km. Skala yang digunakan peta tersebut adalah ...""", 0),
             Pair("""59.  Seorang penjual mie ayam mengeluarkan modal sebesar  Rp 1.000.000,00 untuk menjalankan  usahanya
 dia mematok harga mie ayam  adalah Rp 10.000,00 per porsi. Jika pada hari itu ia menanggung kerugian sebesar 5%, maka berapa porsi yang terjual pada hari itu.?
 """, 0),
             Pair("""60. Perhatikan tabel disamping menunjukkan pasangan nilai x dan y yang membentuk perbandingan berbalik nilai. Tentukan nilai m ……
-""", 0)),
+""", R.mipmap.mat_kelas7_soal60)),
 
         listOf(Pair("""61. Siswa kelas VII sebuah SMP diminta gurunya untuk menggali informasi dari internet atau perpustakaan
 dari 64 siswa, 48 siswa memilih menggali informasi melalui internet dan 16 siswa memilih mencari di perpustakaan
@@ -216,7 +216,7 @@ setelah 3 bulan uang diambil seluruhnya untuk memperbaiki rumah. Berapa uang yan
 """, 0),
             Pair("""71. Perhatikan gambar berikut
 garis yang sejajar dengan AB adalah...
-""", 0),
+""", R.mipmap.mat_kelas7_soal71),
             Pair("""72. Perhatikan gambar di samping, yang merupakan sudut lancip adalah . . .
 """, 0)),
 
@@ -226,7 +226,7 @@ i ∠A2 sehadap dengan   ∠B2
 ii ∠A3 dalam berseberangan dengan   ∠B1
 iii ∠A1 luar sepihak dengan   ∠B3
 dari pernyataan di atas yang benar adalah . . .
-""", 0),
+""", R.mipmap.mat_kelas7_soal74),
             Pair("""75. Perhatikan pernyataan di bawah ini 
 i Segitiga lancip adalah segitiga yang ketiga sudutnya merupakan lancip
 ii Segitiga tumpul adalah segitiga yang kedua sudutnya merupakan sudut tumpul
@@ -236,7 +236,7 @@ dari ketiga pernyataan di atas, yang benar adalah …
 
         listOf(Pair("""76. Perhatikan gambar berikut
 keliling persegi panjang EFGH sama dengan dua kali keliling persegi ABCD. Panjang sisi persegi adalah ….  
-""", 0),
+""", R.mipmap.mat_kelas7_soal76),
             Pair("""77. Suatu persegi panjang mempunyai luas 84 cm2,  jika salah satu sisinya 7 cm. Berapakah keliling persegi panjang tersebut?""", 0),
             Pair("""78. Luas sebuah layang-layang 104 cm2. Jika panjang salah satu diagonalnya 16 cm,  hitunglah panjang diagonal yang lain!""", 0)),
 
@@ -247,9 +247,9 @@ dari pernyataan di atas yang merupakan data numerik adalah . . .
 """, 0),
             Pair("""80. Gambar di samping menunjukkan sumber air minum yang dikonsumsi oleh penduduk provinsi Jawa Timur pada tahun 2010 
 dengan populasi jumlah penduduk 34 juta jiwa, berapa banyak penduduk yang mengkonsumsi air sumur ?   
-""", 0),
+""", R.mipmap.mat_kelas7_soal80),
             Pair("""81. Diagram di samping menunjukkan volume ekspor kopi Indonesia ke Inggris tahun 2009 – 2014. Jumlah volume ekspor kopi sebelum tahun 2012 adalah …  
-""", 0)),
+""", R.mipmap.mat_kelas7_soal81)),
 
         listOf(Pair("""82.  Hasil dari (-12):3+8x(-5) adalah..
 """, 0),
@@ -464,7 +464,7 @@ maka siswa yang tidak  menyukai keduanya adalah...
 
 
     )
-    private lateinit var scoreManager7: ScoreManager
+    private lateinit var scoreManagerMatematika7: ScoreManagerMatematika
 
 
     override fun onCreateView(
@@ -473,8 +473,8 @@ maka siswa yang tidak  menyukai keduanya adalah...
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_soal_mat_kelas7, container, false)
-        scoreManager7 = ScoreManager(requireActivity().applicationContext)
-        jawabanBenar7 = if(scoreManager7.scoreMatKelas7 < 1) 0 else scoreManager7.scoreMatKelas7 / 5
+        scoreManagerMatematika7 = ScoreManagerMatematika(requireActivity().applicationContext)
+        jawabanBenar7 = if(scoreManagerMatematika7.scoreMatKelas7 < 1) 0 else scoreManagerMatematika7.scoreMatKelas7 / 5
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -523,18 +523,18 @@ maka siswa yang tidak  menyukai keduanya adalah...
                     val ch2 = pilihanGanda7[jawabanBenar7][1][kunciJawaban7[jawabanBenar7][1]]
                     val ch3 = pilihanGanda7[jawabanBenar7][2][kunciJawaban7[jawabanBenar7][2]]
 
-                    var scoreMatSd = scoreManager7.scoreMatKelas7
+                    var scoreMatSd = scoreManagerMatematika7.scoreMatKelas7
                     if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
                         jawabanBenar7++
 
                         if(jawabanBenar7 == soalMatsd7.size){
                             scoreMatSd +=5
-                            scoreManager7.scoreMatKelas7 = scoreMatSd
+                            scoreManagerMatematika7.scoreMatKelas7 = scoreMatSd
                             Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
                             done = true
                         }else {
                             scoreMatSd +=5
-                            scoreManager7.scoreMatKelas7 = scoreMatSd
+                            scoreManagerMatematika7.scoreMatKelas7 = scoreMatSd
                             Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
                             // refresh ui
                             for(i in 0 until (listRadiogrup.size)){

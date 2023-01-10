@@ -10,9 +10,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.example.alat.ScoreManager
+import com.example.alat.ScoreManagerMatematika
 import com.example.alat.SoalManager
-import com.example.matematika.LatihanMateriSmp
 
 class MateriSmp : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -59,7 +58,7 @@ class MateriSmp : AppCompatActivity() {
         val pjok8 = findViewById<TextView>(R.id.pjokKelas8)
         val pjok9 = findViewById<TextView>(R.id.pjokKelas9)
 
-        val scoreManager = ScoreManager(this)
+        val scoreManagerMatematika = ScoreManagerMatematika(this)
         val scoreMatSd = findViewById<TextView>(R.id.scoreMatSmp)
 
         Thread {
@@ -68,7 +67,7 @@ class MateriSmp : AppCompatActivity() {
                 Thread.sleep(1000) // Sebelum menampilkan skor baru, cooldown selama 1 detik agar Thread tidak exhausted
                 Handler(Looper.getMainLooper()).post{
                     // Untuk listing score bisa ditambahkan dibawah komen ini (tidak usah sesuai urutan)
-                    scoreMatSd.text = getString(R.string.score_mat)+scoreManager.totalScore.toString()
+                    scoreMatSd.text = getString(R.string.score_mat)+scoreManagerMatematika.totalScoreMat.toString()
                 }
             }
         }.start()
@@ -178,7 +177,7 @@ class MateriSmp : AppCompatActivity() {
 
         }
         mat7.setOnClickListener {
-            if(SoalManager.dijawab(scoreManager.scoreMatKelas7, SoalManager.MATEMATIKA_KELAS7)){
+            if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas7, SoalManager.MATEMATIKA_KELAS7)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this, LatihanMateriSmp::class.java)
@@ -188,7 +187,7 @@ class MateriSmp : AppCompatActivity() {
         }
 
         mat8.setOnClickListener {
-            if(SoalManager.dijawab(scoreManager.scoreMatKelas8, SoalManager.MATEMATIKA_KELAS8)){
+            if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas8, SoalManager.MATEMATIKA_KELAS8)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this, LatihanMateriSmp::class.java)
@@ -198,7 +197,7 @@ class MateriSmp : AppCompatActivity() {
         }
 
         mat9.setOnClickListener {
-            if(SoalManager.dijawab(scoreManager.scoreMatKelas9, SoalManager.MATEMATIKA_KELAS9)){
+            if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas9, SoalManager.MATEMATIKA_KELAS9)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this, LatihanMateriSmp::class.java)

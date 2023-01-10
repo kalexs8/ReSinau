@@ -1,4 +1,4 @@
-package com.example.matematika
+package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,14 +6,16 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.myapplication.R
 import android.os.Handler
 import android.os.Looper
-import com.example.alat.ScoreManager
+import com.example.alat.ScoreManagerMatematika
+import com.example.matematika.SoalMatKelas7
+import com.example.matematika.SoalMatKelas8
+import com.example.matematika.SoalMatKelas9
 
 class LatihanMateriSmp : AppCompatActivity() {
 
-    private lateinit var scoreManager: ScoreManager
+    private lateinit var scoreManagerMatematika: ScoreManagerMatematika
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +24,7 @@ class LatihanMateriSmp : AppCompatActivity() {
         supportActionBar?.hide()
         val tipeSoal = intent.getStringExtra("POINTER_SOAL")
         val viewPagerBilangan: ViewPager2 = findViewById(R.id.view_pager_bilangan_smp)
-        scoreManager = ScoreManager(applicationContext)
+        scoreManagerMatematika = ScoreManagerMatematika(applicationContext)
         progressBar = findViewById(R.id.progress_bar_smp)
 
 
@@ -42,7 +44,7 @@ class LatihanMateriSmp : AppCompatActivity() {
                     while (true){
                         Thread.sleep(1000)
                         Handler(Looper.getMainLooper()).post{
-                            progressBar.progress = if(scoreManager.scoreMatKelas7 < 1) 0 else scoreManager.scoreMatKelas7 / 5
+                            progressBar.progress = if(scoreManagerMatematika.scoreMatKelas7 < 1) 0 else scoreManagerMatematika.scoreMatKelas7 / 5
                         }
                     }
                 }.start()
@@ -57,7 +59,7 @@ class LatihanMateriSmp : AppCompatActivity() {
                     while (true){
                         Thread.sleep(1000)
                         Handler(Looper.getMainLooper()).post{
-                            progressBar.progress = if(scoreManager.scoreMatKelas8 < 1) 0 else scoreManager.scoreMatKelas8 / 5
+                            progressBar.progress = if(scoreManagerMatematika.scoreMatKelas8 < 1) 0 else scoreManagerMatematika.scoreMatKelas8 / 5
                         }
                     }
                 }.start()
@@ -72,7 +74,7 @@ class LatihanMateriSmp : AppCompatActivity() {
                     while (true){
                         Thread.sleep(1000)
                         Handler(Looper.getMainLooper()).post{
-                            progressBar.progress = if(scoreManager.scoreMatKelas9 < 1) 0 else scoreManager.scoreMatKelas9 / 5
+                            progressBar.progress = if(scoreManagerMatematika.scoreMatKelas9 < 1) 0 else scoreManagerMatematika.scoreMatKelas9 / 5
                         }
                     }
                 }.start()

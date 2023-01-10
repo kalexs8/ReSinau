@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.alat.ScoreManager
+import com.example.alat.ScoreManagerMatematika
 import com.example.myapplication.R
 
 
@@ -30,7 +30,7 @@ pertambahan luas persegi tersebut adalah ... .
 """, 0),
             Pair("""8. Perhatikan diagram panah berikut
  relasi dari A ke B adalah ... .
-""", 0),
+""", R.mipmap.mat_kelas8_soal8),
             Pair("""9. Diketahui P = {1, 2, 3} dan Q = {a, b} suatu relasi dari P ke Q menyatakan setiap anggota P berpasangan dengan anggota Q
  Himpunan pasangan berurutanyang menyatakan hal tersebut adalah ... .
 """, 0)),
@@ -44,13 +44,13 @@ pertambahan luas persegi tersebut adalah ... .
 
         listOf(Pair("""13. Disajikan data fungsi sebagai berikut
 rumus dari fungsi tersebut adalah ... .
-""", 0),
+""", R.mipmap.mat_kelas8_soal13),
             Pair("""14. Persamaan yang ekuivalen dengan persamaan 2x + 3y -6 = 0 adalah....""", 0),
             Pair("""15. Gradien garis yang melalui titik A(-2, -1) dan B(1,3) adalah ... .
 """, 0)),
 
         listOf(Pair("""16. Grafik garis dengan persamaan 4   − 6   = 12 adalah ... .
-""", 0),
+""", R.mipmap.mat_kelas8_soal16),
             Pair("""17. Persamaan garis yang melalui titik A(4, -1) dan bergradien ½ adalah ... .
 """, 0),
             Pair("""18. Diantara garis berikut sejajar dengan garis dengan persamaan 6x – 12y + 13 = 0, kecuali ... .
@@ -71,7 +71,7 @@ Jarak antara rumah Denis dan Ali adalah ….
 """, 0),
             Pair("""24. Perhatikan gambar berikut:
 Jika pada gambar di bawah panjang busur PQ =34 cm dan ∠POQ = 60o. Maka keliling lingkarannya adalah ….
-""", 0)),
+""", R.mipmap.mat_kelas8_soal24)),
 
         listOf(Pair("""25. Keliling lingkaran yang berjari-jari 35 cm adalah ….
 """, 0),
@@ -86,9 +86,9 @@ panjang garis singgung persekutuan dalam kedua lingkaran tersebut adalah ….
             Pair("""29. Jarak pusat dua buah lingkaran adalah 13 cm. Panjang salah satu jari-jarinya adalah 2 cm, dan panjang garis singgung persekutuan luarnya 12 cm. Panjang jari-jari lingkaran lainnya adalah ….
 """, 0),
             Pair("""30. Gambar di bawah ini merupakan jaring-jaring
-""", 0)),
+""", R.mipmap.mat_kelas8_soal30)),
 
-        listOf(Pair("""31. Perhatikan gambar berikut.Volume prisma segita tersebut adalah ...""", 0),
+        listOf(Pair("""31. Perhatikan gambar berikut.Volume prisma segita tersebut adalah ...""", R.mipmap.mat_kelas8_soal31),
             Pair("""32. Banyak diagonal ruang pada kubus adalah ….
 """, 0),
             Pair("""33. Luas permukaan kubus 486 cm2. Volume kubus tersebut adalah …. 
@@ -99,7 +99,7 @@ panjang garis singgung persekutuan dalam kedua lingkaran tersebut adalah ….
             Pair("""35. Sebuah balok mempunyai ukuran panjang 26 cm, lebar 24 cm, dan tinggi 15 cm. luas permukaan balok tersebut adalah ….
 """, 0),
             Pair("""36. Perhatikan gambar berikut.Volume prisma segitiga tersebut adalah ….
-""", 0)),
+""", R.mipmap.mat_kelas8_soal36)),
 
         listOf(Pair("""37. Sebuah bangun ruang memiliki ciri-ciri sebagai berikut:
 (i)  mempunyai 6 sisi
@@ -114,23 +114,23 @@ panjang garis singgung persekutuan dalam kedua lingkaran tersebut adalah ….
 
         listOf(Pair("""40. Penjualan beras (dalam kuintal) di toko sembako Amanah selama lima hari sebagai berikut:
 Jika penjualan beras selama lima hari sebanyak 230 kuintal, penjualan beras pada hari Rabu adalah ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal40),
             Pair("""41. Diagram berikut merupakan data biaya kesehatan dan belanja makanan pokok masyarakat Indonesia.
 biaya kesehatan masyarakat Indonesia pada tahun 2013 adalah ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal41),
             Pair("""42. Nilai jangkauan kasus sembuh bulan Oktober sekitar ….
-""", 0)),
+""", R.mipmap.mat_kelas8_soal42_43)),
 
         listOf(Pair("""43. Modus kasus sembuh harian bulan Oktober sekitar ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal42_43),
             Pair("""44. Rata-rata persentase tingkat pengangguran terbuka berjenis kelamin laki-laki dari Agustus 2015 sampai Agustus 2019 adalah ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal44),
             Pair("""45. Berikut adalah gambar beberapa benda model prisma dan limas yang diletakkan dengan susunan posisi tertentu
 Jika dilihat dari atas maka susunan posisi benda yang benar adalah ...
-""", 0)),
+""", R.mipmap.mat_kelas8_soal45)),
 
         listOf(Pair("""46. Perhatikan gambar di bawah.Jika panjang a = 18, dan panjang b = 30,  maka panjang c adalah ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal46),
             Pair("""47. Diketahui kelompok tiga bilangan berikut.
 (i) 3, 4, 5                    (iii) 7, 24, 25
 (ii) 5, 13, 14                 (iv) 20, 21, 29
@@ -142,7 +142,7 @@ kelompok bilangan di atas yang merupakan tripel Pythagoras adalah ....
 jarak ujung atas tangga dan permukaan tanah adalah ...
 """, 0),
             Pair("""50. Perhatikan jaring-jaring kubus di bawah ini.Pasangan tutup dan alas kubus adalah ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal50),
             Pair("""51. Luas permukaan balok yang panjang alasnya 20 cm, lebarnya 10 cm, dan tingginya 25 cm adalah ….
 """, 0)),
 
@@ -167,14 +167,14 @@ jarak ujung atas tangga dan permukaan tanah adalah ...
 """, 0)),
 
         listOf(Pair("""61. Dari data : 7, 9, 3, 6, 6, 8, 4, 5, 8, 7, 4, 5, 6,9, 3 Median data tersebut adalah …
-""", 0),
+""", R.mipmap.mat_kelas8_soal61),
             Pair("""62. Sepuluh wanita mempunyai rata-rata tinggi badan 155 cm . Jika tiga orang wanita dikeluarkan dari kelompok tersebut, 
 rata-rata tinggi badannya menjadi 156,5. Rata-rata tinggi badan ketiga wanita tersebut adalah...
 """, 0),
             Pair("""63. Perhatikan tabel dibawah  Modus dari data adalah …. 
 """, 0)),
 
-        listOf(Pair("""64. Pada pelemparan dua buah dadu, kejadian muka dadu berjumlah 5 adalah ....""", 0),
+        listOf(Pair("""64. Pada pelemparan dua buah dadu, kejadian muka dadu berjumlah 5 adalah ....""", R.mipmap.mat_kelas8_soal64),
             Pair("""65. Dua dadu dilambungkan bersama-sama. Peluang muncul mata dadu pertama 3 dan mata dadu kedua lima adalah…
 """, 0),
             Pair("""66. Perhatikanlah gambar berikut :  
@@ -186,28 +186,28 @@ dalam teorema Pythagoras berlaku hubungan.....
 (ii) 7, 23, 24                 (iv) 12, 35, 37
 kelompok bilangan di atas yang merupakan tripel Pythagoras adalah ....
 """, 0),
-            Pair("""68. Jika segitiga siku-siku PQR dengan panjang sisi siku-sikunya 4 dm dan 6 dm, maka panjang hipotenusa dari ΔPQR adalah ....""", 0),
+            Pair("""68. Jika segitiga siku-siku PQR dengan panjang sisi siku-sikunya 4 dm dan 6 dm, maka panjang hipotenusa dari ΔPQR adalah ....""", R.mipmap.mat_kelas8_soal68),
             Pair("""69. Perhatikan gambar segitiga berikut : 
 nilai x adalah… .   
 """, 0)),
 
         listOf(Pair("""70. Bidang datar pada lingkaran yang dibatasi oleh satu tali busur dan busur disebut…         
 """, 0),
-            Pair("""71. Perhatikan gambar berikut!Besar ∠CBD pada gambar di atas adalah ....    """, 0),
+            Pair("""71. Perhatikan gambar berikut!Besar ∠CBD pada gambar di atas adalah ....    """, R.mipmap.mat_kelas8_soal71),
             Pair("""72. Panjang busur lingkaran dengan jari-jari 21 cm dan sudut pusat 60° adalah .... (π = )
 """, 0)),
 
         listOf(Pair("""73.  Diketahui lingkaran pada gambar disamping dengan jari-jari 7 cm. Panjang busur AB adalah ….
 """, 0),
             Pair("""74. Luas juring dengan sudut pusat 45o dan panjang jari-jari 14 cm adalah…(π=)
-""", 0),
+""", R.mipmap.mat_kelas8_soal74),
             Pair("""75. Diketahui panjang busur suatu lingkaran adalah 22 cm. Jika sudut pusat yang menghadap busur tersebut berukuran 120°, maka panjang jari-jari juring lingkaran tersebut adalah ... cm. (π=)
 """, 0)),
 
-        listOf(Pair("""76. Diketahui 2  buah lingkaran yang pusatnya P dan Q, dengan jarak PQ = 26 cm. Panjang jari-jari lingkaran berturut-turut dengan pusat  P = 8 cm dan pusat Q = 18 cm. Panjang garis singgung persekutuan luarnya adalah....""", 0),
+        listOf(Pair("""76. Diketahui 2  buah lingkaran yang pusatnya P dan Q, dengan jarak PQ = 26 cm. Panjang jari-jari lingkaran berturut-turut dengan pusat  P = 8 cm dan pusat Q = 18 cm. Panjang garis singgung persekutuan luarnya adalah....""", R.mipmap.mat_kelas8_soal76),
             Pair("""77. Perhatikan gambar di bawah panjang AB adalah ….
 """, 0),
-            Pair("""78. Panjang garis singgung persekutuan dalam dua lingkaran adalah 15 cm dan kedua titik pusatnya terpisah sejauh 17 cm. Jika panjang jari-jari salah satu lingkaran adalah 3 cm, maka panjang jari-jari lainnya adalah...""", 0)),
+            Pair("""78. Panjang garis singgung persekutuan dalam dua lingkaran adalah 15 cm dan kedua titik pusatnya terpisah sejauh 17 cm. Jika panjang jari-jari salah satu lingkaran adalah 3 cm, maka panjang jari-jari lainnya adalah...""", R.mipmap.mat_kelas8_soal78)),
 
         listOf(Pair("""79. Gambar disamping adalah jaring-jaring …..  
 """, 0),
@@ -217,11 +217,11 @@ nilai x adalah… .
 """, 0)),
 
         listOf(Pair("""82. Perhatikan gambar di samping Banyak diagonal ruang pada balok PQRS.TUVW adalah ….
-""", 0),
+""", R.mipmap.mat_kelas8_soal82),
             Pair("""83. Luas permukaan balok yang panjang alasnya 15 cm, lebarnya 10 cm, dan tingginya 20 cm adalah ….
 """, 0),
             Pair("""84. Budi membuat kerangka prisma segitiga terbuat dari kawat dengan ukuran alas 25 cm, 20 cm, dan 10 cm. Jika tinggi prisma 15 cm. Maka panjang kawat yang diperlukan adalah…
-""", 0)),
+""", R.mipmap.mat_kelas8_soal84)),
 
         listOf(Pair("""85. Gambar di samping merupakan sebuah kayu penahan roda mobil.  Luas permukaan kayu tersebut adalah  ....  """, 0),
             Pair("""86 . Diketahui pola bilangan 17, 14, 11, 8,… . Suku ke-7 dari pola bilangan tersebut adalah….
@@ -558,7 +558,7 @@ himpunan pasangan berurutan yang merupakan pemetaan(fungsi) adalah ....
 
 
     )
-    private lateinit var scoreManager8: ScoreManager
+    private lateinit var scoreManagerMatematika8: ScoreManagerMatematika
 
 
     override fun onCreateView(
@@ -567,8 +567,8 @@ himpunan pasangan berurutan yang merupakan pemetaan(fungsi) adalah ....
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_soal_mat_kelas8, container, false)
-        scoreManager8 = ScoreManager(requireActivity().applicationContext)
-        jawabanBenar8 = if(scoreManager8.scoreMatKelas8 < 1) 0 else scoreManager8.scoreMatKelas8 / 5
+        scoreManagerMatematika8 = ScoreManagerMatematika(requireActivity().applicationContext)
+        jawabanBenar8 = if(scoreManagerMatematika8.scoreMatKelas8 < 1) 0 else scoreManagerMatematika8.scoreMatKelas8 / 5
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -617,18 +617,18 @@ himpunan pasangan berurutan yang merupakan pemetaan(fungsi) adalah ....
                     val ch2 = pilihanGanda8[jawabanBenar8][1][kunciJawaban8[jawabanBenar8][1]]
                     val ch3 = pilihanGanda8[jawabanBenar8][2][kunciJawaban8[jawabanBenar8][2]]
 
-                    var scoreMatSd = scoreManager8.scoreMatKelas8
+                    var scoreMatSd = scoreManagerMatematika8.scoreMatKelas8
                     if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
                         jawabanBenar8++
 
                         if(jawabanBenar8 == soalMatsd8.size){
                             scoreMatSd +=5
-                            scoreManager8.scoreMatKelas8 = scoreMatSd
+                            scoreManagerMatematika8.scoreMatKelas8 = scoreMatSd
                             Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
                             done = true
                         }else {
                             scoreMatSd +=5
-                            scoreManager8.scoreMatKelas8 = scoreMatSd
+                            scoreManagerMatematika8.scoreMatKelas8 = scoreMatSd
                             Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
                             // refresh ui
                             for(i in 0 until (listRadiogrup.size)){

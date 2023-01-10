@@ -2,7 +2,7 @@ package com.example.alat
 
 import android.content.Context
 
-class ScoreManager(context: Context) {
+class ScoreManagerMatematika(context: Context) {
 
     private val sharedPrefs = context.getSharedPreferences("score_prefs", Context.MODE_PRIVATE)
 
@@ -13,7 +13,10 @@ class ScoreManager(context: Context) {
         scoreMatKelas4 = 0
         scoreMatKelas5 = 0
         scoreMatKelas6 = 0
-        totalScore = 0
+        scoreMatKelas7 = 0
+        scoreMatKelas8 = 0
+        scoreMatKelas9 = 0
+        totalScoreMat = 0
     }
 
     var scoreMatKelas1: Int
@@ -59,7 +62,7 @@ class ScoreManager(context: Context) {
 
 
 
-    var totalScore: Int
+    var totalScoreMat: Int
         get() = scoreMatKelas1 + scoreMatKelas2 + scoreMatKelas3 +scoreMatKelas4 +scoreMatKelas5+
                 scoreMatKelas6 + scoreMatKelas7 + scoreMatKelas8 + scoreMatKelas9
         set(v) = sharedPrefs.edit().putInt("total_score", v).apply()

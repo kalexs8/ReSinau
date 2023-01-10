@@ -1,4 +1,4 @@
-package com.example.matematika
+package com.example.pai
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.alat.ScoreManagerMatematika
+import com.example.alat.ScoreManagerPai
 import com.example.myapplication.R
 
 
-class SoalMatKelas1 : Fragment() {
+class SoalPaiKelas1 : Fragment() {
 
     private var jawabanBenar = 0
-    private val soalMatsd1: List<List<Pair<String, Int>>> = listOf(
+    private val soalPaisd1: List<List<Pair<String, Int>>> = listOf(
         listOf(
             Pair("1.	Nama lambang bilangan 25 adalah ...", 0),
             Pair("2.	Nama lambang bilangan 37 adalah ...", 0),
@@ -121,7 +121,7 @@ class SoalMatKelas1 : Fragment() {
 
 
     )
-    private lateinit var scoreManagerMatematika: ScoreManagerMatematika
+    private lateinit var scoreManagerPai: ScoreManagerPai
 
 
     override fun onCreateView(
@@ -129,13 +129,13 @@ class SoalMatKelas1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_soal_mat_kelas1, container, false)
-        scoreManagerMatematika = ScoreManagerMatematika(requireActivity().applicationContext)
-        jawabanBenar = if(scoreManagerMatematika.scoreMatKelas1 < 1) 0 else scoreManagerMatematika.scoreMatKelas1 / 5
+        val view = inflater.inflate(R.layout.fragment_soal_pai_kelas1, container, false)
+        scoreManagerPai = ScoreManagerPai(requireActivity().applicationContext)
+        jawabanBenar = if(scoreManagerPai.scorePaiKelas1 < 1) 0 else scoreManagerPai.scorePaiKelas1 / 5
 
-        val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
-        val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
-        val grupRadio3 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3c)
+        val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGruppaiSD3a)
+        val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGruppaiSD3b)
+        val grupRadio3 = view.findViewById<RadioGroup>(R.id.radioGruppaiSD3c)
 
         val listRadiogrup: List<RadioGroup> = listOf(
             grupRadio1,
@@ -146,7 +146,7 @@ class SoalMatKelas1 : Fragment() {
 
         // load ui ketika user masuk
         for(i in 0 until (listRadiogrup.size)){
-            val getData = soalMatsd1[jawabanBenar][i]
+            val getData = soalPaisd1[jawabanBenar][i]
             (listRadiogrup[i].getChildAt(0) as TextView).text = getData.first
             val getImg = listRadiogrup[i].getChildAt(1) as ImageView
             if (getData.second != 0){
@@ -166,54 +166,54 @@ class SoalMatKelas1 : Fragment() {
             val grup2 = listRadiogrup[1]
             val grup3 = listRadiogrup[2]
             if(grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1){
-            if(done){
-                Toast.makeText(requireActivity().applicationContext, "Anda telah mengerjakan ini", Toast.LENGTH_SHORT).show()
-            }else{
-            val pilihGrup1 = view.findViewById<RadioButton>(grup1.checkedRadioButtonId).text.toString()
-            val pilihGrup2 = view.findViewById<RadioButton>(grup2.checkedRadioButtonId).text.toString()
-            val pilihGrup3 = view.findViewById<RadioButton>(grup3.checkedRadioButtonId).text.toString()
-            val ch1 = pilihanGanda[jawabanBenar][0][kunciJawaban[jawabanBenar][0]]
-            val ch2 = pilihanGanda[jawabanBenar][1][kunciJawaban[jawabanBenar][1]]
-            val ch3 = pilihanGanda[jawabanBenar][2][kunciJawaban[jawabanBenar][2]]
-            var scoreMatSd = scoreManagerMatematika.scoreMatKelas1
-            if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
-                jawabanBenar++
+                if(done){
+                    Toast.makeText(requireActivity().applicationContext, "Anda telah mengerjakan ini", Toast.LENGTH_SHORT).show()
+                }else{
+                    val pilihGrup1 = view.findViewById<RadioButton>(grup1.checkedRadioButtonId).text.toString()
+                    val pilihGrup2 = view.findViewById<RadioButton>(grup2.checkedRadioButtonId).text.toString()
+                    val pilihGrup3 = view.findViewById<RadioButton>(grup3.checkedRadioButtonId).text.toString()
+                    val ch1 = pilihanGanda[jawabanBenar][0][kunciJawaban[jawabanBenar][0]]
+                    val ch2 = pilihanGanda[jawabanBenar][1][kunciJawaban[jawabanBenar][1]]
+                    val ch3 = pilihanGanda[jawabanBenar][2][kunciJawaban[jawabanBenar][2]]
+                    var scorePaiSd = scoreManagerPai.scorePaiKelas1
+                    if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
+                        jawabanBenar++
 
-                if(jawabanBenar == soalMatsd1.size){
-                    scoreMatSd +=5
-                    scoreManagerMatematika.scoreMatKelas1 = scoreMatSd
-                    Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
-                    done = true
-                }else {
-                    scoreMatSd +=5
-                    scoreManagerMatematika.scoreMatKelas1 = scoreMatSd
-                    Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
-                    // refresh ui
-                    for(i in 0 until (listRadiogrup.size)){
-                        val getData = soalMatsd1[jawabanBenar][i]
-                        (listRadiogrup[i].getChildAt(0) as TextView).text = getData.first
-                        val getImg = listRadiogrup[i].getChildAt(1) as ImageView
-                        if (getData.second != 0){
-                            getImg.setImageResource(getData.second)
-                            getImg.visibility = View.VISIBLE
-                        }else{
-                            getImg.visibility = View.GONE
+                        if(jawabanBenar == soalPaisd1.size){
+                            scorePaiSd +=5
+                            scoreManagerPai.scorePaiKelas1 = scorePaiSd
+                            Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
+                            done = true
+                        }else {
+                            scorePaiSd +=5
+                            scoreManagerPai.scorePaiKelas1 = scorePaiSd
+                            Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
+                            // refresh ui
+                            for(i in 0 until (listRadiogrup.size)){
+                                val getData = soalPaisd1[jawabanBenar][i]
+                                (listRadiogrup[i].getChildAt(0) as TextView).text = getData.first
+                                val getImg = listRadiogrup[i].getChildAt(1) as ImageView
+                                if (getData.second != 0){
+                                    getImg.setImageResource(getData.second)
+                                    getImg.visibility = View.VISIBLE
+                                }else{
+                                    getImg.visibility = View.GONE
+                                }
+                                for(j in 2 until (listRadiogrup[i].childCount)){
+                                    (listRadiogrup[i].getChildAt(j) as RadioButton).text = pilihanGanda[jawabanBenar][i][j-2]
+                                    listRadiogrup[i].clearCheck()
+                                }
+                            }
                         }
-                        for(j in 2 until (listRadiogrup[i].childCount)){
-                            (listRadiogrup[i].getChildAt(j) as RadioButton).text = pilihanGanda[jawabanBenar][i][j-2]
-                            listRadiogrup[i].clearCheck()
+
+                    }else{
+                        // kalau jawaban salah
+                        Toast.makeText(activity,getString(R.string.toast_salah), Toast.LENGTH_SHORT).show()
+                        for(i in listRadiogrup){
+                            i.clearCheck()
                         }
                     }
-                }
-
-            }else{
-                // kalau jawaban salah
-                Toast.makeText(activity,getString(R.string.toast_salah), Toast.LENGTH_SHORT).show()
-                for(i in listRadiogrup){
-                    i.clearCheck()
-                }
-            }
-            } // end cek jawab
+                } // end cek jawab
             }else {
                 Toast.makeText(activity, "Anda belum memasukkan semua jawaban", Toast.LENGTH_SHORT).show()
             } // end cek semua jawaban telah di centang

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.alat.ScoreManager
+import com.example.alat.ScoreManagerMatematika
 import com.example.myapplication.R
 
 
@@ -121,7 +121,7 @@ class SoalMatKelas2 : Fragment() {
 
 
     )
-    private lateinit var scoreManager: ScoreManager
+    private lateinit var scoreManagerMatematika: ScoreManagerMatematika
 
 
     override fun onCreateView(
@@ -130,8 +130,8 @@ class SoalMatKelas2 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_soal_mat_kelas2, container, false)
-        scoreManager = ScoreManager(requireActivity().applicationContext)
-        jawabanBenar = if(scoreManager.scoreMatKelas2 < 1) 0 else scoreManager.scoreMatKelas2 / 5
+        scoreManagerMatematika = ScoreManagerMatematika(requireActivity().applicationContext)
+        jawabanBenar = if(scoreManagerMatematika.scoreMatKelas2 < 1) 0 else scoreManagerMatematika.scoreMatKelas2 / 5
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -175,18 +175,18 @@ class SoalMatKelas2 : Fragment() {
                     val ch1 = pilihanGanda[jawabanBenar][0][kunciJawaban[jawabanBenar][0]]
                     val ch2 = pilihanGanda[jawabanBenar][1][kunciJawaban[jawabanBenar][1]]
                     val ch3 = pilihanGanda[jawabanBenar][2][kunciJawaban[jawabanBenar][2]]
-                    var scoreMatSd = scoreManager.scoreMatKelas2
+                    var scoreMatSd = scoreManagerMatematika.scoreMatKelas2
                     if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
                         jawabanBenar++
 
                         if(jawabanBenar == soalMatsd2.size){
                             scoreMatSd +=5
-                            scoreManager.scoreMatKelas2 = scoreMatSd
+                            scoreManagerMatematika.scoreMatKelas2 = scoreMatSd
                             Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
                             done = true
                         }else {
                             scoreMatSd +=5
-                            scoreManager.scoreMatKelas2 = scoreMatSd
+                            scoreManagerMatematika.scoreMatKelas2 = scoreMatSd
                             Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
                             // refresh ui
                             for(i in 0 until (listRadiogrup.size)){

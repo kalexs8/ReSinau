@@ -41,6 +41,9 @@
     <string name="mat_sd">matematika sd</string>
     <string name="mat_smp">matematika smp</string>
     <string name="mat_sma">matematika sma</string>
+    <string name="pai_sd">pai sd</string>
+    <string name="pai_smp">pai smp</string>
+    <string name="pai_sma">pai sma</string>
     <string name="segments_sukses">Mantab anda keren!!!, menuju materi selanjutnya</string>
     <string name="next">selanjutnya</string>
     <string name="sukses">anda hebat</string>
@@ -50,15 +53,31 @@
     <string name="changelog">
         Changelog\n
         \n
+        Bismillah\n
+        Alhamdulillah\n
+        \n
+        ««––– 2.0 ––– »»\n
+        \n
+        Selamat datang di Resinau 2.0, apa saja yang baru: ?
+        \t\t  • add new package PAI kelas 1-6
+        \t\t  • re-organize folder
         
         Version 1.9\n
                 • add activity materi smp\n
                 • add latihan soal materi smp\n
                 • add materi smp matematika complete\n
+                \t • soal smp kelas 7 90 soal\n
+                \t • soal smp kelas 8 120 soal\n
+                \t • soal smp kelas 7 150 soal\n
+                • untuk versi 2.0 keatas akan ada fitur energy,dimana fungsinya,apabila salah\n
+                  menjawab dalam segment soal, energy akan berkurang\n
+                • energy akan pulih setelah beberapa waktu yang telah ditentukan\n
+
         \n
         
         Version 1.8b\n
                 • complete materi sd matematika \n
+                \t • soal untuk kelas 6sd 60 soal \n
         \n
 
         Version 1.8a\n
