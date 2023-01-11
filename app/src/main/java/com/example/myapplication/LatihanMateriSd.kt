@@ -11,7 +11,7 @@ import android.os.Looper
 import com.example.alat.ScoreManagerMatematika
 import com.example.alat.ScoreManagerPai
 import com.example.matematika.*
-import com.example.pai.SoalPaiKelas1
+import com.example.pai.*
 
 class LatihanMateriSd : AppCompatActivity() {
 
@@ -26,6 +26,7 @@ class LatihanMateriSd : AppCompatActivity() {
         val tipeSoal = intent.getStringExtra("POINTER_SOAL")
         val viewPagerBilangan: ViewPager2 = findViewById(R.id.view_pager_bilangan_sd)
         scoreManagerMatematika = ScoreManagerMatematika(applicationContext)
+        scoreManagerPai = ScoreManagerPai(applicationContext)
         progressBar = findViewById(R.id.progress_bar_sd)
 
 
@@ -140,6 +141,86 @@ class LatihanMateriSd : AppCompatActivity() {
                         Thread.sleep(1000)
                         Handler(Looper.getMainLooper()).post{
                             progressBar.progress = if(scoreManagerPai.scorePaiKelas1 < 1) 0 else scoreManagerPai.scorePaiKelas1 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalPaiKelas2" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalPaiKelas2(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerPai.scorePaiKelas2 < 1) 0 else scoreManagerPai.scorePaiKelas2 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalPaiKelas3" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalPaiKelas3(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerPai.scorePaiKelas3 < 1) 0 else scoreManagerPai.scorePaiKelas3 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalPaiKelas4" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalPaiKelas4(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerPai.scorePaiKelas4 < 1) 0 else scoreManagerPai.scorePaiKelas4 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalPaiKelas5" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalPaiKelas5(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerPai.scorePaiKelas5 < 1) 0 else scoreManagerPai.scorePaiKelas5 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalPaiKelas6" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalPaiKelas6(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerPai.scorePaiKelas6 < 1) 0 else scoreManagerPai.scorePaiKelas6 / 5
                         }
                     }
                 }.start()

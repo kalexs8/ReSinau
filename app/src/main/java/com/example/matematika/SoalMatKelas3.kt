@@ -69,8 +69,8 @@ class SoalMatKelas3 : Fragment() {
         ),
         listOf(
             listOf("a. 80°","b. 90°","c. 100°","d. 60°"),
-            listOf("a. 1","b. 2","c. 3","b. 4"),
-            listOf("a. Sama kaki","b. Siku-siku","c. Lancip","d. Sama sisi")
+            listOf("a. 1","b. 2","c. 3","d. 4"),
+            listOf("a. Sama kaki","b. Siku-siku","c. Sama sisi","d. Lancip")
         ),
         listOf(
             listOf("a. 1","b. 2","c. 3","d. 4"),

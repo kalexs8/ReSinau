@@ -58,9 +58,11 @@
         \n
         ««––– 2.0 ––– »»\n
         \n
-        Selamat datang di Resinau 2.0, apa saja yang baru: ?
-        \t\t  • add new package PAI kelas 1-6
-        \t\t  • re-organize folder
+        Selamat datang di Resinau 2.0, apa saja yang baru: ?\n
+        \t\t  • add new package PAI kelas 1-6\n
+        \t\t  • re-organize folder\n
+        \t\t  • fix bug jawaban dan dobel pilihan\n
+        \n
         
         Version 1.9\n
                 • add activity materi smp\n
