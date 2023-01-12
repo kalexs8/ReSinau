@@ -9,36 +9,63 @@
     tools:context=".LatihanMateriSmp">
 
     <ImageView
-        android:id="@+id/closeSmp"
+        android:id="@+id/heartsImageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
         android:contentDescription="null"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toStartOf="@+id/heartsCount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heartsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20.0sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/closeSd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="null"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_close_24"
         tools:ignore="ContentDescription" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager_bilangan_smp"
+        android:id="@+id/view_pager_bilangan_sd"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_bar_smp" />
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar_sd"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
-        android:id="@+id/progress_bar_smp"
+        android:id="@+id/progress_bar_sd"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@android:color/holo_blue_bright"
-        app:layout_constraintEnd_toStartOf="@+id/closeSmp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/closeSd" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
