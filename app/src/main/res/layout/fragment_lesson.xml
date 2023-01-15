@@ -120,5 +120,15 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/timerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heartsLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

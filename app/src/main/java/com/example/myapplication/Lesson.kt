@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.example.alat.EnergyManager
 
 
 
@@ -25,12 +26,11 @@ class Lesson : Fragment() {
         val materisd: Button = view.findViewById(R.id.jenjangSD)
         val materismp: Button = view.findViewById(R.id.jenjangSMP)
         //val materisma: Button = view.findViewById(R.id.jenjangSMA)
+        val heart = EnergyManager(requireActivity().applicationContext)
         val changeLog: TextView = view.findViewById(R.id.changeLog)
         changeLog.text = getString(R.string.changelog)
 
-
-
-
+        heart.viewUpdater(view.findViewById(R.id.heartsCount), view.findViewById(R.id.timerView))
 
         materisd.setOnClickListener {
             val intent = Intent(context, MateriSd::class.java)

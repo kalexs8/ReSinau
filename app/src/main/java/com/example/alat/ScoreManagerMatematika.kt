@@ -6,7 +6,7 @@ class ScoreManagerMatematika(context: Context) {
 
     private val sharedPrefs = context.getSharedPreferences("score_prefs", Context.MODE_PRIVATE)
 
-    fun resetScore() {
+    fun resetScoreMat() {
         scoreMatKelas1 = 0
         scoreMatKelas2 = 0
         scoreMatKelas3 = 0

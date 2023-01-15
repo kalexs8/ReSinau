@@ -6,7 +6,7 @@ class ScoreManagerPai(context: Context) {
 
         private val sharedPrefs = context.getSharedPreferences("score_prefs", Context.MODE_PRIVATE)
 
-        fun resetScore() {
+        fun resetScorePai() {
             scorePaiKelas1 = 0
             scorePaiKelas2 = 0
             scorePaiKelas3 = 0
@@ -56,14 +56,8 @@ class ScoreManagerPai(context: Context) {
         set(v) = sharedPrefs.edit().putInt("score_mat_kelas_9", v).apply()
 
 
-
-
-
-
-
-
-        var totalScorePai: Int
-        get() = scorePaiKelas1 + scorePaiKelas1 + scorePaiKelas1 + scorePaiKelas1 +scorePaiKelas1+
-                scorePaiKelas1 + scorePaiKelas1 + scorePaiKelas1 + scorePaiKelas1
+    var totalScorePai: Int
+        get() = scorePaiKelas1 + scorePaiKelas2 + scorePaiKelas3 + scorePaiKelas4 +scorePaiKelas5+
+                scorePaiKelas6 + scorePaiKelas7 + scorePaiKelas8 + scorePaiKelas9
         set(v) = sharedPrefs.edit().putInt("total_score", v).apply()
     }

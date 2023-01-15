@@ -1,11 +1,13 @@
 package com.example.matematika
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.example.alat.EnergyManager
 import com.example.alat.ScoreManagerMatematika
 import com.example.myapplication.R
 
@@ -138,6 +140,7 @@ class SoalMatKelas4 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_soal_mat_kelas4, container, false)
         scoreManagerMatematika4 = ScoreManagerMatematika(requireActivity().applicationContext)
         jawabanBenar4 = if(scoreManagerMatematika4.scoreMatKelas4 < 1) 0 else scoreManagerMatematika4.scoreMatKelas4 / 5
+        val energy = EnergyManager(requireContext())
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -175,59 +178,98 @@ class SoalMatKelas4 : Fragment() {
             val grup2 = listRadiogrup[1]
             val grup3 = listRadiogrup[2]
 
-            if(grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1){
-                if(done){
-                    Toast.makeText(requireActivity().applicationContext, "Anda telah mengerjakan ini", Toast.LENGTH_SHORT).show()
-                }else{
-                    val pilihGrup1 = view.findViewById<RadioButton>(grup1.checkedRadioButtonId).text.toString()
-                    val pilihGrup2 = view.findViewById<RadioButton>(grup2.checkedRadioButtonId).text.toString()
-                    val pilihGrup3 = view.findViewById<RadioButton>(grup3.checkedRadioButtonId).text.toString()
-                    val ch1 = pilihanGanda4[jawabanBenar4][0][kunciJawaban4[jawabanBenar4][0]]
-                    val ch2 = pilihanGanda4[jawabanBenar4][1][kunciJawaban4[jawabanBenar4][1]]
-                    val ch3 = pilihanGanda4[jawabanBenar4][2][kunciJawaban4[jawabanBenar4][2]]
+            if(energy.energy == 0){
+                val ad = AlertDialog.Builder(requireActivity())
+                ad.setTitle("Empty")
+                ad.setMessage(R.string.empty_energy)
+                ad.setNeutralButton("OK") { _, _ ->
+                    requireActivity().finish()
+                }
+                ad.setCancelable(false)
+                ad.create().show()
+            }else {
 
-                    var scoreMatSd = scoreManagerMatematika4.scoreMatKelas4
-                    if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
-                        jawabanBenar4++
+                if (grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1) {
+                    if (done) {
+                        Toast.makeText(
+                            requireActivity().applicationContext,
+                            "Anda telah mengerjakan ini",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        val pilihGrup1 =
+                            view.findViewById<RadioButton>(grup1.checkedRadioButtonId).text.toString()
+                        val pilihGrup2 =
+                            view.findViewById<RadioButton>(grup2.checkedRadioButtonId).text.toString()
+                        val pilihGrup3 =
+                            view.findViewById<RadioButton>(grup3.checkedRadioButtonId).text.toString()
+                        val ch1 = pilihanGanda4[jawabanBenar4][0][kunciJawaban4[jawabanBenar4][0]]
+                        val ch2 = pilihanGanda4[jawabanBenar4][1][kunciJawaban4[jawabanBenar4][1]]
+                        val ch3 = pilihanGanda4[jawabanBenar4][2][kunciJawaban4[jawabanBenar4][2]]
 
-                        if(jawabanBenar4 == soalMatsd4.size){
-                            scoreMatSd +=5
-                            scoreManagerMatematika4.scoreMatKelas4 = scoreMatSd
-                            Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
-                            done = true
-                        }else {
-                            scoreMatSd +=5
-                            scoreManagerMatematika4.scoreMatKelas4 = scoreMatSd
-                            Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
-                            // refresh ui
-                            for(i in 0 until (listRadiogrup.size)){
-                                val getData = soalMatsd4[jawabanBenar4][i]
-                                (listRadiogrup[i].getChildAt(0) as TextView).text = getData.first
-                                val getImg = listRadiogrup[i].getChildAt(1) as ImageView
-                                if (getData.second != 0){
-                                    getImg.setImageResource(getData.second)
-                                    getImg.visibility = View.VISIBLE
-                                }else{
-                                    getImg.visibility = View.GONE
-                                }
-                                for(j in 2 until (listRadiogrup[i].childCount)){
-                                    (listRadiogrup[i].getChildAt(j) as RadioButton).text = pilihanGanda4[jawabanBenar4][i][j-2]
-                                    listRadiogrup[i].clearCheck()
+                        var scoreMatSd = scoreManagerMatematika4.scoreMatKelas4
+                        if (pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3) {
+                            jawabanBenar4++
+
+                            if (jawabanBenar4 == soalMatsd4.size) {
+                                scoreMatSd += 5
+                                scoreManagerMatematika4.scoreMatKelas4 = scoreMatSd
+                                Toast.makeText(
+                                    activity,
+                                    "Selamat anda telah menyelesaikan misi",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                done = true
+                            } else {
+                                scoreMatSd += 5
+                                scoreManagerMatematika4.scoreMatKelas4 = scoreMatSd
+                                Toast.makeText(
+                                    activity,
+                                    R.string.segments_sukses,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                // refresh ui
+                                for (i in 0 until (listRadiogrup.size)) {
+                                    val getData = soalMatsd4[jawabanBenar4][i]
+                                    (listRadiogrup[i].getChildAt(0) as TextView).text =
+                                        getData.first
+                                    val getImg = listRadiogrup[i].getChildAt(1) as ImageView
+                                    if (getData.second != 0) {
+                                        getImg.setImageResource(getData.second)
+                                        getImg.visibility = View.VISIBLE
+                                    } else {
+                                        getImg.visibility = View.GONE
+                                    }
+                                    for (j in 2 until (listRadiogrup[i].childCount)) {
+                                        (listRadiogrup[i].getChildAt(j) as RadioButton).text =
+                                            pilihanGanda4[jawabanBenar4][i][j - 2]
+                                        listRadiogrup[i].clearCheck()
+                                    }
                                 }
                             }
-                        }
 
-                    }else{
-                        // kalau jawaban salah
-                        Toast.makeText(activity,getString(R.string.toast_salah), Toast.LENGTH_SHORT).show()
-                        for(i in listRadiogrup){
-                            i.clearCheck()
+                        } else {
+                            // kalau jawaban salah
+                            Toast.makeText(
+                                activity,
+                                getString(R.string.toast_salah),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            for (i in listRadiogrup) {
+                                i.clearCheck()
+                            }
+                            energy.energy = energy.energy - 1
+                            energy.saveComp()
                         }
-                    }
-                } // end cek jawab
-            }else {
-                Toast.makeText(activity, "Anda belum memasukkan semua jawaban", Toast.LENGTH_SHORT).show()
-            } // end cek semua jawaban telah di centang
+                    } // end cek jawab
+                } else {
+                    Toast.makeText(
+                        activity,
+                        "Anda belum memasukkan semua jawaban",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }// end cek semua jawaban telah di centang
         }
         return view
     }

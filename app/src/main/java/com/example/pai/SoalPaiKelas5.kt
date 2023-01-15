@@ -1,11 +1,13 @@
 package com.example.pai
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.example.alat.EnergyManager
 
 import com.example.alat.ScoreManagerPai
 import com.example.myapplication.R
@@ -228,6 +230,7 @@ class SoalPaiKelas5 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_soal_pai_kelas5, container, false)
         scoreManagerPai = ScoreManagerPai(requireActivity().applicationContext)
         jawabanBenar6 = if(scoreManagerPai.scorePaiKelas5 < 1) 0 else scoreManagerPai.scorePaiKelas5 / 5
+        val energy = EnergyManager(requireContext())
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -264,60 +267,90 @@ class SoalPaiKelas5 : Fragment() {
             val grup1 = listRadiogrup[0]
             val grup2 = listRadiogrup[1]
             val grup3 = listRadiogrup[2]
-
-            if(grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1){
-                if(done){
-                    Toast.makeText(requireActivity().applicationContext, "Anda telah mengerjakan ini", Toast.LENGTH_SHORT).show()
-                }else{
-                    val pilihGrup1 = view.findViewById<RadioButton>(grup1.checkedRadioButtonId).text.toString()
-                    val pilihGrup2 = view.findViewById<RadioButton>(grup2.checkedRadioButtonId).text.toString()
-                    val pilihGrup3 = view.findViewById<RadioButton>(grup3.checkedRadioButtonId).text.toString()
+            if(energy.energy == 0){
+                val ad = AlertDialog.Builder(requireActivity())
+                ad.setTitle("Empty")
+                ad.setMessage(R.string.empty_energy)
+                ad.setNeutralButton("OK") { _, _ ->
+                    requireActivity().finish()
+                }
+                ad.setCancelable(false)
+                ad.create().show()
+            }else{
+                if (grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1) {
+                if (done) {
+                    Toast.makeText(
+                        requireActivity().applicationContext,
+                        "Anda telah mengerjakan ini",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    val pilihGrup1 =
+                        view.findViewById<RadioButton>(grup1.checkedRadioButtonId).text.toString()
+                    val pilihGrup2 =
+                        view.findViewById<RadioButton>(grup2.checkedRadioButtonId).text.toString()
+                    val pilihGrup3 =
+                        view.findViewById<RadioButton>(grup3.checkedRadioButtonId).text.toString()
                     val ch1 = pilihanGanda6[jawabanBenar6][0][kunciJawaban6[jawabanBenar6][0]]
                     val ch2 = pilihanGanda6[jawabanBenar6][1][kunciJawaban6[jawabanBenar6][1]]
                     val ch3 = pilihanGanda6[jawabanBenar6][2][kunciJawaban6[jawabanBenar6][2]]
 
                     var scoreMatSd = scoreManagerPai.scorePaiKelas5
-                    if(pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3){
+                    if (pilihGrup1 == ch1 && pilihGrup2 == ch2 && pilihGrup3 == ch3) {
                         jawabanBenar6++
 
-                        if(jawabanBenar6 == soalPaisd5.size){
-                            scoreMatSd +=5
+                        if (jawabanBenar6 == soalPaisd5.size) {
+                            scoreMatSd += 5
                             scoreManagerPai.scorePaiKelas5 = scoreMatSd
-                            Toast.makeText(activity,"Selamat anda telah menyelesaikan misi", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                activity,
+                                "Selamat anda telah menyelesaikan misi",
+                                Toast.LENGTH_SHORT
+                            ).show()
                             done = true
-                        }else {
-                            scoreMatSd +=5
+                        } else {
+                            scoreMatSd += 5
                             scoreManagerPai.scorePaiKelas5 = scoreMatSd
-                            Toast.makeText(activity,R.string.segments_sukses, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity, R.string.segments_sukses, Toast.LENGTH_SHORT)
+                                .show()
                             // refresh ui
-                            for(i in 0 until (listRadiogrup.size)){
+                            for (i in 0 until (listRadiogrup.size)) {
                                 val getData = soalPaisd5[jawabanBenar6][i]
                                 (listRadiogrup[i].getChildAt(0) as TextView).text = getData.first
                                 val getImg = listRadiogrup[i].getChildAt(1) as ImageView
-                                if (getData.second != 0){
+                                if (getData.second != 0) {
                                     getImg.setImageResource(getData.second)
                                     getImg.visibility = View.VISIBLE
-                                }else{
+                                } else {
                                     getImg.visibility = View.GONE
                                 }
-                                for(j in 2 until (listRadiogrup[i].childCount)){
-                                    (listRadiogrup[i].getChildAt(j) as RadioButton).text = pilihanGanda6[jawabanBenar6][i][j-2]
+                                for (j in 2 until (listRadiogrup[i].childCount)) {
+                                    (listRadiogrup[i].getChildAt(j) as RadioButton).text =
+                                        pilihanGanda6[jawabanBenar6][i][j - 2]
                                     listRadiogrup[i].clearCheck()
                                 }
                             }
                         }
 
-                    }else{
+                    } else {
                         // kalau jawaban salah
-                        Toast.makeText(activity,getString(R.string.toast_salah), Toast.LENGTH_SHORT).show()
-                        for(i in listRadiogrup){
+                        Toast.makeText(
+                            activity,
+                            getString(R.string.toast_salah),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        for (i in listRadiogrup) {
                             i.clearCheck()
                         }
+                        energy.energy = energy.energy - 1
+                        energy.saveComp()
                     }
                 } // end cek jawab
-            }else {
-                Toast.makeText(activity, "Anda belum memasukkan semua jawaban", Toast.LENGTH_SHORT).show()
-            } // end cek semua jawaban telah di centang
+            } else {
+                Toast.makeText(activity, "Anda belum memasukkan semua jawaban", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }// end cek semua jawaban telah di centang
         }
         return view
     }

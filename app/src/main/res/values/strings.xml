@@ -49,7 +49,8 @@
     <string name="sukses">anda hebat</string>
     <string name="cek">cek jawaban</string>
     <string name="lanjut">selanjutnya</string>
-    <string name="kurang_tepat">jawaban belum benar, ayo coba lagi !!</string>
+    <string name="kurang_tepat">jawaban belum benar, ayo coba lagi !!</string>\
+    <string name="empty_energy">Energi Anda habis, tunggu beberapa saat lagi</string>
     <string name="changelog">
         Changelog\n
         \n
@@ -59,6 +60,13 @@
         ««––– 2.0 ––– »»\n
         \n
         Selamat datang di Resinau 2.0, apa saja yang baru: ?\n
+        • Icon baru untuk Resinau\n
+        • System Energy telah di tambahkan dengan detail :\n
+        \t 1. energy default sebanyak 3\n
+        \t 2. energy akan berkurang 1 untuk jawaban salah\n
+        \t 3. energy akan pulih setelah 4 jam\n
+        \t 4. energy bericon hati dan di samping tertera jumlah energi tersisa\n
+        • Update Lainya untuk versi 2.0\n
         \t\t  • add new package PAI kelas 1-6\n
         \t\t  • re-organize folder\n
         \t\t  • fix bug jawaban dan dobel pilihan\n

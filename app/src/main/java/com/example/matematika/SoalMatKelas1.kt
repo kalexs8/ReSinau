@@ -1,11 +1,13 @@
 package com.example.matematika
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.example.alat.EnergyManager
 import com.example.alat.ScoreManagerMatematika
 import com.example.myapplication.R
 
@@ -132,6 +134,8 @@ class SoalMatKelas1 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_soal_mat_kelas1, container, false)
         scoreManagerMatematika = ScoreManagerMatematika(requireActivity().applicationContext)
         jawabanBenar = if(scoreManagerMatematika.scoreMatKelas1 < 1) 0 else scoreManagerMatematika.scoreMatKelas1 / 5
+        // initialisasi energi
+        val energy = EnergyManager(requireContext())
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -165,6 +169,17 @@ class SoalMatKelas1 : Fragment() {
             val grup1 = listRadiogrup[0]
             val grup2 = listRadiogrup[1]
             val grup3 = listRadiogrup[2]
+            // cek kalau user masih bisa lanjut
+            if(energy.energy == 0){
+                val ad = AlertDialog.Builder(requireActivity())
+                ad.setTitle("Empty")
+                ad.setMessage(R.string.empty_energy)
+                ad.setNeutralButton("OK") { _, _ ->
+                    requireActivity().finish()
+                }
+                ad.setCancelable(false)
+                ad.create().show()
+            }else{
             if(grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1){
             if(done){
                 Toast.makeText(requireActivity().applicationContext, "Anda telah mengerjakan ini", Toast.LENGTH_SHORT).show()
@@ -212,12 +227,16 @@ class SoalMatKelas1 : Fragment() {
                 for(i in listRadiogrup){
                     i.clearCheck()
                 }
+                // pengurangan energi
+                energy.energy = energy.energy - 1
+                energy.saveComp()
             }
             } // end cek jawab
             }else {
                 Toast.makeText(activity, "Anda belum memasukkan semua jawaban", Toast.LENGTH_SHORT).show()
             } // end cek semua jawaban telah di centang
-        }
+        } // end cek energi sudah habis
+        } // end listener
         return view
     }
 }

@@ -1,5 +1,8 @@
 package com.example.alat;
 
+import android.content.Context;
+import android.widget.Toast;
+
 public final class SoalManager {
     // Batas-batas segmen soal setiap materi dan kelas
     public static final int MATEMATIKA_KELAS1 = 10;
@@ -24,5 +27,13 @@ public final class SoalManager {
     }
     public static boolean dijawab(int score, int target){
         return score != 0 &&  score / 5 == target;
+    }
+    // Cek energi kalau masih ada
+    public static boolean cek(Context ct, EnergyManager em, String text){
+        if(em.getEnergy() == 0){
+            Toast.makeText(ct, text, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }

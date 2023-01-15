@@ -54,6 +54,29 @@ class MainActivity : AppCompatActivity() {
 
         return true
     }
-
-
+//    override fun onPause(){
+//        super.onPause()
+//        val pref = applicationContext.getSharedPreferences("score_prefs", android.content.Context.MODE_PRIVATE)
+//        if(!com.example.alat.EnergyManager(this).full()){
+//            pref.edit().putLong("time_left_energy", if(pref.getLong("time_left_energy", System.currentTimeMillis()) < System.currentTimeMillis())
+//                pref.getLong("time_left_energy", System.currentTimeMillis())
+//            else
+//                System.currentTimeMillis()
+//            ).apply()
+//            println("Invoked pause, saving current time_left_energy...")
+//        }
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        val pref = applicationContext.getSharedPreferences("score_prefs", android.content.Context.MODE_PRIVATE)
+//        if(!com.example.alat.EnergyManager(this).full()){
+//            pref.edit().putLong("time_left_energy", if(pref.getLong("time_left_energy", System.currentTimeMillis()) < System.currentTimeMillis())
+//                    pref.getLong("time_left_energy", System.currentTimeMillis())
+//                    else
+//                        System.currentTimeMillis()
+//                ).apply()
+//            println("Invoked stop, saving current time_left_energy...")
+//        }
+//    }
 }

@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/resinau"
+        android:icon="@mipmap/resinau2_fix"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/resinau"
+        android:roundIcon="@mipmap/resinau2_fix"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">

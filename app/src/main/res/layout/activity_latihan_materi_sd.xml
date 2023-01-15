@@ -8,11 +8,21 @@
     tools:ignore="HardcodedText"
     tools:context=".LatihanMateriSd">
 
+  <TextView
+      android:id="@+id/timerView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="32dp"
+      android:visibility="visible"
+      app:layout_constraintEnd_toStartOf="@+id/heartsImageview"
+      app:layout_constraintTop_toTopOf="parent" />
+
   <ImageView
       android:id="@+id/heartsImageview"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
+      android:layout_marginTop="10dp"
       android:layout_marginEnd="5dp"
       android:contentDescription="null"
       android:src="@drawable/heart"
@@ -23,8 +33,8 @@
       android:id="@+id/heartsCount"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="3dp"
-      android:layout_marginEnd="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="32dp"
       android:textSize="20.0sp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"

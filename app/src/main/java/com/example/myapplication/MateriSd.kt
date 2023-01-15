@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.alat.EnergyManager
 import com.example.alat.ScoreManagerMatematika
 import com.example.alat.ScoreManagerPai
 import com.example.alat.SoalManager
@@ -88,6 +89,7 @@ class MateriSd : AppCompatActivity() {
         val scoreManagerMatematika = ScoreManagerMatematika(this)
         val scoreManagerPai = ScoreManagerPai(this)
         val scoreMatSd = findViewById<TextView>(R.id.scoreMatSd)
+        val energy = EnergyManager(applicationContext)
 
         Thread {
             while (true){
@@ -255,7 +257,10 @@ class MateriSd : AppCompatActivity() {
 
         }
         mat1.setOnClickListener {
-            if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas1, SoalManager.MATEMATIKA_KELAS1)){
+            if(
+                SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas1, SoalManager.MATEMATIKA_KELAS1) &&
+                SoalManager.cek(this, energy, "Energi Anda habis, tunggu beberapa saat lagi")
+            ){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this, LatihanMateriSd::class.java)
@@ -352,6 +357,7 @@ class MateriSd : AppCompatActivity() {
             }
         }
         pai5.setOnClickListener {
+
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas5, SoalManager.PAI_KELAS5)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{

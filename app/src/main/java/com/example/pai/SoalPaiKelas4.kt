@@ -1,11 +1,13 @@
 package com.example.pai
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.example.alat.EnergyManager
 
 import com.example.alat.ScoreManagerPai
 import com.example.myapplication.R
@@ -222,6 +224,7 @@ class SoalPaiKelas4 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_soal_pai_kelas4, container, false)
         scoreManagerPai = ScoreManagerPai(requireActivity().applicationContext)
         jawabanBenar6 = if(scoreManagerPai.scorePaiKelas4 < 1) 0 else scoreManagerPai.scorePaiKelas4 / 5
+        val energy = EnergyManager(requireContext())
 
         val grupRadio1 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3a)
         val grupRadio2 = view.findViewById<RadioGroup>(R.id.radioGrupmatSD3b)
@@ -258,8 +261,17 @@ class SoalPaiKelas4 : Fragment() {
             val grup1 = listRadiogrup[0]
             val grup2 = listRadiogrup[1]
             val grup3 = listRadiogrup[2]
-
-            if(grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1){
+            if(energy.energy == 0){
+                val ad = AlertDialog.Builder(requireActivity())
+                ad.setTitle("Empty")
+                ad.setMessage(R.string.empty_energy)
+                ad.setNeutralButton("OK") { _, _ ->
+                    requireActivity().finish()
+                }
+                ad.setCancelable(false)
+                ad.create().show()
+            }else{
+                if(grup1.checkedRadioButtonId != -1 && grup2.checkedRadioButtonId != -1 && grup3.checkedRadioButtonId != -1){
                 if(done){
                     Toast.makeText(requireActivity().applicationContext, "Anda telah mengerjakan ini", Toast.LENGTH_SHORT).show()
                 }else{
@@ -307,11 +319,13 @@ class SoalPaiKelas4 : Fragment() {
                         for(i in listRadiogrup){
                             i.clearCheck()
                         }
+                        energy.energy = energy.energy - 1
+                        energy.saveComp()
                     }
                 } // end cek jawab
             }else {
                 Toast.makeText(activity, "Anda belum memasukkan semua jawaban", Toast.LENGTH_SHORT).show()
-            } // end cek semua jawaban telah di centang
+            }} // end cek semua jawaban telah di centang
         }
         return view
     }

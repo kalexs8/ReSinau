@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.alat.ScoreManagerMatematika
+import com.example.alat.ScoreManagerPai
 
 
 class Profile : Fragment() {
@@ -19,12 +20,14 @@ class Profile : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
         val scoreManagerMatematika = ScoreManagerMatematika(requireActivity().applicationContext)
+        val scoreManagerPai = ScoreManagerPai(requireActivity().applicationContext)
         val skormatSd = view.findViewById<Button>(R.id.resetMatsd1)
 
 
         skormatSd.setOnClickListener {
 
-            scoreManagerMatematika.resetScore()
+            scoreManagerMatematika.resetScoreMat()
+            scoreManagerPai.resetScorePai()
         }
 
         return view

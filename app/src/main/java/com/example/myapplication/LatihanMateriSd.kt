@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import android.os.Handler
 import android.os.Looper
+import com.example.alat.EnergyManager
 import com.example.alat.ScoreManagerMatematika
 import com.example.alat.ScoreManagerPai
 import com.example.matematika.*
@@ -28,6 +29,8 @@ class LatihanMateriSd : AppCompatActivity() {
         scoreManagerMatematika = ScoreManagerMatematika(applicationContext)
         scoreManagerPai = ScoreManagerPai(applicationContext)
         progressBar = findViewById(R.id.progress_bar_sd)
+        val heart = EnergyManager(applicationContext)
+        heart.viewUpdater(findViewById(R.id.heartsCount), findViewById(R.id.timerView2))
 
 
         val closesd = findViewById<ImageView>(R.id.closeSd)
