@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(Lesson())
 
-
-
         binding.menuBawahNavigationView.setOnItemSelectedListener {
 
             when(it.itemId){

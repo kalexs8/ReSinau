@@ -63,7 +63,7 @@ class EnergyManager(context: Context) {
         }
     }
     var energy: Int
-        get() = sharedPrefs.getInt("energy_data", 0)
+        get() = sharedPrefs.getInt("energy_data", 3)
         set(v) = sharedPrefs.edit().putInt("energy_data", v).apply()
 
     fun viewUpdater(vt: TextView, em: TextView){

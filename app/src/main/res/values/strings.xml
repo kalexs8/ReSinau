@@ -27,6 +27,8 @@
     <string name="kelas11">Kelas 11</string>
     <string name="kelas12">Kelas 12</string>
     <string name="score_mat">Math:</string>
+    <string name="score_ipa">Ipa:</string>
+    <string name="score_pai">Pai:</string>
     <string name="matematika">MATEMATIKA</string>
     <string name="indonesia">Bahasa Indonesia</string>
     <string name="inggris">Bahasa Inggris</string>
@@ -56,6 +58,19 @@
         \n
         Bismillah\n
         Alhamdulillah\n
+        \n
+        ««––– 2.2 ––– »»\n
+        • fix bug score pai SD\n
+        • fix bug score pai SMP\n
+        • minor update :\n
+        \t\t • IPA SD completed\n
+        \n
+        ««––– 2.1 ––– »»\n
+        • fix Bug energy 0 di beberapa android versi 7.0 kebawah\n
+        • fix Bug energy loop\n
+        • SMP sekarang sudah bisa di akses\n
+        • minor update:\n
+            \t\t • PAI SMP completed\n
         \n
         ««––– 2.0 ––– »»\n
         \n

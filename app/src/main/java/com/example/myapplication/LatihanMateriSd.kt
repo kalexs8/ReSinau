@@ -32,7 +32,6 @@ class LatihanMateriSd : AppCompatActivity() {
         val heart = EnergyManager(applicationContext)
         heart.viewUpdater(findViewById(R.id.heartsCount), findViewById(R.id.timerView2))
 
-
         val closesd = findViewById<ImageView>(R.id.closeSd)
         closesd.setOnClickListener{
             finish()

@@ -20,43 +20,43 @@ class ScoreManagerPai(context: Context) {
         }
 
         var scorePaiKelas1: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_1", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_1", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_1", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_1", v).apply()
 
         var scorePaiKelas2: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_2", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_2", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_2", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_2", v).apply()
 
         var scorePaiKelas3: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_3", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_3", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_3", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_3", v).apply()
 
         var scorePaiKelas4: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_4", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_4", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_4", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_4", v).apply()
 
         var scorePaiKelas5: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_5", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_5", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_5", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_5", v).apply()
 
         var scorePaiKelas6: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_6", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_6", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_6", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_6", v).apply()
 
         var scorePaiKelas7: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_7", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_7", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_7", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_7", v).apply()
 
         var scorePaiKelas8: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_8", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_8", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_8", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_8", v).apply()
 
         var scorePaiKelas9: Int
-        get() = sharedPrefs.getInt("score_mat_kelas_9", 0)
-        set(v) = sharedPrefs.edit().putInt("score_mat_kelas_9", v).apply()
+        get() = sharedPrefs.getInt("score_pai_kelas_9", 0)
+        set(v) = sharedPrefs.edit().putInt("score_pai_kelas_9", v).apply()
 
 
-    var totalScorePai: Int
+        var totalScorePai: Int
         get() = scorePaiKelas1 + scorePaiKelas2 + scorePaiKelas3 + scorePaiKelas4 +scorePaiKelas5+
                 scorePaiKelas6 + scorePaiKelas7 + scorePaiKelas8 + scorePaiKelas9
         set(v) = sharedPrefs.edit().putInt("total_score", v).apply()

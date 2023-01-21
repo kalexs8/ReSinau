@@ -89,6 +89,7 @@ class MateriSd : AppCompatActivity() {
         val scoreManagerMatematika = ScoreManagerMatematika(this)
         val scoreManagerPai = ScoreManagerPai(this)
         val scoreMatSd = findViewById<TextView>(R.id.scoreMatSd)
+        val scorePaiSd = findViewById<TextView>(R.id.scorePaiSd)
         val energy = EnergyManager(applicationContext)
 
         Thread {
@@ -98,6 +99,7 @@ class MateriSd : AppCompatActivity() {
                 Handler(Looper.getMainLooper()).post{
                     // Untuk listing score bisa ditambahkan dibawah komen ini (tidak usah sesuai urutan)
                     scoreMatSd.text = getString(R.string.score_mat)+scoreManagerMatematika.totalScoreMat.toString()
+                    scorePaiSd.text = getString(R.string.score_pai)+scoreManagerPai.totalScorePai.toString()
                 }
             }
         }.start()
@@ -257,15 +259,16 @@ class MateriSd : AppCompatActivity() {
 
         }
         mat1.setOnClickListener {
-            if(
-                SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas1, SoalManager.MATEMATIKA_KELAS1) &&
-                SoalManager.cek(this, energy, "Energi Anda habis, tunggu beberapa saat lagi")
-            ){
+            if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas1, SoalManager.MATEMATIKA_KELAS1)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalMatKelas1")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalMatKelas1")
+                    startActivity(intent)
+                }
             }
         }
 
@@ -273,9 +276,17 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas2, SoalManager.MATEMATIKA_KELAS2)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalMatKelas2")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    if(!SoalManager.cek(energy)){
+                        Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                    }else{
+                        val intent = Intent(this, LatihanMateriSd::class.java)
+                        intent.putExtra("POINTER_SOAL", "SoalMatKelas2")
+                        startActivity(intent)
+                    }
+                }
             }
         }
 
@@ -283,9 +294,13 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas3, SoalManager.MATEMATIKA_KELAS3)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalMatKelas3")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalMatKelas3")
+                    startActivity(intent)
+                }
             }
         }
 
@@ -293,9 +308,13 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas4, SoalManager.MATEMATIKA_KELAS4)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalMatKelas4")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalMatKelas4")
+                    startActivity(intent)
+                }
             }
         }
 
@@ -303,9 +322,13 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas5, SoalManager.MATEMATIKA_KELAS5)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalMatKelas5")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalMatKelas5")
+                    startActivity(intent)
+                }
             }
         }
 
@@ -313,9 +336,13 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerMatematika.scoreMatKelas6, SoalManager.MATEMATIKA_KELAS6)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalMatKelas6")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalMatKelas6")
+                    startActivity(intent)
+                }
             }
         }
 
@@ -323,9 +350,13 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas1, SoalManager.PAI_KELAS1)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalPaiKelas1")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalPaiKelas1")
+                    startActivity(intent)
+                }
             }
         }
 
@@ -333,27 +364,39 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas2, SoalManager.PAI_KELAS2)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalPaiKelas2")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalPaiKelas2")
+                    startActivity(intent)
+                }
             }
         }
         pai3.setOnClickListener {
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas3, SoalManager.PAI_KELAS3)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalPaiKelas3")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalPaiKelas3")
+                    startActivity(intent)
+                }
             }
         }
         pai4.setOnClickListener {
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas4, SoalManager.PAI_KELAS4)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalPaiKelas4")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalPaiKelas4")
+                    startActivity(intent)
+                }
             }
         }
         pai5.setOnClickListener {
@@ -361,18 +404,26 @@ class MateriSd : AppCompatActivity() {
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas5, SoalManager.PAI_KELAS5)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalPaiKelas5")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalPaiKelas5")
+                    startActivity(intent)
+                }
             }
         }
         pai6.setOnClickListener {
             if(SoalManager.dijawab(scoreManagerPai.scorePaiKelas6, SoalManager.PAI_KELAS6)){
                 Toast.makeText(applicationContext, "Anda telah menyelesaikan semua soal di bagian ini", Toast.LENGTH_SHORT).show()
             }else{
-                val intent = Intent(this, LatihanMateriSd::class.java)
-                intent.putExtra("POINTER_SOAL", "SoalPaiKelas6")
-                startActivity(intent)
+                if(!SoalManager.cek(energy)){
+                    Toast.makeText(this, R.string.empty_energy, Toast.LENGTH_SHORT).show()
+                }else{
+                    val intent = Intent(this, LatihanMateriSd::class.java)
+                    intent.putExtra("POINTER_SOAL", "SoalPaiKelas6")
+                    startActivity(intent)
+                }
             }
         }
 

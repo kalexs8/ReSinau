@@ -20,6 +20,11 @@ public final class SoalManager {
     public static final int PAI_KELAS4 = 15;
     public static final int PAI_KELAS5 = 15;
     public static final int PAI_KELAS6 = 20;
+    public static final int PAI_KELAS7 = 30;
+    public static final int PAI_KELAS8 = 40;
+    public static final int PAI_KELAS9 = 50;
+
+
 
     // Fungsi operasi soal
     public static boolean dijawab(int score, int target, int division){
@@ -29,11 +34,7 @@ public final class SoalManager {
         return score != 0 &&  score / 5 == target;
     }
     // Cek energi kalau masih ada
-    public static boolean cek(Context ct, EnergyManager em, String text){
-        if(em.getEnergy() == 0){
-            Toast.makeText(ct, text, Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        return true;
+    public static boolean cek(EnergyManager em){
+        return em.getEnergy() != 0;
     }
 }
