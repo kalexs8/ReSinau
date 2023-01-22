@@ -40,7 +40,7 @@ android {
             res {
                 srcDirs 'src\\main\\res',
                         'src\\main\\res\\soalmateri\\mat',
-                        'src\\main\\res\\soalmateri\\pai'
+                        'src\\main\\res\\soalmateri\\pai', 'src\\main\\res\\soalmateri\\ipa'
             }
         }
     }

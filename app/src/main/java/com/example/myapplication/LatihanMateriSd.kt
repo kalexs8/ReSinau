@@ -9,8 +9,10 @@ import androidx.viewpager2.widget.ViewPager2
 import android.os.Handler
 import android.os.Looper
 import com.example.alat.EnergyManager
+import com.example.alat.ScoreManagerIpa
 import com.example.alat.ScoreManagerMatematika
 import com.example.alat.ScoreManagerPai
+import com.example.ipa.*
 import com.example.matematika.*
 import com.example.pai.*
 
@@ -18,6 +20,7 @@ class LatihanMateriSd : AppCompatActivity() {
 
     private lateinit var scoreManagerMatematika: ScoreManagerMatematika
     private lateinit var scoreManagerPai: ScoreManagerPai
+    private lateinit var scoreManagerIpa: ScoreManagerIpa
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +31,7 @@ class LatihanMateriSd : AppCompatActivity() {
         val viewPagerBilangan: ViewPager2 = findViewById(R.id.view_pager_bilangan_sd)
         scoreManagerMatematika = ScoreManagerMatematika(applicationContext)
         scoreManagerPai = ScoreManagerPai(applicationContext)
+        scoreManagerIpa = ScoreManagerIpa(applicationContext)
         progressBar = findViewById(R.id.progress_bar_sd)
         val heart = EnergyManager(applicationContext)
         heart.viewUpdater(findViewById(R.id.heartsCount), findViewById(R.id.timerView2))
@@ -227,10 +231,102 @@ class LatihanMateriSd : AppCompatActivity() {
                     }
                 }.start()
             }
+            "SoalIpaKelas1" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpaKelas1(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIpa.scoreIpaKelas1 < 1) 0 else scoreManagerIpa.scoreIpaKelas1 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpaKelas2" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpaKelas2(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIpa.scoreIpaKelas2 < 1) 0 else scoreManagerIpa.scoreIpaKelas3 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpaKelas3" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpaKelas3(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIpa.scoreIpaKelas3 < 1) 0 else scoreManagerIpa.scoreIpaKelas3 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpaKelas4" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpaKelas4(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIpa.scoreIpaKelas4 < 1) 0 else scoreManagerIpa.scoreIpaKelas4 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpaKelas5" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpaKelas5(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIpa.scoreIpaKelas5 < 1) 0 else scoreManagerIpa.scoreIpaKelas5 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpaKelas6" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpaKelas6(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIpa.scoreIpaKelas6 < 1) 0 else scoreManagerIpa.scoreIpaKelas6 / 5
+                        }
+                    }
+                }.start()
+            }
         }
-
-
     }
-
-
 }

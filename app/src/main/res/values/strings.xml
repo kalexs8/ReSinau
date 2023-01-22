@@ -46,6 +46,9 @@
     <string name="pai_sd">pai sd</string>
     <string name="pai_smp">pai smp</string>
     <string name="pai_sma">pai sma</string>
+    <string name="ipa_sd">ipa sd</string>
+    <string name="ipa_smp">ipa smp</string>
+    <string name="ipa_sma">ipa sma</string>
     <string name="segments_sukses">Mantab anda keren!!!, menuju materi selanjutnya</string>
     <string name="next">selanjutnya</string>
     <string name="sukses">anda hebat</string>
@@ -59,11 +62,20 @@
         Bismillah\n
         Alhamdulillah\n
         \n
+         ««––– 2.3 ––– »»\n
+        • add res ipa\n
+        • add layout ipa\n
+        • add mipmap ipa sd\n
+        • add example.ipa\n
+        • add example.scoremanager.ipa\n
+        • add soal ipa sd 1-6\n
+        \n
         ««––– 2.2 ––– »»\n
         • fix bug score pai SD\n
         • fix bug score pai SMP\n
-        • minor update :\n
-        \t\t • IPA SD completed\n
+        • fix bug dobel score\n
+        • add fragment ipa sd 1-6\n
+        • add fragment ipa smp 7-9\n
         \n
         ««––– 2.1 ––– »»\n
         • fix Bug energy 0 di beberapa android versi 7.0 kebawah\n

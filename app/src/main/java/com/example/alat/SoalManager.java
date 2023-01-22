@@ -1,7 +1,6 @@
 package com.example.alat;
 
-import android.content.Context;
-import android.widget.Toast;
+
 
 public final class SoalManager {
     // Batas-batas segmen soal setiap materi dan kelas
@@ -16,13 +15,22 @@ public final class SoalManager {
     public static final int MATEMATIKA_KELAS9 = 50;
     public static final int PAI_KELAS1 = 10;
     public static final int PAI_KELAS2 = 10;
-    public static final int PAI_KELAS3 = 10;
+    public static final int PAI_KELAS3 = 15;
     public static final int PAI_KELAS4 = 15;
     public static final int PAI_KELAS5 = 15;
     public static final int PAI_KELAS6 = 20;
     public static final int PAI_KELAS7 = 30;
     public static final int PAI_KELAS8 = 40;
     public static final int PAI_KELAS9 = 50;
+    public static final int IPA_KELAS1 = 10;
+    public static final int IPA_KELAS2 = 10;
+    public static final int IPA_KELAS3 = 10;
+    public static final int IPA_KELAS4 = 15;
+    public static final int IPA_KELAS5 = 15;
+    public static final int IPA_KELAS6 = 20;
+    public static final int IPA_KELAS7 = 30;
+    public static final int IPA_KELAS8 = 40;
+    public static final int IPA_KELAS9 = 50;
 
 
 
