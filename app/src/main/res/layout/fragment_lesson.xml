@@ -15,11 +15,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start|end"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginBottom="128dp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heartsLayout" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/heartsLayout"
@@ -27,15 +27,14 @@
         android:layout_height="56.0dip"
         android:layout_gravity="end|bottom|center"
         android:layout_margin="16.0dip"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/energy"
         android:clickable="true"
         android:elevation="4.0dip"
         android:focusable="true"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/timerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jenjangSMA">
 

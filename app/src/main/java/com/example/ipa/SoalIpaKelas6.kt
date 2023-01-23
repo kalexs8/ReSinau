@@ -19,21 +19,21 @@ class SoalIpaKelas6 : Fragment() {
     private val soalIpasd6: List<List<Pair<String, Int>>> = listOf(
         listOf(
             Pair("""1. Perhatikan gambar berikut 
-ular Dalam rantai makanan dibawah peran musang dan elang adalah ....
-""", 0),
+Dalam rantai makanan dibawah peran musang dan elang adalah ....
+""", R.mipmap.soal_pas_kelas6_ipa_1),
             Pair("""2. Perhatikan gambar berikut
 hewan seperti gambar beradaptasi dengan cara memiliki ….
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_2),
             Pair("""3. Perhatikan gambar berikut
 untuk melestarikan tumbuhan seperti pada gambar, dapat dillakukan dengan cara ....
-""", 0)),
+""", R.mipmap.soal_pas_kelas6_ipa_3)),
 
         listOf(Pair("""4. Perhatikan gambar berikut Image result for gambar sistem organ pernafasan manusia 
 bagian organ pernafasan yang ditunjukan oleh nomor 4 seperti pada gambar adalah ….
 """, 0),
             Pair("""5. Perhatikan gambar
 proses pencernaan makanan pada organ yang ditunjuk tanda panah seperti pada gambar terjadi secara ….
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_5),
             Pair("""6. Para petani yang memiliki sawah di daerah aliran sungai seringkali melakukan pemupukan tanaman padi
 di sawahnya secara berlebihan, dengan harapan hasil panennya akan bertambah banyak. Padahal tanpa disadari kegiatan tersebut akan mengakibatkan ….
 """, 0)),
@@ -50,21 +50,21 @@ bentuk simbiosis yang terjadi pada nomor  2 dan 5 secara berurutan adalah ….
 """, 0),
             Pair("""9. Perhatikan tabel
 pasangan bagian tubuh hewan dan fungsinya yang tepat pada tabel ditunjukkan oleh nomor ....
-""", 0)),
+""", R.mipmap.soal_pas_kelas6_ipa_9)),
 
         listOf(Pair("""10. Perhatikan gambar
 gambar tersebut termasuk sendi ….
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_10),
             Pair("""11. Perhatikan tabel dibawah ini 
 pasangan tumbuhan dan cara perkembangbiakan yang tepat ditunjukkan oleh nomor ….
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_11),
             Pair("""12.Perhatikan gambar berikut 
 pemanfaatan energi alternatif dalam kehidupan sehari-hari ditunjukkan oleh alat seperti pada gambar nomor ….
-""", 0)),
+""", R.mipmap.soal_pas_kelas6_ipa_12)),
 
         listOf(Pair("""13. Perhatikan gambar
 metamorfosis yang dialami hewan seperti pada gambar yang benar adalah ….
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_13),
             Pair("""14.Perhatikan pernyataan berikut 
 (1) dapat menarik semua benda
 (2) memiliki medan magnet
@@ -72,21 +72,21 @@ metamorfosis yang dialami hewan seperti pada gambar yang benar adalah ….
 (4) memiliki banyak kutub
 sifat magnet yang benar ditunjukkan oleh nomor ....
 """, 0),
-            Pair("""15. Urutan peredaran darah kecil yang benar adalah ....  """, 0)),
+            Pair("""15. Urutan peredaran darah kecil yang benar adalah ....  """, R.mipmap.soal_pas_kelas6_ipa_15)),
 
         listOf(Pair("""16. Benda-benda dibawah ini yang termasuk konduktor panas adalah ….
 """, 0),
             Pair("""17. Gigi berfungsi untuk mencerna makanan secara mekanis di mulut. dari fungsi tersebut, gigi mudah terkena karies gigi yang disebabkan oleh infeksi bakteri. Salah satu cara yang dapat dilakukan untuk mencegah terjadinya karies gigi adalah....""", 0),
             Pair("""18. Perhatikan gambar
 gambar tersebut adalah bentuk model tiruan organ ….
-""", 0)),
+""", R.mipmap.soal_pas_kelas6_ipa_18)),
 
         listOf(Pair("""19. Perhatikan gambar berikut Hasil gambar untuk wujud benda padat 
 sifat benda seperti gambar dibawah adalah...
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_19),
             Pair("""20.Perhatikan tabel di bawah ini
 pasangan bahan penyusun benda dan sifatnya yang benar ditunjukkan oleh nomor ….
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_20),
             Pair("""21. Perhatikan pernyataan
 1) menjemur baju basah
 2) membuat agar-agar
@@ -116,7 +116,7 @@ gaya yang digunakan pada kegiatan seperti gambar dibawah adalah ….
 3) minyak bumi
 6) bioetanol
 sumber energi alternatif yang digunakan dalam kehidupan sehari-hari ditunjukkan oleh nomor ....
-""", 0),
+""", R.mipmap.soal_pas_kelas6_ipa_25),
             Pair("""26. Karena curah hujan yang sangat tinggi saat ini, gelombang air laut bertambah besar. Akibatnya dibeberapa daerah pantai terjadi abrasi. Upaya yang dapat dilakukan untuk mencegah terjadinya abrasi di daerah pantai antara lain dengan cara ....""", 0),
             Pair("""27. Gelembung-gelembung balon air mainan jika terkena sinar matahari akan terlihat berwarna-warni. Peristiwa tersebut menunjukkan salah satu sifat cahaya yaitu dapat ….
 """, 0)),
@@ -139,7 +139,7 @@ kelompok sumber daya alam yang dapat diperbarui ditunjukkan oleh nomor ….
             Pair("""33. Perhatikan gambar gerhana di bawah ini  
 bila bulan berada dalam bayangan umbra 
 seperti pada gambar, maka yang terjadi adalah … 
-""", 0)),
+""", R.mipmap.soal_pas_kelas6_ipa_33)),
 
         listOf(Pair("""34. Perhatikan pernyataan  
 1) Pergantian siang dan malam 
