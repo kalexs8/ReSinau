@@ -432,7 +432,7 @@ maka siswa yang tidak  menyukai keduanya adalah...
         listOf(2,2,2),
         listOf(1,1,1),
         listOf(3,1,3),
-        listOf(0,2,2),
+        listOf(2,2,2),
         listOf(0,3,3),
         listOf(3,3,2),
         listOf(1,2,3),

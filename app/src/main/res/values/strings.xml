@@ -1,4 +1,7 @@
-<resources>
+<?xml version="1.0" encoding="utf-8" ?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
     <string name="app_name">ReSinau</string>
     <string name="score">Score</string>
     <string name="profile">Profile</string>
@@ -61,6 +64,13 @@
         \n
         Bismillah\n
         Alhamdulillah\n
+         \n
+         ««––– 2.5 ––– »»\n
+        • fix jawaban salan mat kelas 7 no 10\n
+        • update soal smp Ipa lengkap\n
+        • mipmap-smp\n
+        • update score ipa smp\n
+        • ignore "missing translation"\n
         \n
          ««––– 2.4 ––– »»\n
         • fix layout for android display small resolution\n

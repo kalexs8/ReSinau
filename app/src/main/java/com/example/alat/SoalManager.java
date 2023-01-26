@@ -28,9 +28,9 @@ public final class SoalManager {
     public static final int IPA_KELAS4 = 15;
     public static final int IPA_KELAS5 = 15;
     public static final int IPA_KELAS6 = 20;
-    public static final int IPA_KELAS7 = 30;
-    public static final int IPA_KELAS8 = 40;
-    public static final int IPA_KELAS9 = 50;
+    public static final int IPA_KELAS7 = 33;
+    public static final int IPA_KELAS8 = 44;
+    public static final int IPA_KELAS9 = 52;
 
 
 
