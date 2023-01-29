@@ -18,221 +18,249 @@ class SoalIpsKelas5 : Fragment() {
     private var jawabanBenar6 = 0
     private val soalIpssd5: List<List<Pair<String, Int>>> = listOf(
         listOf(
-            Pair("""1. Apakah makna kemerdekaan bagi seorang pelajar ialah …..
+            Pair("""1. Kerajaan Islam pertama di Indonesia adalah ….
 """, 0),
-            Pair("""2. Berikut ini yang bukan penyebab hancurnya perekonomian di awal masa kemerdekaan Indonesia ialah ……
+            Pair("""2. Berikut adalah peninggalan kerajaan Islam, kecuali …
 """, 0),
-            Pair("""3. Untuk membantu penyelesaian sengketa antara Indonesia dan Belanda, PBB membentuk KTN yang terdiri atas …….
+            Pair("""3. Kerajaan Majapahit dikenal dengan kerajaan yang mempunyai ….
 """, 0)),
 
-        listOf(Pair("""4. Pertempuran yang terjadi pada tanggal 10 November 1954 ialah …….
+        listOf(Pair("""4. Kerajaan Hindu tertua di Indonesia adalah kerajaan ….
 """, 0),
-            Pair("""5. Siapakah tokoh pemuda yang pertama kali mengetahui bahwa Jepang telah menyerah?""", 0),
-            Pair("""6. Supaya Indonesia mampu bersaing dengan produk-produk luar negeri, Sebaiknya Indonesia ……
+            Pair("""5. Prasasti Batu Bertulis, Prasasti Tugu dan Prasasti Kebon Kopi adalah peninggalan kerajaan ….
+""", 0),
+            Pair("""6. Kerajaan Mataram Islam mencapai puncak kejayaan pada masa pemerintahan ….
 """, 0)),
 
-        listOf(Pair("""7. Kawasan Masyarakat ASEAN memiliki ciri ekonomi seperti berikut, kecuali …….
+        listOf(Pair("""7. Berikut ini candi peninggalan Agama Hindu adalah candi . . . .
 """, 0),
-            Pair("""8. Berikut ini yang merupakan bentuk kerja sama ASEAN dibidang ekonomi, kecuali …..
+            Pair("""8. Candi Borobudur salah satu peninggalan sejarah Agama . . . .
 """, 0),
-            Pair("""9. Indonesia merupakan pelaku kegiatan ekspor impor merupakan peranan dan posisi Indonesia di ASEAN dalam bidang …….
+            Pair("""9. Di Sriwijaya terdapat perguruan tinggi agama Budha , maha guru yang terkenal    adalah . . . .
 """, 0)),
 
-        listOf(Pair("""10. Pembentukan Masyarakat Ekonomi ASEAN (MEA) bertujuan untuk?""", 0),
-            Pair("""11. Penanggulangan bencana alam merupakan bentuk kerja sama negara-negara ASEAN dalam bidang?""", 0),
-            Pair("""12. Bentuk kerja sama ASEAN dalam bidang politik, ialah?""", 0)),
+        listOf(Pair("""10. Mapandes adalah upacara potong...""", 0),
+            Pair("""11.   Bhineka Tunggal Ika diambil dari kitab . . . .
+""", 0),
+            Pair("""12. Kitab Bustan Al Salatin  yang berisi riwayat sultan – sultan Aceh di karang oleh
+""", 0)),
 
-        listOf(Pair("""13. Kerja sama ASEAN di bidang pendidikan, ialah?""", 0),
-            Pair("""14. Berikut ini adalah tujuan berdirinya ASEAN, kecuali?""", 0),
-            Pair("""15. Mengadakan festival lagu dan lomba menyanyi negaraa-negaraa ASEAN merupakan contoh kerjasama dalam bidang?""", 0)),
+        listOf(Pair("""13.Tiang Masjid yang terbuat dari tatal atau potongan kayu terdapat pada masjid. . . . .
+""", 0),
+            Pair("""14.Julukan Ayam Jantan dari Timur ” diberikan belanda kepada . . . .
+""", 0),
+            Pair("""15.Pendiri Pondok Pesantren pertama di Indonesia . . . .
+""", 0)),
 
-        listOf(Pair("""16. Salah satu manfaat dengan adanya perkembangan alat transportasi, ialah?""", 0),
-            Pair("""17. Sebuah tayangan di TV menampilkan sebuah festival budaya di salah satu daerah. Dampak dari adanya penayangan festival budaya tersebut, ialah?""", 0),
-            Pair("""18. Manfaat ditemukan bola lampu, ialah?""", 0)),
+        listOf(Pair("""16.Tugu Katulistiwa terdapat di kota . . . .
+""", 0),
+            Pair("""17. Bukit Barisan terdapat di Pulau . . . .
+""", 0),
+            Pair("""18.Sungai terpanjang di Indonesia adalah . . . .
+""", 0)),
 
-        listOf(
-            Pair("""19. Garis yang membagi bola bumi menjadi dua, yaitu bagian barat dan timur disebut garis ....""", 0),
-            Pair("""20. Yang termasuk zona Waktu Indonesia Bagian Barat (WIB) antara lain ....""", 0),
-            Pair("""21. Jika di Semarang pukul 09.00 maka di Merauke pukul ....""", 0)),
+        listOf(Pair("""19.Garis Bujur 0 derajat melalui kota . . . .
+""", 0),
+            Pair("""20. Berikut ini yang bukan termasuk kenampakan alam adalah ….
+""", 0),
+            Pair("""21. Daratan yang menjorok ke laut dinamakan ….
+""", 0)),
 
-        listOf(Pair("""22. Selisih waktu antara Greenwich Mean Time (GMT) dengan zona  Waktu Indonesia Tengah (WITA) adalah ... jam?""", 0),
-            Pair("""23. Berikut ini merupakan faktor penyebab banjir, kecuali ....""", 0),
-            Pair("""24. Salah satu dampak banjir dalam bidang ekonomi adalah ....""", 0)),
+        listOf(Pair("""22. Wilayah Indonesia dibagi menjadi …. waktu.
+""", 0),
+            Pair("""23. Dataran tinggi Dieng terdapat di Provinsi ….
+""", 0),
+            Pair("""24. Kota Semarang, Palembang dan Padang termasuk wilayah Indonesia dengan pembagian waktu …
+""", 0)),
 
-        listOf(Pair("""25. Salah satu penyakit yang sering mendera pada musim hujan adalah ....""", 0),
-            Pair("""26. Kekeringan, tanah tandus, pohon mati adalah gejala saat musim ....""", 0),
-            Pair("""27. Pekerjaan yang tidak dipengaruhi oleh musim adalah ....""", 0)),
+        listOf(Pair("""25. Keanekaragaman suku-suku bangsa Indonesia antara lain dipengaruhi oleh ….
+""", 0),
+            Pair("""26. Suku Asmat, Bintuni dan Sentani berasal dari pulau ….
+""", 0),
+            Pair("""27. Upacara pembakaran jenazah di Bali dikenal dengan nama ….
+""", 0)),
 
-        listOf(Pair("""28. Daerah yang cocok dijadikan wilayah pertanian, perkebunan, peternakan, perindustrian, dan sentra-sentra bisnis adalah ....""", 0),
-            Pair("""29. Ruang angkasa yang luasnya tidak terukur dan semua benda langit berada di dalamnya disebut ....""", 0),
-            Pair("""30. Berikut merupakan penyebab pemanasan global, kecuali ....""", 0)),
+        listOf(Pair("""28. Berikut adalah suku-suku yang ada di pulau Jawa, kecuali ….
+""", 0),
+            Pair("""29. Alat musik berikut ini yang berasal dari daerah Nusa Tenggara adalah ….
+""", 0),
+            Pair("""30.Rumah adat Papua bernama . . . .
+""", 0)),
 
-        listOf(Pair("""31. Salah satu dampak pemanasan global yaitu ....""", 0),
-            Pair("""32. Berikut ini yang bukan kegiatan untuk mengurangi pemanasan global adalah ....""", 0),
-            Pair("""33. Komet yang terpanjang lintasannya dan muncul setiap 76 tahun sekali yaitu komet ....""", 0)),
+        listOf(Pair("""31.Suku Asmat terdapat di pulau . . . .
+""", 0),
+            Pair("""32.Tari Reog berasal dari  kota . . . .
+""", 0),
+            Pair("""33.Lagu gundul – gundul pacul berasal dari . . . .
+""", 0)),
 
-        listOf(Pair("""34. Salah satu penemuan Galileo adalah ....""", 0),
-            Pair("""35. Salah satu keunikan planet bumi dibandingkan dengan planet lainnya yaitu ....""", 0),
-            Pair("""36. Ilmu yang mempelajari tentang benda langit serta fenomena-fenomena alam yang terjadi di luar atmosfer bumi disebut ....""", 0)),
+        listOf(Pair("""34.Pertunjukan ondel – ondel berasal dari . . . .
+""", 0),
+            Pair("""35. Berikut yang tidak termasuk kebudayaan daerah Indonesia adalah ….
+""", 0),
+            Pair("""36. Tujuan Belanda datang ke Indonesia untuk ....        """, 0)),
 
-        listOf(Pair("""37. Observatorium Bosscha merupakan tempat peneropongan bintang yang terletak di ....""", 0),
-            Pair("""38. Alat yang digunakan untuk melihat benda angkasa luar yang sangat jauh agar tampak jelas dan besar adalah ....""", 0),
-            Pair("""39. Organisasi kemasyarakatan yang dibentuk melalui musyawarah masyarakat setempat dalam rangka pelayanan pemerintahan dan kemasyarakatan yang ditetapkan oleh Desa atau Kelurahan dan dibina oleh Pemerintah disebut ....""", 0)),
+        listOf(Pair("""37. Sistem tanam paksa pada masa penjajahan belanda disebut ....        """, 0),
+            Pair("""38. Pertama kali belanda mendarat di indonesia dipimpin oleh Cornelis De Houtman di wilayah ....""", 0),
+            Pair("""39. Pahlawan yang mendapat gelar ”Ayam Jantan dari Timur” adalah ....""", 0)),
 
-        listOf(Pair("""40. Badan yang mengatur untuk memilih pemimpin yang berwibawa adalah lembaga ....""", 0),
-            Pair("""41. Lembaga sosial terkecil dalam masyarakat adalah ....""", 0),
-            Pair("""42. Salah satu fungsi lembaga pendidikan yaitu ....""", 0)),
+        listOf(Pair("""40. Penderitaan para petani ini diungkapkan oleh Edward Douwes Dekker dalam buku ....""", 0),
+            Pair("""41. Strategi perang Pangeran Diponegoro melawan Belanda adalah dengan ....""", 0),
+            Pair("""42. Raja Sisingamangaraja XII memimpin rakyat batak melakukan perlawanan terhadap Belanda di daerah ....""", 0)),
 
-        listOf(Pair("""43. Seorang lurah diangkat berdasarkan ....""", 0),
-            Pair("""44. Lembaga ekonomi berikut termasuk Badan Usaha Milik Negara (BUMN), kecuali ....""", 0),
-            Pair("""45. Pemilihan umum dilaksanakan di kabupaten dan provinsi untuk memilih ....""", 0)),
+        listOf(Pair("""43. Kerja paksa pada masa penjajahan Jepang disebut .…        
+""", 0),
+            Pair("""44. Sebab mengapa perjuangan bangsa Indonesia melawan penjajah sering mengalami kegagalan adalah ....""", 0),
+            Pair("""45. Sarekat Islam adalah salah satu organisasi yang gigih melawan penjajah yang didirikan oleh ....""", 0)),
 
-        listOf(Pair("""46. Faktor utama penyebab keanekaragaman suku bangsa, budaya, dan bahasa lokal di Indonesia adalah ....""", 0),
-            Pair("""47. Hak pemerintah daerah untuk mengatur pemerintahan sendiri disebut ....""", 0),
-            Pair("""48. Yang berperan dalam pengembangan budaya, ilmu pengetahuan, seni, lingkungan, dan pendidikan pada masyarakat yang ada pada suatu daerah atau negara adalah lembaga ....""", 0)),
+        listOf(Pair("""46. Pada tanggal 1 Maret 1943 Jepang membentuk suatu organisasi yang bertujuan memusatkan tenaga rakyat untuk mendukung Jepang yaitu ....""", 0),
+            Pair("""47. Surat-surat dari R.A. Kartini diterbitkan menjadi sebuah buku oleh sahabatnya, J.H. Abendanon. Buku tersebut diterjemahkan Armijn Pane dengan judul ....""", 0),
+            Pair("""48. Dua kota di Jepang yang dijatuhi bom atom oleh sekutu adalah ....""", 0)),
 
-        listOf(Pair("""49. Badan yang mengawasi obat dan makanan di Indonesia adalah ....""", 0),
-            Pair("""50. Manusia adalah makhluk rasional yang berusaha dengan seefisien mungkin dan sebaik-baiknya dalam memakai sumber daya alam untuk memenuhi kebutuhan hidupnya. Oleh karena itu manusia disebut sebagai makhluk ....""", 0),
-            Pair("""51. Untuk melaksanakan PHBS sekolah dapat bekerja sama dengan ....""", 0)),
+        listOf(Pair("""49. BPUPKI singkatan dari ....""", 0),
+            Pair("""50. BPUPKI diketuai oleh ....""", 0),
+            Pair("""51. Tujuan Jepang memberikan janji kemerdekaan kepada Indonesia adalah ....""", 0)),
 
-        listOf(Pair("""52. Menghemat biaya pengharum ruangan adalah salah satu manfaat potpourri dalam bidang ....""", 0),
-            Pair("""53. Berikut ini cara untuk menjaga udara yang bersih, kecuali ....""", 0),
-            Pair("""54. Salah satu negara yang dikenal sebagai negara yang ramah lingkungan adalah ....""", 0)),
+        listOf(Pair("""52. Jepang menyerah tanpa syarat pada sekutu pada tanggal ....""", 0),
+            Pair("""53. Para pemuda membawa Ir. Soekarno dan Drs. Moh. Hatta ke Rengasdengklok bertujuan untuk ....""", 0),
+            Pair("""54. Sidang BPUPKI yang pertama menyepakai bahwa negara Indonesia berbentuk ....""", 0)),
 
-        listOf(Pair("""55. Berikut merupakan kegiatan Posyandu, kecuali ....""", 0),
-            Pair("""56. Hasil interaksi manusia dengan lingkungan alam melalui kegiatan penghijauan adalah ....""", 0),
-            Pair("""57. Segala sesuatu yang ada di lingkungan dan bukan makhluk hidup disebut komponen ....""", 0)),
+        listOf(Pair("""55. Pembacaan teks proklamasi dilakukan di .... """, 0),
+            Pair("""56. Sikap pahlawan yang bisa kita teladani adalah ....""", 0),
+            Pair("""57. Sebagai siswa kita dapat meneruskan perjuangan para pahlawan dengan ....""", 0)),
 
-        listOf(Pair("""58. Gotong royong antaranggota masyarakat untuk mencapai suatu tujuan merupakan contoh interaksi manusia dengan lingkungan .... """, 0),
-            Pair("""59. Keberadaan komputer dapat memudahkan dan menunjang pembelajaran di sekolah. Hal tersebut merupakan salah satu manfaat komputer di bidang?""", 0),
-            Pair("""60. Salah satu pengaruh penemuan listrik di bidang komunikasi, ialah?""", 0))
+        listOf(Pair("""58. Kemerdekaan bangsa indonesia diperoleh dari ....""", 0),
+            Pair("""59. Tujuan mengheningkan cipta pada saat upacara adalah untuk ....""", 0),
+            Pair("""60. Tujuan mengubah isi dalam Piagam Jakarta dari kalimat “Ketuhanan dengan berkewajiban menjalankan syariat-syariat Islam bagi para pemeluknya” dengan diganti dengan “Ketuhanan yang Maha Esa” adalah ....""", 0)
+        )
     )
 
     private  val pilihanGanda6: List<List<List<String>>> = listOf(
         listOf(
-            listOf("a. memperboleh kebebasan dalam melakukan pekerjaan","b. memiliki hak yang sama dalam memberikan pendapat","c. memiliki hak untuk memperoleh pendidikan","d. memperolah kebebasan memilih dalam pemilihan umum (pemilu)"),
-            listOf("a. Kekosongan kas negara","b. Adanya pinjaman nasional","c. Inflasi yang sangat tinggi","d. Blokade ekonomi oleh Belanda"),
-            listOf("a. Australia, Swedia, dan Belgia","b. Belgia, Amerika Serikat, dan Belgia","c. Amerika Serikat, Belgia, dan Swedia","d. Amerika Serikat, Australia, dan Belgia")
+            listOf("a. Aceh   ","b. Demak   ","c. Gowa-Tallo  ","d. Samudra Pasai"),
+            listOf("a. Masjid Demak","b. Menara Kudus","c. Candi Borobudur","d. Pondok Pesantren"),
+            listOf("a. Permaisuri yang cantik-cantik  ","b. Angkatan darat yang banyak  ","c. Raja-raja yang bijak","d. Kekuatan maritim yang besar")
         ),
         listOf(
-            listOf("a. Pertempuran Surabaya","b. Pertemuran Ambarawa","c. Pertempuran Bandung Lautan Api","d. Pertempuran Medan Area"),
-            listOf("a. Sayuti Melik","b. Yusuf Kunto","c. Sutan Syahrir","d. Sukarni"),
-            listOf("a. Menambah modal","b. Meningkatkan kwalitas barang","c. Meningkatkan penggunaan tenaga kerja","d. Menambah berbagai jenis produk")
+            listOf("a. Sriwijaya  ","b. Singasari   ","c. Kutai  ","d. Majapahit"),
+            listOf("a. Majapahit  ","b. Demak   ","c. Tarumanegara","d. Gowa-Tallo"),
+            listOf("a. Hayam Wuruk    ","b. Sultan Agung","c. Sultan Ageng Tirtayasa","d. Sultan Hasanudin")
         ),
         listOf(
-            listOf("a. Iklim ekonomi menjadi kompetitif","b. Terjadi integrasi dengan adanya pasar tunggal","c. Perkembangan ekonomi terasa lambat","d. Terdapat usaha pemerataan ekonomi ASEAN"),
-            listOf("a. Kawasan perdagangan bebas","b. Pembukaan pusat promosi ASEAN","c. Penyediaan cadangan pangan","d. Penawaran beasiswa pendidikan"),
-            listOf("a. Ekonomi","b. Pendidikan","c. Sosial budaya","d. Politik")
+            listOf("a. Prambanan                                     ","b. Pawon           ","c. Muaran Takus                                 ","d. Tikus"),
+            listOf("a. Hindu                                               ","b. Budha       ","c. Animisme                                     ","d. Kong hu cu"),
+            listOf("a. I Tsing                                             ","b. Dapunta Hyang   ","c. Sakyakirti                           ","d. Putra Dewa")
         ),
         listOf(
-            listOf("a. Memajukan teknologi komunikasi dan informasi","b. Meningkatkan stabilitas ekonomi negara-negara ASEAN","c. Menjaga negara-negara ASEAN supaya terhindar dari kriminalitas","d. Meningkatkan sumber daya manusia yang berkualitas"),
-            listOf("a. Budaya","b. Politik","c. Sosial","d. IPTEK"),
-            listOf("a. Menyediakan cadangan pangan untuk negara-negara ASEAN","b. Penandatanganan kesepakatan bersama ASEAN Tourism Agreement","c. Menegakkan Perjanjian Ekstradisi di Kawasan ASEAN","d. Penyelenggaraan pesta dua tahun sekali SEA GAMES")
+            listOf("a. gigi                                                 ","b. kuku   ","c. Rambut                                           ","d. Tumpang"),
+            listOf("a. Arjuna Wiwaha                                 ","b. Sotasoma           ","c. Negara Kertagama                           ","d. Barata Yuda"),
+            listOf("a. Nuruddi ar roini                                 ","b. Nurul ar roini     ","c. Sunan Giri                             ","d. Nuruddin")
         ),
         listOf(
-            listOf("a. Perlindungan terhadap anak cacat","b. Pertukaran pelajar antar negara ASEAN","c. Mendirikan ASCC (ASEAN Socio Cultural Community)","d. Penanganan narkoba dan solusinya"),
-            listOf("a. Memajukan kerja sama dalam bidang IPTEK","b. Memajukan perdamaian di kawasan Asia Tenggara","c. Mempercepat pertumbuhan ekonomi sosial budaya di Asia Tenggara","d. Memajukan persiapan perang negara-negara ASEAN melawan penjajah"),
-            listOf("a. Perdagangan","b. Sosial budaya","c. Politik","d. industri")
+            listOf("a. Demak                                             ","b. Banten       ","c. Baiturrahman                                     ","d. Menara Kudus"),
+            listOf("a. Sultan Iskandar Muda                       ","b. Sultan Hasanuddin   ","c. Sultan Trenggono                     ","d. Sultan Ternate."),
+            listOf("a. Sunan Ampel                                   ","b. Sunan Giri     ","c. Sunan Gersik                                 ","d. Sunan Bonang")
         ),
         listOf(
-            listOf("a. Kegiatan distribusi menjadi lebih mudah","b. Masyarakat kesulitan memenuhi kebutuhan","c. Harga semua barang menjadi sangat mahal","d. Membuat jalan menjadi macet"),
-            listOf("a. Menimbulkan perpecahan antar warga","b. Menambah pengetahuan dan wawasan","c. Menimbulkan kesan sombong dan angkuh","d. Menimbulkan rasa iri dan benci"),
-            listOf("a. Suasana menjadi gelap di malam hari","b. Komunikasi tidak terhalang jarak dan waktu","c. Dapat melakukan kegiatan di malam hari","d. Jarak antar tempat menjadi lebih dekat")
+            listOf("a. Jakarta                                             ","b. Surabaya     ","c. Balik Papan                                   ","d. Pontianak"),
+            listOf("a. Sumatra                                           ","b. Kalimantan     ","c. Jawa                                 ","d. Papua"),
+            listOf("a. Batanghari                                       ","b. Kapuas       ","c. Bengawan Solo                                   ","d. Barito")
         ),
         listOf(
-            listOf("a. bujur","b. lintang","c. khatulistiwa","d. astronomis"),
-            listOf("a. Kalimantan Timur, Bali, dan Sulawesi","b. Papua dan Kepulauan Maluku","c. Jawa, Bali, dan Kepulauan Nusa Tenggara","d. Sumatera, Jawa, dan Madura"),
-            listOf("a. 07.00","b. 08.00","c. 10.00","d. 11.00")
+            listOf("a. Paris                                               ","b. London       ","c. Greenwich                                   ","d. Pontianak"),
+            listOf("a. Sungai  ","b. Pelabuhan  ","c. Danau ","d. Gunung"),
+            listOf("a. Lembah ","b. Teluk  ","c. Selat ","d. Tanjung")
         ),
         listOf(
-            listOf("a. 6","b. 7","c. 8","d. 9"),
-            listOf("a. adanya daerah peresapan air","b. pendangkalan sungai akibat sampah","c. penebangan pohon yang berlebihan","d. curah hujan yang tinggi"),
-            listOf("a. menimbulkan berbagai macam penyakit","b. pencemaran lingkungan","c. pemicu tanah longsor","d. kerusakan sarana dan prasarana")
+            listOf("a. 3 bagian ","b. 4 bagian  ","c. 2 bagian ","d. 1 bagian"),
+            listOf("a. Jawa Tengah ","b. Jawa timur ","c. Jawa barat ","d. Banten"),
+            listOf("a. WITA  ","b. WIB   ","c. WIT  ","d. WIS")
         ),
         listOf(
-            listOf("a. hepatitis","b. hipertensi","c. diare","d. vertigo"),
-            listOf("a. kemarau","b. dingin","c. semi","d. gugur"),
-            listOf("a. bercocok tanam","b. karyawan pabrik","c. pembuatan batu bata","d. petani garam")
+            listOf("a. Perbedaan kondisi lingkungan yang ditempati","b. Persamaan lingkungan pulau yang ditempati","c. Banyaknya gunung berapi di Indonesia","d. Perbedaan jenis iklim antar pulau di Indonesia"),
+            listOf("a. Kalimantan ","b. Sumatra  ","c. Papua ","d. Jawa"),
+            listOf("a. Wiwit  ","b. Legong  ","c. Ngaben ","d. Kecak")
         ),
         listOf(
-            listOf("a. daerah pantai","b. dataran rendah","c. dataran tinggi","d. pegunungan"),
-            listOf("a. tata surya","b. galaksi","c. jagad raya","d. astronomi"),
-            listOf("a. efek rumah kaca","b. gas buang dari industri","c. pengrusakan hutan","d. perubahan iklim")
+            listOf("a. Jawa  ","b. Sunda  ","c. Toraja ","d. Tengger"),
+            listOf("a. Bonang ","b. Sasando  ","c. Popondi","d. Rebab"),
+            listOf("a. Joglo                                               ","b. Betang     ","c. Kariwari                                     ","d. Gudang")
         ),
         listOf(
-            listOf("a. menurunnya tinggi permukaan laut","b. meningkatnya temperatur udara","c. meningkatnya kesehatan masyarakat","d. meningkatnya tingkat kesuburan tumbuhan"),
-            listOf("a. menanam pohon atau reboisasi","b. menggunakan energi alternatif ","c. meningkatkan penggunaan bahan bakar fosil","d. menghemat pemakaian energi listrik"),
-            listOf("a. Halley","b. Encke","c. Biella","d. Halle-Bop")
+            listOf("a. Madura                                           ","b. Jawa       ","c. Sumatra                                       ","d. Papua."),
+            listOf("a. Ponorogo                                         ","b. Bojonegoro     ","c. Purworejo                                 ","d. Malioboro"),
+            listOf("a. Jawa Timur                                     ","b. Jawa Tengah       ","c. Jawa Barat                           ","d. Yogyakarta")
         ),
         listOf(
-            listOf("a. telegrap","b. mikroskop","c. stetoskop","d. termometer"),
-            listOf("a. memiliki kawah berwarna biru","b. mempunyai cincin yang indah","c. dapat dihuni makhluk hidup","d. memiliki banyak satelit"),
-            listOf("a. astronomi","b. astrologi","c. geografi","d. kosmologi")
+            listOf("a. Surabaya                                         ","b. Semarang           ","c. Jakarta                           ","d. Yogyakarta."),
+            listOf("a. Tarian daerah","b. Lagu daerah  ","c. Bahasa daerah  ","d. Tanah daerah"),
+            listOf("a. Bertamasya        ","b. Berdagang                ","c. Mengembara        ","d. Berpetualang")
         ),
         listOf(
-            listOf("a. Semarang","b. Jakarta","c. Lembang","d. Malang"),
-            listOf("a. mikroskop","b. teleskop","c. periskop","d. kaleidoskop"),
-            listOf("a. Rukun Tetangga","b. Rukun Warga","c. Kelurahan","d. Kecamatan")
+            listOf("a. Cultuur Stelsel        ","b. Rodi                        ","c. Romusha                ","d. Devide et impera"),
+            listOf("a. Sumatra                ","b. Banten                ","c. Jawa tengah        ","d. Kalimantan"),
+            listOf("a. Pangeran Antasari                                   ","b. Imam Bonjol                                ","c. Sisingamangaraja XII     ","d. Sultan Hasanudin        ")
         ),
         listOf(
-            listOf("a. politik","b. sosial","c. ekonomi","d. pendidikan"),
-            listOf("a. individu","b. keluarga","c. RT","d. RW"),
-            listOf("a. memelihara ketertiban dalam masyarakat","b. mengatur tata cara hubungan manusia dengan Tuhan","c. sebagai sarana untuk mewujudkan keadilan sosial","d. mempersiapkan anggota masyarakat untuk mencari nafkah")
+            listOf("a. max havelaar        ","b. Trias politica        ","c. Sutasoma                ","d. Raflesia"),
+            listOf("a. Perang senjata        ","b. Perang gerilya        ","c. Perang bom                ","d. Perang saudara"),
+            listOf("a. Jakarta                ","b. Tapanuli                ","c. Sulawesi                ","d. Makasar")
         ),
         listOf(
-            listOf("a. pemilihan langsung oleh penduduk","b. Surat Keputusan Bupati/Walikota","c. Surat Keputusan Gubernur","d. Surat Keputusan Presiden"),
-            listOf("a. Persero","b. Perum/Perusahaan Umum","c. Perusahaan Jawatan","d. Koperasi"),
-            listOf("a. kepala dinas","b. kepala daerah","c. kepala departemen","d. kepala divisi")
+            listOf("a. Rodi                ","b. Kempetai                ","c. Sheikirei                 ","d. Romusha"),
+            listOf("a. Kurangnya bahan makanan                ","b. Kurangnya pasokan senjata","c. Kurangnya persatuan dan kesatuan","d. Kurangnya orang-orang yang hebat"),
+            listOf("a. Agus Salim                                        ","b. H.O.S Cokroaminoto","c. H. Samanhudi","d. K.H. Achmad Dahlan")
         ),
         listOf(
-            listOf("a. bangsa Indonesia dibangun dari berbagai macam ras","b. kesamaan kondisi alam dari Sabang sampai Merauke","c. nenek moyang bangsa Indonesia berasal dari berbagai daerah","d. letak wilayah Indonesia yang sangat strategis"),
-            listOf("a. otonomi daerah","b. sentralisasi","c. dekonsentrasi","d. ekonomi daerah"),
-            listOf("a. sosial","b. ekonomi","c. budaya","d. agama")
+            listOf("a. Sinendan                ","b. Jawa Hokokai        ","c. Keibodan                ","d. Putera"),
+            listOf("a. Habis gelap terbitlah matahari                ","b. Habis gelap terbitlah terang","c. Habis terang terlihat cahaya","d. Habis terang gelap tiada"),
+            listOf("a. Tokyo dan Nagasaki                        ","b. Tokyo dan Kyoto","c. Hiroshima dan Nagasaki","d. Hiroshima dan Tokyo")
         ),
         listOf(
-            listOf("a. BPOM","b. WHO","c. Litbangkes","d. Depkes"),
-            listOf("a. sosial","b. budaya","c. ekonomi","d. individu"),
-            listOf("a. Puskesmas","b. Partai Politik","c. Karang Taruna","d. Koperasi")
+            listOf("a. Badan Persiapan Usaha-Usaha Perjuangan Kemerdekaan Indonesia","b. Badan Penyelidik Usaha-Usaha Persiapan Kemerdekaan Indonesia","c. Badan Penyelidik Usaha-Usaha Perjuangan Kemerdekaan Indonesia","d. Badan Penyelidik Usaha-Usaha Proklamasi Kemerdekaan Indonesia"),
+            listOf("a. Ir. Soekarno                                ","b. Drs. Moh Hatta                                ","c. Dr. Radjiman Wedyodiningrat","d. Ki Hajar Dewantoro"),
+            listOf("a. Agar Indonesia menjadi negara maju","b. Agar Indonesia mau membantu Jepang melawan sekutu","c. Agar Indonesia mau menyerah kepada Jepang","d. Agar Indonesia bisa diadu dengan sekutu")
         ),
         listOf(
-            listOf("a. budaya","b. sosial","c. ekonomi","d. lingkungan"),
-            listOf("a. menanam pohon","b. mengurangi penggunaan bahan bakar fosil","c. membakar sampah plastik","d. menggunakan energi alternatif"),
-            listOf("a. Indonesia","b. Finlandia","c. Cina","d. India")
+            listOf("a. 17 Agustus 1945                                ","b. 15 Agustus 1945                                ","c. 14 Agustus 1945","d. 13 Agustus 1945"),
+            listOf("a. Mengamankan Ir. Sokarno dan Drs. Moh. Hatta dari pengaruh Jepang","b. Memaksa Ir. Soekarno dan Drs. Moh. Hatta mundur dari PPKI","c. Memaksa Ir. Sokarno dan Drs, Moh. Hatta untuk meminta bantuan Jepang","d. Mengharap Ir. Sokarno dan Drs. Moh. Hatta untuk bergabung dengan sekutu"),
+            listOf("a. Kerajaan                ","b. Kesultanan                ","c. Komunis                ","d. Republik")
         ),
         listOf(
-            listOf("a. imunisasi gratis","b. pengecekan tumbuh kembang","c. penyuluhan tentang makanan sehat untuk bayi","d. kerja bakti membersihkan lingkungan"),
-            listOf("a. mendapatkan berbagai jenis ikan","b. tersedianya sumber air bersih","c. mudah mendapatkan susu dan daging","d. tersedianya bahan bakar fosil"),
-            listOf("a. biotik","b. abiotik","c. biologis","d. ekosistem")
+            listOf("a. Rumah laksamana Tadashi Maeda        ","b. Rengasdengklok","c. Jalan Pegangsaan Timur No. 56        ","d. Istana merdeka"),
+            listOf("a. Cinta negara lain                                ","b. Cinta tanah air","c. Mengkhianati bangsa","d. Melakukan pemberontokan"),
+            listOf("a. Melawan negara lain                        ","b. Menghancurkan negara lain","c. Belajar dengan tekun","d. Menyerang negara penjajah")
         ),
         listOf(
-            listOf("a. alam","b. budaya","c. ekonomi","d. sosial"),
-            listOf("a. Sosial","b. Budaya","c. Pendidikan","d. Ekonomi"),
-            listOf("a. Komunikasi tidak terhalang jarak dan waktu","b. Sumber penerangan menjadi berkurang","c. Jarak antar tempat menjadi lebih dekat","d. Komunikasi semakin sulit danlambat")
+            listOf("a. Hadiah negara lain                                ","b. Perjuangan bangsa sendiri","c. Kenang-kenangan Jepang","d. Bonus dari negara sekutu"),
+            listOf("a. Istirahat sejenak                                ","b. Mengenang jasa pahlawan                ","c. Menghafal lagu","d. Meneruskan jasa pahlawan"),
+            listOf("a. Menghormati pemeluk agama lain","b. Menyingkat kalimat yang terlalu panjang","c. Menghormati negara lain","d. Memudahkan pengucapan pembaca")
         )
     )
 
 
     private val kunciJawaban6: List<List<Int>> = listOf(
-        listOf(2,2,3),
-        listOf(0,2,1),
-        listOf(2,3,0),
-        listOf(1,1,2),
-        listOf(1,3,1),
-        listOf(0,1,2),
-        listOf(0,3,3),
-        listOf(2,0,3),
-        listOf(2,0,1),
-        listOf(1,2,3),
-        listOf(1,2,0),
-        listOf(3,2,0),
-        listOf(2,1,0),
-        listOf(0,1,3),
-        listOf(1,3,1),
-        listOf(3,0,2),
-        listOf(0,2,0),
+        listOf(3,2,3),
         listOf(2,2,1),
-        listOf(3,1,1),
-        listOf(3,2,0)
+        listOf(0,1,2),
+        listOf(0,1,0),
+        listOf(0,1,2),
+        listOf(3,0,1),
+        listOf(2,1,3),
+        listOf(0,0,1),
+        listOf(0,2,2),
+        listOf(2,1,2),
+        listOf(3,0,1),
+        listOf(2,3,1),
+        listOf(0,1,3),
+        listOf(0,1,1),
+        listOf(3,2,2),
+        listOf(3,1,2),
+        listOf(1,2,1),
+        listOf(1,0,3),
+        listOf(2,1,2),
+        listOf(1,1,0)
+
 
 
 
