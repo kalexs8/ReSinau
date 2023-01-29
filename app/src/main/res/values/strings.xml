@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<resources
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingTranslation">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">ReSinau</string>
     <string name="score">Score</string>
     <string name="profile">Profile</string>
@@ -32,6 +30,7 @@
     <string name="score_mat">Math:</string>
     <string name="score_ipa">Ipa:</string>
     <string name="score_pai">Pai:</string>
+    <string name="score_ips">Ips:</string>
     <string name="matematika">MATEMATIKA</string>
     <string name="indonesia">Bahasa Indonesia</string>
     <string name="inggris">Bahasa Inggris</string>
@@ -52,6 +51,9 @@
     <string name="ipa_sd">ipa sd</string>
     <string name="ipa_smp">ipa smp</string>
     <string name="ipa_sma">ipa sma</string>
+    <string name="ips_sd">ips sd</string>
+    <string name="ips_smp">ips smp</string>
+    <string name="ips_sma">ips sma</string>
     <string name="segments_sukses">Mantab anda keren!!!, menuju materi selanjutnya</string>
     <string name="next">selanjutnya</string>
     <string name="sukses">anda hebat</string>
@@ -64,6 +66,22 @@
         \n
         Bismillah\n
         Alhamdulillah\n
+        \n
+         ««––– 2.6 ––– »»\n
+
+         \n
+         ««––– 2.6 ––– »»\n
+        • fix soal pai kelas 2 nomor 16\n
+        • fix soal pai kelas 9 nomor 4\n
+        • add soal ips sd complete\n
+        \n
+
+        • fix soal ipa kelas 1 no, soal tidak lengkap\n
+        • new ips package dir\n
+        • new ips res dir\n
+        • add fragment ips kelas 1-9\n
+        • add mipmap ips\n
+        • remove unused file or variavel\n
          \n
          ««––– 2.5 ––– »»\n
         • fix jawaban salan mat kelas 7 no 10\n

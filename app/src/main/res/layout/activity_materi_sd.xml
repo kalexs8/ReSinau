@@ -831,7 +831,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="IPS: 0"
                     app:layout_constraintStart_toEndOf="@+id/scoreIpaSd"
                     app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 
@@ -841,7 +840,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="IPA: 0"
                     app:layout_constraintStart_toEndOf="@+id/scoreMatSd"
                     app:layout_constraintTop_toBottomOf="@+id/scoreTotal" />
 

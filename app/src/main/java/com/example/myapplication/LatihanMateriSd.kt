@@ -8,11 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import android.os.Handler
 import android.os.Looper
-import com.example.alat.EnergyManager
-import com.example.alat.ScoreManagerIpa
-import com.example.alat.ScoreManagerMatematika
-import com.example.alat.ScoreManagerPai
+import com.example.alat.*
 import com.example.ipa.*
+import com.example.ips.*
 import com.example.matematika.*
 import com.example.pai.*
 
@@ -21,6 +19,7 @@ class LatihanMateriSd : AppCompatActivity() {
     private lateinit var scoreManagerMatematika: ScoreManagerMatematika
     private lateinit var scoreManagerPai: ScoreManagerPai
     private lateinit var scoreManagerIpa: ScoreManagerIpa
+    private lateinit var scoreManagerIps: ScoreManagerIps
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +31,7 @@ class LatihanMateriSd : AppCompatActivity() {
         scoreManagerMatematika = ScoreManagerMatematika(applicationContext)
         scoreManagerPai = ScoreManagerPai(applicationContext)
         scoreManagerIpa = ScoreManagerIpa(applicationContext)
+        scoreManagerIps = ScoreManagerIps(applicationContext)
         progressBar = findViewById(R.id.progress_bar_sd)
         val heart = EnergyManager(applicationContext)
         heart.viewUpdater(findViewById(R.id.heartsCount), findViewById(R.id.timerView2))
@@ -323,6 +323,102 @@ class LatihanMateriSd : AppCompatActivity() {
                         Thread.sleep(1000)
                         Handler(Looper.getMainLooper()).post{
                             progressBar.progress = if(scoreManagerIpa.scoreIpaKelas6 < 1) 0 else scoreManagerIpa.scoreIpaKelas6 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpsKelas1" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpsKelas1(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIps.scoreIpsKelas1 < 1) 0 else scoreManagerIps.scoreIpsKelas1 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpsKelas2" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpsKelas2(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIps.scoreIpsKelas2 < 1) 0 else scoreManagerIps.scoreIpsKelas2 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpsKelas3" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpsKelas3(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIps.scoreIpsKelas3 < 1) 0 else scoreManagerIps.scoreIpsKelas3 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpsKelas4" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpsKelas4(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIps.scoreIpsKelas4 < 1) 0 else scoreManagerIps.scoreIpsKelas4 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpsKelas5" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpsKelas5(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIps.scoreIpsKelas5 < 1) 0 else scoreManagerIps.scoreIpsKelas5 / 5
+                        }
+                    }
+                }.start()
+            }
+            "SoalIpsKelas6" ->{
+                val fragments: ArrayList<Fragment> = arrayListOf(
+                    SoalIpsKelas6(),
+
+                    )
+                val adapterSD = ViewPagerAdapterSd(fragments,this)
+                viewPagerBilangan.adapter = adapterSD
+                Thread {
+                    while (true){
+                        Thread.sleep(1000)
+                        Handler(Looper.getMainLooper()).post{
+                            progressBar.progress = if(scoreManagerIps.scoreIpsKelas6 < 1) 0 else scoreManagerIps.scoreIpsKelas6 / 5
                         }
                     }
                 }.start()

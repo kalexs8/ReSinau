@@ -18,7 +18,13 @@ class SoalIpaKelas7 : Fragment() {
     private var jawabanBenar6 = 0
     private val soalIpasd7: List<List<Pair<String, Int>>> = listOf(
         listOf(
-            Pair("""1. Urutan langkah-langkah metode ilmiah yang benar adalah ....""", 0),
+            Pair("""1. ⦁	Perhatikan langkah-langkah metode ilmiah berikut
+1) Melakukan pengamatan
+2) Melakukan eksperimen
+3) Merumuskan hipotesis
+4) Menarik kesimpulan
+5) Merumuskan masalah
+Urutan langkah-langkah metode ilmiah yang benar adalah ....""", 0),
             Pair("""2. Berikut ini yang bukan manfaat mempelajari IPA adalah mampu ....""", 0),
             Pair("""3. Perhatikan pernyataan di bawah ini
 1) Bunga mawar berwarna merah.

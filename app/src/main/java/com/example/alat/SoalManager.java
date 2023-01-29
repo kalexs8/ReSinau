@@ -31,6 +31,15 @@ public final class SoalManager {
     public static final int IPA_KELAS7 = 33;
     public static final int IPA_KELAS8 = 44;
     public static final int IPA_KELAS9 = 52;
+    public static final int IPS_KELAS1 = 10;
+    public static final int IPS_KELAS2 = 10;
+    public static final int IPS_KELAS3 = 15;
+    public static final int IPS_KELAS4 = 18;
+    public static final int IPS_KELAS5 = 20;
+    public static final int IPS_KELAS6 = 20;
+    public static final int IPS_KELAS7 = 33;
+    public static final int IPS_KELAS8 = 44;
+    public static final int IPS_KELAS9 = 52;
 
 
 
